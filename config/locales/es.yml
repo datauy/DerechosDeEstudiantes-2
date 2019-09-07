@@ -3,8 +3,8 @@ es:
     sessions:
       new:
         new_session:
-          mail: "Correo"
-          mail_hint: "correo@mail.com"
+          email: "Correo"
+          email_hint: "correo@mail.com"
           password: "Contraseña"
           password_hint: "********"
           password_lost: "Recuperar contraseña"
@@ -16,7 +16,7 @@ es:
         new_session:
           reset_password: "Recuperar contraseña"
           instruction: "Recibirás un correo con instrucciones para reiniciar tu contraseña en unos minutos."
-          mail_hint: "usuaria@mail.com"
+          email_hint: "usuaria@mail.com"
           ok: "Aceptar"
       edit:
         new_session:
@@ -84,3 +84,5 @@ es:
   time:
     formats:
       default: "%d/%m/%Y %H:%M"
+      short: "%b %d"
+      long: "%B %d, %Y"
