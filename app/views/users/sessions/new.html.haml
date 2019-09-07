@@ -1,0 +1,23 @@
+%section.content-login
+  .container
+    %row
+      %div.col-md-6.offset-md-3
+        %h1.c_purple=t('.new_session.title')
+        %div.not-margin
+          = render partial: "shared/messages", flash: flash
+        %BR
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .form-group
+            .field
+              .c_purple= f.label t('.new_session.mail')
+              .input-devise= f.email_field :email, autofocus: true, placeholder: t('.new_session.mail_hint'), class: "form-control match-parent"
+          .form-group
+            .field
+              .c_purple= f.label t('.new_session.password')
+              .input-devise= f.password_field :password, autocomplete: "off", placeholder: t('.new_session.password_hint'), class: "form-control match-parent"
+          .form-group
+            .field
+              .actions.text-center.button-box
+                %button{:type=>"submit",:class=>"button btn btn-lg btn-primary", :style=>"vertical-align:middle"}
+                  %span=t('.new_session.ok')
+=# render "users/shared/links"
