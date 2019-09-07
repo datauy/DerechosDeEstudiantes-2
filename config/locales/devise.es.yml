@@ -24,7 +24,7 @@ es:
       unauthenticated: 'Tienes que registrarte o iniciar sesión antes de continuar.'
       unconfirmed: 'Tienes que confirmar tu cuenta antes de continuar.'
       locked: 'Tu cuente está bloqueada.'
-      invalid: 'Email o contraseña inválidos.'
+      invalid: 'Correo o contraseña inválidos.'
       invalid_token: 'Token de autentificación inválido.'
       timeout: 'Tu sesión ha expirado. Inicia sesión nuevamente.'
       inactive: 'Tu cuenta aun no ha sido activada.'
@@ -42,10 +42,10 @@ es:
           remember: "Recordarme"
           ok: "Aceptar"
     passwords:
-      send_instructions: 'Recibirás un email con instrucciones para reiniciar tu contraseña en unos minutos.'
+      send_instructions: 'Recibirás un correo con instrucciones para reiniciar tu contraseña en unos minutos.'
       updated: 'Tu contraseña fue cambiada correctamente. Has iniciado sesión.'
       updated_not_active: 'Tu contraseña fue cambiada correctamente.'
-      send_paranoid_instructions: "Si tu email existe en el sistema, recibirás instrucciones para recuperar tu contraseña en él"
+      send_paranoid_instructions: "Si tu correo existe en el sistema, recibirás instrucciones para recuperar tu contraseña en él"
       edit:
         new_session:
           title_password: "Cambiar contraseña"
@@ -60,19 +60,19 @@ es:
           mail_hint: "correo@mail.com"
           ok: "Aceptar"
     confirmations:
-      send_instructions: 'Recibirás instrucciones para confirmar tu cuenta en tu email en unos minutos.'
-      send_paranoid_instructions: 'Si tu email existe en el sistema, recibirás instrucciones para confirmar tu cuenta en tu email en unos minutos.'
+      send_instructions: 'Recibirás instrucciones para confirmar tu cuenta en tu correo en unos minutos.'
+      send_paranoid_instructions: 'Si tu correo existe en el sistema, recibirás instrucciones para confirmar tu cuenta en tu correo en unos minutos.'
       confirmed: 'Tu cuenta fue confirmada. Has iniciado sesión.'
     registrations:
       signed_up: 'Bienvenido! Te has registrado correctamente.'
-      signed_up_but_unconfirmed: 'Te hemos enviado un email con instrucciones para que confirmes tu cuenta.'
+      signed_up_but_unconfirmed: 'Te hemos enviado un correo con instrucciones para que confirmes tu cuenta.'
       signed_up_but_inactive: 'Te has registrado correctamente, pero tu cuenta aun no ha sido activada.'
       signed_up_but_locked: 'Te has registrado correctamente, pero tu cuenta está bloqueada.'
       updated: 'Actualizaste tu cuenta correctamente.'
-      update_needs_confirmation: "Actualizaste tu cuenta correctamente, pero tenemos que revalidar tu email. Revisa tu correo para confirmar la dirección."
+      update_needs_confirmation: "Actualizaste tu cuenta correctamente, pero tenemos que revalidar tu correo. Revisa tu correo para confirmar la dirección."
       destroyed: 'Adiós, tu cuenta ha sido eliminada. Esperamos verte de vuelta pronto!'
     unlocks:
-      send_instructions: 'Recibirás un email con instrucciones para desbloquear tu cuenta en unos minutos'
+      send_instructions: 'Recibirás un correo con instrucciones para desbloquear tu cuenta en unos minutos'
       unlocked: 'Tu cuenta ha sido desbloqueada. Inicia sesión para continuar.'
       send_paranoid_instructions: 'Si tu cuenta existe, recibirás instrucciones para desbloquear tu cuenta en unos minutos'
     omniauth_callbacks:
@@ -100,10 +100,10 @@ es:
           remember: "Recordarme"
           ok: "Aceptar"
     passwords:
-      send_instructions: 'Recibirás un email con instrucciones para reiniciar tu contraseña en unos minutos.'
+      send_instructions: 'Recibirás un correo con instrucciones para reiniciar tu contraseña en unos minutos.'
       updated: 'Tu contraseña fue cambiada correctamente. Has iniciado sesión.'
       updated_not_active: 'Tu contraseña fue cambiada correctamente.'
-      send_paranoid_instructions: "Si tu email existe en el sistema, recibirás instrucciones para recuperar tu contraseña en él"
+      send_paranoid_instructions: "Si tu correo existe en el sistema, recibirás instrucciones para recuperar tu contraseña en él"
       edit:
         new_session:
           title_password: "Cambiar contraseña"

@@ -1,0 +1,86 @@
+es:
+  users:
+    sessions:
+      new:
+        new_session:
+          mail: "Correo"
+          mail_hint: "correo@mail.com"
+          password: "Contraseña"
+          password_hint: "********"
+          password_lost: "Recuperar contraseña"
+          title: "Iniciar sesión"
+          remember: "Recordar"
+          ok: "Aceptar"
+    passwords:
+      new:
+        new_session:
+          reset_password: "Recuperar contraseña"
+          instruction: "Recibirás un correo con instrucciones para reiniciar tu contraseña en unos minutos."
+          mail_hint: "usuaria@mail.com"
+          ok: "Aceptar"
+      edit:
+        new_session:
+          title_password: "Cambiar contraseña"
+          password: "Contraseña"
+          password_confirmation: "Confirmar contraseña"
+          password_hint: "***********"
+          ok: "Aceptar"
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    -
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%A, %d de %B de %Y"
+      short: "%d de %b"
+      day_month: "%d de %B"
+      day_month_short: "%d %B"
+      mont_year: "%B/%Y"
+    month_names:
+    -
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
