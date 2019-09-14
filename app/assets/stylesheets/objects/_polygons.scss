@@ -8,9 +8,9 @@
 
 .polygon-top {
   @extend .polygon;
-  width: 311px;
-  height: 138px;
-  left: 30px;
+  width: 411px;
+  height: 238px;
+  left: 60px;
   top: 0;
 }
 
@@ -44,4 +44,14 @@
   height: 1126px;
   right: 0px;
   top: 1229px;
+}
+
+
+.polygon-center{
+  @extend .polygon;
+  width: 218px;
+  height: 215px;
+  opacity: 0.43;
+  top: -50px;
+  left: -20px;
 }

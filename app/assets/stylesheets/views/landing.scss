@@ -1,0 +1,53 @@
+.container{
+  .landing{
+    margin-top: 120px;
+    .icono{
+      width: 218px;
+      height: 153px;
+      object-fit: contain;
+    }
+    .text-know-title{
+        width: 322px;
+        height: 47px;
+        font-family: SourceSansPro;
+        font-size: 38px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.81px;
+        text-align: center;
+        color: #00a6d6;
+    }
+
+    .text-know-p{
+      width: 381px;
+      height: 104px;
+      font-family: SourceSansPro;
+      font-size: 17px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.66;
+      letter-spacing: normal;
+      color: #383a48;
+    }
+
+    .text-know-subtitle{
+      font-family: SourceSansPro;
+      font-size: 14.4px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.44;
+      letter-spacing: 1.12px;
+      text-align: center;
+      color: #383a48;
+      margin-top: 20px;
+    }
+    .btn-group{
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}
