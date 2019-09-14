@@ -1,11 +1,15 @@
 @import 'bootstrap';
 @import "font-awesome-sprockets";
 @import "font-awesome";
+//////////Base//////////
 @import 'base/variables';
 @import 'base/color';
 @import 'base/flashes';
+//////////objects//////////
 @import 'objects/navbar';
-@import 'views/login';
-@import 'views/landing';
 @import 'objects/polygons';
 @import 'objects/buttons';
+@import 'objects/inputs';
+//////////views//////////
+@import 'views/login';
+@import 'views/landing';

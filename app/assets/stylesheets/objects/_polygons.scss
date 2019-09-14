@@ -55,3 +55,12 @@
   top: -50px;
   left: -20px;
 }
+
+.polygon-center-right{
+  @extend .polygon;
+  width: 218px;
+  height: 215px;
+  opacity: 0.43;
+  bottom: -50px;
+  right: 0px;
+}
