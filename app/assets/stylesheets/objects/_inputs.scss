@@ -2,6 +2,7 @@
   border: none;
   margin-left: 5px;
   margin-right: 5px;
+
   &:focus, &:active, &:focus{
     outline: none;
     border: none;
@@ -23,15 +24,16 @@
 .input-group{
   margin-top: 30px;
   border-radius: 27.6px;
-  border: 1.2px #383a48 solid;
+  border: 1.2px $medium-gray solid;
   padding: 10px;
   text-align: right;
+  background-color: white;
 }
 
 .dot{
   height: 40px;
   width: 40px;
-  background-color: #ffb81c;
+  background-color: $orange;
   border-radius: 50%;
   display: inline-block;
 }
