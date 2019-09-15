@@ -2,9 +2,9 @@
   .landing{
     margin-top: 120px;
     hr{
-      text-align: left;
       width: 64px;
       height: 3px;
+      position: absolute;
       background-color: #ffdd6e;
     }
     .icono{
@@ -64,6 +64,20 @@
         line-height: normal;
         letter-spacing: normal;
         color: rgba(0, 0, 0, 0.85);
+    }
+
+    .text-complain-p{
+      width: 381px;
+      height: 104px;
+      margin-top: 50px;
+      font-family: SourceSansPro;
+      font-size: 17px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.66;
+      letter-spacing: normal;
+      color: #383a48;
     }
 
     .btn-group{
