@@ -1,0 +1,83 @@
+.container{
+  .landing{
+    margin-top: 120px;
+    hr{
+      width: 64px;
+      height: 3px;
+      position: absolute;
+      background-color: $orange;
+    }
+    .icono{
+      width: 218px;
+      height: 153px;
+      object-fit: contain;
+    }
+    .text-know-title{
+        width: 322px;
+        height: 47px;
+        font-size: 38px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.81px;
+        text-align: center;
+        color: #00a6d6;
+    }
+
+    .text-know-p{
+      width: 381px;
+      height: 104px;
+      font-size: 17px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.66;
+      letter-spacing: normal;
+      color: #383a48;
+    }
+
+    .text-know-subtitle{
+      font-size: 14.4px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.44;
+      letter-spacing: 1.12px;
+      text-align: center;
+      color: #383a48;
+      margin-top: 25px;
+    }
+
+    .text-complain-title{
+      margin-top: 100px;
+      width: 201px;
+      height: 28px;
+      font-size: 22px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    .text-complain-p{
+      width: 381px;
+      height: 104px;
+      margin-top: 50px;
+      font-size: 17px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.66;
+      letter-spacing: normal;
+      color: #383a48;
+    }
+
+    .btn-group{
+      margin-top: 30px;
+      text-align: center;
+    }
+  }
+}

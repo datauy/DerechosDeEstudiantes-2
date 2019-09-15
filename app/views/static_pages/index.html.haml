@@ -1,0 +1,59 @@
+=image_tag("polygon.svg",  :class => "polygon-left")
+=image_tag("polygon-top.svg",  :class => "polygon-top")
+=image_tag("polygon-right.svg",  :class => "polygon-right")
+=image_tag("polygon-right-down.svg",  :class => "polygon-right-down")
+=image_tag("polygon-left-down.svg",  :class => "polygon-left-down")
+
+=render "navbar"
+
+.container
+  .landing
+    .row.justify-content-md-center
+      .col-md-auto
+        =image_tag("polygon-center.svg",  :class => "polygon-center")
+        .row
+          .col-md-6
+            =image_tag("icono_saber.svg",  :class => "icono")
+          .col-md-6
+            .text-know-title
+              =t('.know.title')
+            .text-know-p
+              =t('.know.description')
+    .row.justify-content-md-center
+      .col-md-auto
+        .text-know-subtitle
+          =t('.know.subtitle')
+        .btn-group.btn-group-toggle{"data-toggle" => "buttons"}
+          %label.btn.btn-secondary.active
+            %input#option1{:autocomplete => "off", :checked => "checked", :name => "options", :type => "radio"}/
+            Secundaria
+          %label.btn.btn-secondary
+            %input#option2{:autocomplete => "off", :name => "options", :type => "radio"}/
+            UTU
+    .row.justify-content-md-center
+      .col-md-8
+        .input-group
+          %input.form-control{:placeholder => t('.search.placeholder'), :type => "text"}/
+          %span.dot
+            %i.fas.fa-search{"aria-hidden" => "true"}
+
+    .row.justify-content-md-center
+      .col-md-auto
+        .text-complain-title
+          =t('.complain.title')
+    .row.justify-content-md-center
+      .col-md-auto
+        =image_tag("polygon-center.svg",  :class => "polygon-center-right")
+        .row
+          .col-md-6
+            %hr
+            .text-complain-p
+              =t('.complain.description')
+          .col-md-6.right
+            =image_tag("complain.svg",  :class => "icono")
+
+    .row.justify-content-md-center
+      .col-md-8
+        %button.btn.btn-outline-primary-yellow{:type => "submit"}=t('.complain.button_ok')
+
+=render "footer"

@@ -1,0 +1,65 @@
+.btn-outline-primary{
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 19.8px;
+  border: solid 1.2px $medium-gray;
+  width: 186px;
+  color: $medium-gray;
+  &:hover {
+    background-color: $medium-gray;
+    color: white;
+    border: solid 1.2px white;
+  }
+}
+
+
+.btn-outline-primary-yellow{
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 19.8px;
+  border: solid 1.2px black;
+  width: 186px;
+  color: $black;
+  background-color: $yellow;
+  &:hover {
+    background-color: black;
+    color: $yellow;
+  }
+}
+.btn-group{
+  background-color: $light-blue;
+  border-radius: 19.8px;
+  border: solid 1.2px $medium-gray;
+
+  .btn-secondary{
+    width: 208px;
+    height: 40px;
+    border: solid 0px;
+    border-radius: 19.8px;
+    background-color: transparent;
+    color: $medium-gray;
+    &:hover{
+      border: solid 1.2px $medium-gray;
+      background-color: transparent;
+      color: $medium-gray;
+      border: solid 0px;
+    }
+  }
+
+  .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+  .show > .btn-secondary.dropdown-toggle {
+    width: 208px;
+    height: 35px;
+    border-radius: 19.8px;
+    border: solid 1.2px #ffffff;
+    background-color: $blue;
+    box-shadow: 0 8px 0 $blue, 0 15px 20px rgba(0, 0, 0, .35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+  }
+}
+
+
+
