@@ -1,0 +1,16 @@
+es:
+  complains:
+    index:
+      title: 'Denuncias confidenciales'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices purus a ullamcorper egestas. Sed dui massa, con
+magna et, mattis dignissim enim.'
+      button_back: 'Volver'
+      instructions_title: 'No publicaremos ninguno de tus datos'
+      instructions_p: 'Te responderemos a tu email'
+      name_placeholder: 'Nombre apellido'
+      email_placeholder: 'correo@mail.com'
+      message_placeholder: 'Describe ...'
+      name: 'Nombre'
+      email: 'correo'
+      message: 'Mensaje'
+      send: 'Enviar'

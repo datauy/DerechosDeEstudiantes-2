@@ -1,6 +1,15 @@
 footer {
   position: absolute;
-  top: 2200px;
   width: 100%;
   height: auto;
- }
+}
+
+footer-landing{
+  @extend footer;
+  top: 2000px;
+}
+
+footer-complain{
+  @extend footer;
+  top: 1600px;
+}

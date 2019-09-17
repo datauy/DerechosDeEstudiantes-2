@@ -25,6 +25,9 @@ es:
           password_confirmation: "Confirmar contraseña"
           password_hint: "***********"
           ok: "Aceptar"
+  shared:
+    footer:
+      copyright: '© 2019 Derechos del Estudiante'
   date:
     abbr_day_names:
     - dom

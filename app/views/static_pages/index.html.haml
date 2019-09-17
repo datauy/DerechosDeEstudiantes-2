@@ -1,13 +1,12 @@
-=image_tag("polygon.svg",  :class => "polygon-left")
 =image_tag("polygon-top.svg",  :class => "polygon-top")
-=image_tag("polygon-right.svg",  :class => "polygon-right")
-=image_tag("polygon-right-down.svg",  :class => "polygon-right-down")
-=image_tag("polygon-left-down.svg",  :class => "polygon-left-down")
+
 
 =render "navbar"
 
 .container
   .landing
+    =image_tag("polygon-right.svg",  :class => "polygon-right")
+    =image_tag("polygon.svg",  :class => "polygon-left")
     .row.justify-content-md-center
       .col-md-auto
         =image_tag("polygon-center.svg",  :class => "polygon-center")
@@ -55,5 +54,10 @@
     .row.justify-content-md-center
       .col-md-8
         %button.btn.btn-outline-primary-yellow{:type => "submit"}=t('.complain.button_ok')
+    =image_tag("polygon-right-down.svg",  :class => "polygon-right-down")
 
-=render "footer"
+    .row.justify-content-md-center
+      .col-md-8
+        /section comments
+%footer-landing.sticky-footer.max-parent
+  =render "shared/footer"
