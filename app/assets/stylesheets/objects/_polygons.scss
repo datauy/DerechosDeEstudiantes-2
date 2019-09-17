@@ -19,15 +19,14 @@
   width: 275px;
   height: 1126px;
   left: 0;
-  top: 501px;
 }
 
 .polygon-left-down {
   @extend .polygon;
   width: 291px;
   height: 291px;
+  bottom: 0px;
   left: 0px;
-  top: 2100px;
 }
 
 .polygon-right{
@@ -35,7 +34,6 @@
   width: 137px;
   height: 524px;
   right: 0;
-  top: 417px;
 }
 
 .polygon-right-down {
@@ -43,7 +41,6 @@
   width: 260px;
   height: 1126px;
   right: 0px;
-  top: 1229px;
 }
 
 
@@ -63,4 +60,14 @@
   opacity: 0.43;
   bottom: -50px;
   right: 0px;
+}
+
+.polygon-big-center{
+  @extend .polygon;
+  width: 942px;
+  height: 1088px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }

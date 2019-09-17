@@ -6,9 +6,9 @@
   width: 186px;
   color: $medium-gray;
   &:hover {
-    background-color: $medium-gray;
-    color: white;
-    border: solid 1.2px white;
+    background-color: white;
+    color: $medium-gray;
+    border: solid 1.2px $medium-gray;
   }
 }
 
@@ -21,10 +21,10 @@
   width: 186px;
   color: $black;
   background-color: $yellow;
-  &:hover {
-    background-color: black;
-    color: $yellow;
-  }
+  //&:hover {
+  //  background-color: black;
+  //  color: $yellow;
+  //}
 }
 .btn-group{
   background-color: $light-blue;
@@ -62,4 +62,14 @@
 }
 
 
+
+.btn-outline-primary-yellow-shadow{
+  @extend .btn-outline-primary-yellow;
+  background-color: $yellow;
+  box-shadow: 0 8px 0 $yellow, 0 0px 0px rgba(0, 0, 0, .35);
+  -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+  -moz-transition: -moz-box-shadow .1s ease-in-out;
+  -o-transition: -o-box-shadow .1s ease-in-out;
+  transition: box-shadow .1s ease-in-out;
+}
 

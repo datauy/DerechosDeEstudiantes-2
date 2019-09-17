@@ -12,6 +12,7 @@
 .c_red 			    {color:$red;}
 .c_orange 			{color:$orange;}
 .c_white 			  {color:#fff;}
+.c_light-yellow   {color: $light-yellow}
 
 .bg-purple 			{background-color:$purple;}
 .bg-yellow			{background-color:$yellow;}
@@ -26,3 +27,5 @@
 .bg-dark-green 	{background-color:$dark-green;}
 .bg-navbar 		  {background-color:$white;}
 .bg-black       {background-color: #000}
+
+.fill_light-yellow   {fill: $light-yellow !important}

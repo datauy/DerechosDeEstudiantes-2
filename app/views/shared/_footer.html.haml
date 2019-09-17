@@ -1,5 +1,15 @@
-
-%footer.sticky-footer.max-parent
-    .container.my-auto
-        .copyright.text-center.my-auto
-            %span
+.container.my-auto
+  .copyright.text-center.my-auto
+    =image_tag("polygon-left-down.svg",  :class => "polygon-left-down")
+    .footer-copyright.text-center.py-3
+      .row.justify-content-md-center
+        .col-md-9
+          .row
+            .col-md-4.bottom
+              =t('.copyright')
+            .col-md-2.bottom
+              =image_tag("unicef.svg")
+            .col-md-2.bottom
+              =image_tag("data.svg")
+            .col-md-2.bottom
+              =image_tag("ces.svg")

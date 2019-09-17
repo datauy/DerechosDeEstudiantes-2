@@ -11,5 +11,3 @@ es:
         title: 'Denuncias anónimas'
         description: 'Este es un espacio para que puedas conocer más sobre los derechos que tenés como estudiante de educación secundaria.'
         button_ok: 'Reportar aquí'
-    footer:
-      copyright: '© 2019 Derechos del Estudiante'
