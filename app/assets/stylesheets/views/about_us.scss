@@ -1,0 +1,51 @@
+.container{
+  .about_us{
+    margin-top: 100px;
+    hr{
+      width: 64px;
+      height: 3px;
+      position: absolute;
+      background-color: $blue-text;
+    }
+    .icono{
+      width: 218px;
+      height: 153px;
+      object-fit: contain;
+    }
+    .text-title{
+      font-size: 38px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.81px;
+      color: $blue-text;
+    }
+
+    .text-p{
+      font-size: 17px;
+      margin-top: 50px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.66;
+      letter-spacing: normal;
+      color: $medium-gray;
+    }
+    .text-p-no-top{
+      @extend .polygon;
+      margin-top: 0px;
+    }
+    .label-solid{
+      border-radius: 29.4px;
+      border: solid 1.8px #383a48;
+      padding: 55px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 0 $black, 0 15px 20px rgba(0, 0, 0, .35);
+      -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+      -moz-transition: -moz-box-shadow .1s ease-in-out;
+      -o-transition: -o-box-shadow .1s ease-in-out;
+      transition: box-shadow .1s ease-in-out;
+    }
+  }
+}

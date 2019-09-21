@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :complains
+  get 'static_pages/about_us'
   root to: 'static_pages#index'
+
 end
