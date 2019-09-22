@@ -117,6 +117,21 @@
       padding-top: 10px;
       border: solid 1.8px $medium-gray;
     }
+    .complain-btn{
+      margin-top: 15px;
+      text-align: right;
+      width: 100%;
+    }
+    .text-input{
+      font-size: 16px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $blue-input;
+      margin-top: 10px;
+    }
 
     .tag-answer{
       width: 127px;

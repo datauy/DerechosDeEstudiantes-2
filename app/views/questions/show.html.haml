@@ -49,11 +49,29 @@
       .col-md-6
         .row
           .col-md-6
-            %a.threedbutton2{:href => "#"}
+            %a.threedbutton2{:onclick=>"show_form()"}
               =t('.btn_no')
           .col-md-6
             %a.threedbutton2{:href => "#"}
               =t('.btn_yes')
+    #form-more-help.row.justify-content-md-center.gone
+      .col-md-8
+        .input-group
+          %span
+            .text-input=t('.name')
+          %input.form-control{:placeholder => "", :type => "text"}/
+        .input-group
+          %span
+            .text-input=t('.email')
+          %input.form-control{:placeholder => "", :type => "text"}/
+        .input-group
+          %span
+            .text-input=t('.message')
+          %textarea.form-control{:placeholder => ""}
+        .complain-btn
+          %a.threedbutton{:href => "#"}
+            =t('.send')
+
     .row.justify-content-md-center.center
       .col-md-12
         .text-we-can=t('.other_questions')
@@ -100,3 +118,9 @@
 
 %footer-answer.sticky-footer.max-parent
   =render "shared/footer"
+
+
+:javascript
+  function show_form(){
+    $('#form-more-help').removeClass("gone").addClass("visible");
+  }

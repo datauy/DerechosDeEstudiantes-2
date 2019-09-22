@@ -169,3 +169,7 @@ a.threedbutton2:active {
   -webkit-box-shadow: 0 -20px 5px $blue inset, 1px 1px 2px #eee;
   box-shadow: 0 -20px 5px $blue inset, 1px 1px 2px #eee;
 }
+
+a.threedbutton2:not([href]):not([tabindex]) {
+  color: white;
+}
