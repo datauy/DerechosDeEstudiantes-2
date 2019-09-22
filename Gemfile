@@ -35,6 +35,7 @@ gem 'bootstrap-datepicker-rails'
 gem 'devise'
 gem 'i18n'
 gem 'activeadmin'
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

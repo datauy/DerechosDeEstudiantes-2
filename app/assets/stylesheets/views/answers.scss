@@ -20,6 +20,17 @@
       letter-spacing: 0.81px;
       color: $blue-text;
     }
+    .text-p-tags{
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 1.16px;
+      margin-bottom: 30px;
+      display: inline-block;
+    }
+
     .div-title{
       padding: 20px 50px 0px 50px;
     }
@@ -80,6 +91,21 @@
       letter-spacing: 1.9px;
       border-radius: 9.5px;
       background-color: $yellow;
+    }
+
+    .tag-search1{
+      width: 110px;
+      height: 19px;
+      border-radius: 9.5px;
+      background-color: $blue-text;
+      color: white;
+      text-align: center;
+      display: inline-block;
+    }
+    .tag-search2{
+      @extend .tag-search1;
+      background-color: $light-blue;
+      display: inline-block;
     }
   }
 }

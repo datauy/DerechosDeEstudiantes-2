@@ -1,14 +1,22 @@
 =image_tag("polygon-top.svg",  :class => "polygon-top")
-=render "navbar"
+=render "shared/navbar"
 
 .container
   .answers
     .row.justify-content-md-center.padding-top
-      .col-md-6
+      .col-md-8
         %a.threedbutton{:href => "#"}
           %i.fas.fa-arrow-left=t('.button_back')
-      .col-md-6
+      .col-md-4
         =image_tag("list.svg")
+    .row.justify-content-md-center.text-main
+      .col-md-8
+        .text-p-tags
+          =t('.search_in')
+        .tag-search1
+          Derecho
+        .tag-search2
+          Secundaria
     .row.justify-content-md-center.text-main
       .col-md-8
         .text-title
@@ -35,6 +43,7 @@
             .row.justify-content-end
               .btn-shape
                 Ver detalle
-
+    .row.pagination.justify-content-center
+      = paginate @users, outer_window: 4
 %footer-answer.sticky-footer.max-parent
   =render "shared/footer"
