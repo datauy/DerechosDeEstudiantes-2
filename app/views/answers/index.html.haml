@@ -1,0 +1,101 @@
+=image_tag("polygon-top.svg",  :class => "polygon-top")
+=render "shared/navbar"
+
+.container
+  .questions
+    .row.justify-content-md-center.padding-top
+      =image_tag("polygon-answer-right.svg",  :class => "polygon-answer-right")
+      .col-md-8
+        %a.threedbutton{:href => "#"}
+          %i.fas.fa-arrow-left=t('.button_back')
+      .col-md-4
+        =image_tag("paloma.svg")
+    .row.justify-content-md-center.text-main
+      .col-md-8
+        .text-p-tags
+          =t('.search_in')
+        .tag-search1
+          Derecho
+        .tag-search2
+          Secundaria
+    .row.justify-content-md-center.text-main
+      .col-md-8
+        .text-title
+          =t('.title')
+    %div.margin-top
+    .row.justify-content-md-center
+      =image_tag("polygon-answer-left.svg",  :class => "polygon-answer-left")
+      .col-md-8
+        -3.times do |x|
+          .row
+            .col-md-10
+              .label-solid-answer
+                .p-answers
+                  ¿Me ponen falta si no voy un dia de Alerta Meteorologica?
+          .row
+            .col-md-2.center
+              =image_tag("answer.svg")
+            .col-md-10
+              .label-solid-answer
+                .p-answers
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis tincidunt ante, scelerisque molestie ante condimentum a. Aenean consectetur quis quam eget interdum.
+
+    %div.margin-top
+    .row.justify-content-md-center.center
+      .col-md-6
+        .text-we-can=t('.we_can')
+    .row.justify-content-md-center.center
+      .col-md-6
+        .row
+          .col-md-6
+            %a.threedbutton2{:onclick=>"show_form()"}
+              =t('.btn_no')
+          .col-md-6
+            %a.threedbutton2{:href => "#"}
+              =t('.btn_yes')
+
+    #form-more-help.row.justify-content-md-center.gone
+      .col-md-8
+        .input-group
+          %span
+            .text-input=t('.name')
+          %input.form-control{:placeholder => "", :type => "text"}/
+        .input-group
+          %span
+            .text-input=t('.email')
+          %input.form-control{:placeholder => "", :type => "text"}/
+        .input-group
+          %span
+            .text-input=t('.message')
+          %textarea.form-control{:placeholder => ""}
+        .complain-btn
+          %a.threedbutton{:href => "#"}
+            =t('.send')
+
+
+    %div.margin-top
+    .row.justify-content-md-center
+      .col-md-10
+        .label-solid
+          .div-title
+            .row
+              .col-md-6
+                .subtext-title
+                  Compartir este derecho
+                  %hr
+              .col-md-6.right
+                =image_tag("facebook.svg")
+                =image_tag("twitter.svg")
+          .row
+            .col-md-12
+              .text-p
+                %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+
+%footer-answer.sticky-footer.max-parent
+  =render "shared/footer"
+
+:javascript
+  function show_form(){
+    $('#form-more-help').removeClass("gone").addClass("visible");
+  }

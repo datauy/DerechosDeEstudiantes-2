@@ -106,6 +106,14 @@
       -o-transition: -o-box-shadow .1s ease-in-out;
       transition: box-shadow .1s ease-in-out;
     }
+
+    .label-solid-answer{
+      border-radius: 29.4px;
+      border: solid 1.8px $medium-gray;
+      margin-bottom: 30px;
+      background-color: white;
+      padding: 15px;
+    }
     .btn-shape{
       text-align: center;
       width: 232px;
