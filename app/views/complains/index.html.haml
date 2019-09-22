@@ -2,14 +2,14 @@
 =image_tag("polygon-top-yellow.svg",  :class => "polygon-top")
 
 
-=render "navbar"
+=render "shared/navbar"
 
 .container
   .complain
     =image_tag("polygon-big-center.svg",  :class => "polygon-big-center")
     .row.justify-content-md-center.padding-top
       .col-md-12
-        %button.btn.btn-outline-primary-yellow-shadow{:type => "submit"}
+        %a.threedbutton{:href => "#"}
           %i.fas.fa-arrow-left=t('.button_back')
     .row.justify-content-md-center.text-main
       .col-md-auto
@@ -41,8 +41,7 @@
             .text-input=t('.message')
           %textarea.form-control{:placeholder => t('.message_placeholder')}
         .complain-btn
-          %button.btn.btn-outline-primary-yellow-shadow{:type => "submit"}
+          %a.threedbutton{:href => "#"}
             =t('.send')
-
 %footer-complain.sticky-footer.max-parent
   =render "shared/footer"

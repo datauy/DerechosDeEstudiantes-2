@@ -28,6 +28,18 @@ es:
   shared:
     footer:
       copyright: '© 2019 Derechos del Estudiante'
+
+    navbar:
+      title_html: 'Envianos tu pregunta y te vamos<br>a responder lo antes posible'
+      institution: 'Institución'
+      grade: 'Grado'
+      depto: 'Departamento'
+      question: 'Pregunta'
+      send: 'Enviar'
+      title_send: 'Tu mensaje fue enviado'
+      message_send: 'Gracias por reportar y ayudar'
+      close: 'Cerrar'
+
   date:
     abbr_day_names:
     - dom

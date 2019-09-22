@@ -1,0 +1,6 @@
+es:
+  answers:
+    index:
+      title: 'Resultados'
+      button_back: 'Volver'
+      search_in: 'BUSCASTE EN'

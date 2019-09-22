@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
+  z-index: -1000;
 }
 
 .polygon-top {
@@ -70,4 +71,19 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
+
+}
+
+.polygon-big-right{
+  @extend .polygon;
+  width: 669px;
+  height: 1126px;
+  right: 0;
+}
+
+.polygon-big-left {
+  @extend .polygon;
+  width: 450px;
+  height: 1126px;
+  left: 0;
 }

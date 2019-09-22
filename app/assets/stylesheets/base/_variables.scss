@@ -2,10 +2,13 @@
 $purple:#AA005A;
 $light-purple:#9F4995;
 $yellow:#ffc107;
+$dark-yellow: #b77e00;
 $blue: #003087;
 $dark-blue: #4a90e2;
+$blue-text: #00a6d6;
 $light-blue: #d3edf5;
 $blue-title: #84a1d5;
+$blue-input: #2b91b1;
 $medium-gray: #383a48;
 $dark-gray: #243033;
 $light-gray: #E9EDF2;
@@ -19,6 +22,7 @@ $green:#00B14D;
 $gold: #FFB100;
 $yellow: #ffb81c;
 $light-yellow: #fbebc7;
+$gray: #9fa0a4;
 
 body{
     font-family: SourceSansPro;
@@ -37,10 +41,19 @@ body{
 .left{
     text-align: right;
 }
+
+.center{
+    text-align: center;
+}
+
 .bottom{
     display: flex;
     align-items: flex-end;
 }
 .padding-top{
     padding-top: 20px;
+}
+
+.margin-top{
+    margin-top: 50px;
 }

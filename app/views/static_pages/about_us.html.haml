@@ -1,0 +1,42 @@
+=image_tag("polygon-top.svg",  :class => "polygon-top")
+=render "shared/navbar"
+
+.container
+  .about_us
+    .row.justify-content-md-center.padding-top
+      .col-md-6
+        %a.threedbutton{:href => "#"}
+          %i.fas.fa-arrow-left=t('.button_back')
+      .col-md-6
+        =image_tag("page.svg")
+    .row.justify-content-md-center.text-main
+      .col-md-8
+        .text-title
+          =t('.title')
+        %hr
+    .row.justify-content-md-center
+      =image_tag("polygon-right-down2.svg",  :class => "polygon-right-down")
+      .col-md-8
+        .row
+          .col-md-6
+            .text-p
+              %p=t('.text_left_html')
+          .col-md-6
+            .text-p
+              %p=t('.text_right_html')
+    .row.justify-content-md-center
+      .col-md-10
+        .label-solid
+          .row
+            .col-md-6
+              .text-title
+                =t('.subtitle')
+              %hr
+              .text-p
+                %p=t('.box_text_left_html')
+            .col-md-6
+              .text-p-no-top
+                %p=t('.box_text_right_html')
+
+%footer-about-us.sticky-footer.max-parent
+  =render "shared/footer"

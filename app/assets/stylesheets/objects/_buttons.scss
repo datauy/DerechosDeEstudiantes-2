@@ -12,6 +12,9 @@
   }
 }
 
+.fa-arrow-left:before {
+  margin-right: 10px;
+}
 
 .btn-outline-primary-yellow{
   margin-left: 5px;
@@ -21,11 +24,8 @@
   width: 186px;
   color: $black;
   background-color: $yellow;
-  //&:hover {
-  //  background-color: black;
-  //  color: $yellow;
-  //}
 }
+
 .btn-group{
   background-color: $light-blue;
   border-radius: 19.8px;
@@ -38,7 +38,7 @@
     border-radius: 19.8px;
     background-color: transparent;
     color: $medium-gray;
-    &:hover{
+    &:active:hover {
       border: solid 1.2px $medium-gray;
       background-color: transparent;
       color: $medium-gray;
@@ -46,30 +46,74 @@
     }
   }
 
-  .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+  .btn-secondary:not(:disabled):not(.disabled).active,
   .show > .btn-secondary.dropdown-toggle {
     width: 208px;
     height: 35px;
     border-radius: 19.8px;
-    border: solid 1.2px #ffffff;
+    border: solid 1.2px #fff;
     background-color: $blue;
     box-shadow: 0 8px 0 $blue, 0 15px 20px rgba(0, 0, 0, .35);
     -webkit-transition: -webkit-box-shadow .1s ease-in-out;
     -moz-transition: -moz-box-shadow .1s ease-in-out;
     -o-transition: -o-box-shadow .1s ease-in-out;
     transition: box-shadow .1s ease-in-out;
+    &:active{
+      background-color: $blue;
+      color:#fff;
+    }
   }
 }
 
 
+a.threedbutton {
+  text-align: center;
+  width: 208px;
+  height: 35px;
+  background:$yellow; /* background color of button */
+  color: black;
+  text-decoration: none;
+  position: relative;
+  top: 0; /* anchor main button's position */
+  bottom: -12px; /* Depth of 3D effect. :after pseudo element inherits this value so it's animated in Chrome. See: kizu.ru/en/pseudos */
+  margin-bottom: 12px;
+  -moz-box-shadow: 0 -15px 5px $yellow inset;
+  -webkit-box-shadow: 0 -15px 5px $yellow inset;
+  box-shadow: 0 -15px 5px $yellow inset;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border: solid 1.2px black;
 
-.btn-outline-primary-yellow-shadow{
-  @extend .btn-outline-primary-yellow;
-  background-color: $yellow;
-  box-shadow: 0 8px 0 $yellow, 0 0px 0px rgba(0, 0, 0, .35);
-  -webkit-transition: -webkit-box-shadow .1s ease-in-out;
-  -moz-transition: -moz-box-shadow .1s ease-in-out;
-  -o-transition: -o-box-shadow .1s ease-in-out;
-  transition: box-shadow .1s ease-in-out;
 }
-
+a.threedbutton, a.threedbutton:after {
+  display: inline-block;
+  padding: 5px 15px; /* vertical and horizontal padding of button */
+  -moz-border-radius: 19.8px;
+  -webkit-border-radius: 19.8px;
+  border-radius: 19.8px;
+  outline: none;
+}
+a.threedbutton:after { /* pseudo element to construct 3D side of button */
+  content: "";
+  position: absolute;
+  padding: 0;
+  z-index: -1;
+  bottom: inherit; /* Inherit main button bottom value to animate it. See: kizu.ru/en/pseudos */
+  left: 0;
+  margin-bottom: 3px;
+  width: 100%;
+  height: 90%;
+  background: $dark-yellow; ; /* background color of 3D effect */
+  -moz-box-shadow:  1px 1px 0px $black, -1px 0px 0px rgba(0, 0, 0, 1);
+  -webkit-box-shadow:   1px 1px 0px $black, -1px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 1px 1px 0px $black, -1px 0px 0px rgba(0, 0, 0, 1);
+}
+a.threedbutton:active {
+  top: 12px; /* shift button down 12px when depressed. Change 12px to match button's "bottom" property above */
+  bottom: 0;
+  -moz-box-shadow: 0 -20px 5px $yellow inset, 1px 1px 2px #eee;
+  -webkit-box-shadow: 0 -20px 5px $yellow inset, 1px 1px 2px #eee;
+  box-shadow: 0 -20px 5px $yellow inset, 1px 1px 2px #eee;
+}
