@@ -1,0 +1,23 @@
+.custome-list{
+  ul {
+    position: relative;
+  }
+
+  ul li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+    list-style-type: none!important;
+  }
+
+  ul li:before {
+    content: "";
+    position: absolute;
+    left : 0em;
+    width: 30px;
+    height: 3px;
+    background: $blue-text;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+}
