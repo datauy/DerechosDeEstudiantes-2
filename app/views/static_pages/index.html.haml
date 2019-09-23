@@ -33,8 +33,9 @@
       .col-md-8
         .input-group
           %input.form-control{:placeholder => t('.search.placeholder'), :type => "text"}/
-          %span.dot
-            %i.fas.fa-search{"aria-hidden" => "true"}
+          =link_to questions_path do
+            %span.dot
+              %i.fas.fa-search{"aria-hidden" => "true"}
 
     .row.justify-content-md-center
       .col-md-auto
@@ -53,7 +54,7 @@
 
     .row.justify-content-md-center
       .col-md-8
-        %button.btn.btn-outline-primary-yellow{:type => "submit"}=t('.complain.button_ok')
+        =link_to t('.complain.button_ok'), complains_path, class: "btn btn-outline-primary-yellow"
     =image_tag("polygon-right-down.svg",  :class => "polygon-right-down")
 
     %div.margin-top

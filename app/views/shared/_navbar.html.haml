@@ -40,7 +40,7 @@
               .text-input=t('.question')
             %textarea.form-control{:placeholder =>  ""}
           .complain-btn
-            %a.threedbutton{:href => "#"}
+            %a.threedbutton{"aria-label" => "Close", "data-dismiss" => "modal", "data-toggle": "modal", "data-target": "#sendModal"}
               =t('.send')
 
 
@@ -57,5 +57,5 @@
               =t('.title_send')
             %p
               =t('.message_send')
-            %a.threedbutton{:href => "#"}
+            %a.threedbutton{"aria-label" => "Close", "data-dismiss" => "modal"}
               =t('.close')

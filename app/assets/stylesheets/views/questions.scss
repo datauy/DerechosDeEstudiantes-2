@@ -105,6 +105,10 @@
       -moz-transition: -moz-box-shadow .1s ease-in-out;
       -o-transition: -o-box-shadow .1s ease-in-out;
       transition: box-shadow .1s ease-in-out;
+      a{
+        color: $medium-gray;
+        text-decoration: none !important;
+      }
     }
 
     .label-solid-answer{

@@ -6,7 +6,7 @@
     .row.justify-content-md-center.padding-top
       =image_tag("polygon-answer-right.svg",  :class => "polygon-answer-right")
       .col-md-8
-        %a.threedbutton{:href => "#"}
+        %a.threedbutton{:href => "#{root_path}"}
           %i.fas.fa-arrow-left=t('.button_back')
       .col-md-4
         =image_tag("paloma.svg")
@@ -51,7 +51,7 @@
             %a.threedbutton2{:onclick=>"show_form()"}
               =t('.btn_no')
           .col-md-6
-            %a.threedbutton2{:href => "#"}
+            %a.threedbutton2{"data-toggle": "modal", "data-target": "#sendModal"}
               =t('.btn_yes')
 
     #form-more-help.row.justify-content-md-center.gone
@@ -69,7 +69,7 @@
             .text-input=t('.message')
           %textarea.form-control{:placeholder => ""}
         .complain-btn
-          %a.threedbutton{:href => "#"}
+          %a.threedbutton{"data-toggle": "modal", "data-target": "#sendModal"}
             =t('.send')
 
 

@@ -5,7 +5,7 @@
   .questions
     .row.justify-content-md-center.padding-top
       .col-md-8
-        %a.threedbutton{:href => "#"}
+        %a.threedbutton{:href => "#{root_path}"}
           %i.fas.fa-arrow-left=t('.button_back')
       .col-md-4
         =image_tag("list.svg")
@@ -41,8 +41,9 @@
                 .text-p
                   %p Si voy a un colegio doble horario, y practico futbol en un club federado (nacional o peñarol), puedo salir antes y que se me justifiquen las faltas de la ultima materia del dia? Si es posible, que normativa lo considera? Gracias
             .row.justify-content-end
-              .btn-shape
-                Ver detalle
+              =link_to question_path(1) do
+                .btn-shape
+                  Ver detalle
     .row.pagination.justify-content-center
       = paginate @users, outer_window: 4
 %footer-answer.sticky-footer.max-parent

@@ -6,7 +6,7 @@
     =image_tag("polygon-right-question.svg",  :class => "polygon-right-question")
     .row.justify-content-md-center.padding-top
       .col-md-8
-        %a.threedbutton{:href => "#"}
+        %a.threedbutton{:href => "#{root_path}"}
           %i.fas.fa-arrow-left=t('.button_back')
       .col-md-4
         =image_tag("foco.svg")
@@ -52,7 +52,7 @@
             %a.threedbutton2{:onclick=>"show_form()"}
               =t('.btn_no')
           .col-md-6
-            %a.threedbutton2{:href => "#"}
+            %a.threedbutton2{"data-toggle": "modal", "data-target": "#sendModal"}
               =t('.btn_yes')
     #form-more-help.row.justify-content-md-center.gone
       .col-md-8
@@ -69,7 +69,7 @@
             .text-input=t('.message')
           %textarea.form-control{:placeholder => ""}
         .complain-btn
-          %a.threedbutton{:href => "#"}
+          %a.threedbutton{"data-toggle": "modal", "data-target": "#sendModal"}
             =t('.send')
 
     .row.justify-content-md-center.center
@@ -92,8 +92,9 @@
                 .text-p
                   %p Si voy a un colegio doble horario, y practico futbol en un club federado (nacional o peñarol), puedo salir antes y que se me justifiquen las faltas de la ultima materia del dia? Si es posible, que normativa lo considera? Gracias
             .row.justify-content-end
-              .btn-shape
-                Ver detalle
+              =link_to question_path(1) do
+                .btn-shape
+                  Ver detalle
 
     %div.margin-top
     .row.justify-content-md-center
