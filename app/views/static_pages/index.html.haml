@@ -33,8 +33,9 @@
       .col-md-8
         .input-group
           %input.form-control{:placeholder => t('.search.placeholder'), :type => "text"}/
-          %span.dot
-            %i.fas.fa-search{"aria-hidden" => "true"}
+          =link_to questions_path do
+            %span.dot
+              %i.fas.fa-search{"aria-hidden" => "true"}
 
     .row.justify-content-md-center
       .col-md-auto
@@ -53,11 +54,61 @@
 
     .row.justify-content-md-center
       .col-md-8
-        %button.btn.btn-outline-primary-yellow{:type => "submit"}=t('.complain.button_ok')
+        =link_to t('.complain.button_ok'), complains_path, class: "btn btn-outline-primary-yellow"
     =image_tag("polygon-right-down.svg",  :class => "polygon-right-down")
 
+    %div.margin-top
     .row.justify-content-md-center
-      .col-md-8
-        /section comments
+      .col-md-8.center
+        .text-know-title.max-parent
+          Lorem Ipsum
+        .text-know-p.max-parent
+          consectetuer adipiscing
+
+    .row.justify-content-md-center.section_main
+      .col-md-10
+        .label-solid
+          .row.padding-section-main
+            .col-md-6
+              =image_tag("section_1.svg",  :class => "icono")
+            .col-md-6
+              .text-title
+                Titulo sección
+              %hr
+              .text-p
+                %p
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          .row.justify-content-end
+            .col-md-6
+              .btn-shape
+                .subtext-title
+                  Compartí este derecho en
+                  =image_tag("facebook.svg")
+                  =image_tag("twitter.svg")
+
+
+    .row.justify-content-md-center.section_main
+      .col-md-10
+        .label-solid
+          .row.padding-section-main
+            .col-md-6
+              .text-title
+                Titulo sección
+              %hr
+              .text-p
+                %p
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            .col-md-6
+              =image_tag("section_2.svg",  :class => "icono")
+
+          .row.justify-content-end
+            .col-md-6.left
+              .btn-shape-left
+                .subtext-title
+                  Compartí este derecho en
+                  =image_tag("facebook.svg")
+                  =image_tag("twitter.svg")
+            .col-md-6
+
 %footer-landing.sticky-footer.max-parent
   =render "shared/footer"

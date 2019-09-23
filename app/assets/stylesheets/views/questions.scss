@@ -1,5 +1,5 @@
 .container{
-  .answers{
+  .questions{
     margin-top: 100px;
     hr{
       width: 100%;
@@ -19,6 +19,22 @@
       line-height: normal;
       letter-spacing: 0.81px;
       color: $blue-text;
+    }
+    .subtext-title{
+      font-size: 23px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.49px;
+      color: $blue-text;
+      text-align: left;
+      hr{
+        width: 53px;
+        height: 3px;
+        position: absolute;
+        background-color: $blue-text;
+      }
     }
     .text-p-tags{
       font-size: 16px;
@@ -55,6 +71,30 @@
       color: $medium-gray;
       padding: 20px 0px 0px 50px;
     }
+    .text-we-can{
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 1.16px;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .text-p-answer{
+      font-size: 17px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.66;
+      letter-spacing: normal;
+      color: $medium-gray;
+      margin-top: 20px;
+      margin-top: 20px;
+    }
     .label-solid{
       border-radius: 29.4px;
       border: solid 1.8px $medium-gray;
@@ -65,6 +105,18 @@
       -moz-transition: -moz-box-shadow .1s ease-in-out;
       -o-transition: -o-box-shadow .1s ease-in-out;
       transition: box-shadow .1s ease-in-out;
+      a{
+        color: $medium-gray;
+        text-decoration: none !important;
+      }
+    }
+
+    .label-solid-answer{
+      border-radius: 29.4px;
+      border: solid 1.8px $medium-gray;
+      margin-bottom: 30px;
+      background-color: white;
+      padding: 15px;
     }
     .btn-shape{
       text-align: center;
@@ -76,6 +128,21 @@
       border-bottom-right-radius: 16.4px;
       padding-top: 10px;
       border: solid 1.8px $medium-gray;
+    }
+    .complain-btn{
+      margin-top: 15px;
+      text-align: right;
+      width: 100%;
+    }
+    .text-input{
+      font-size: 16px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $blue-input;
+      margin-top: 10px;
     }
 
     .tag-answer{
@@ -105,7 +172,14 @@
     .tag-search2{
       @extend .tag-search1;
       background-color: $light-blue;
-      display: inline-block;
+    }
+    .tag-search3{
+      @extend .tag-search1;
+      background-color: $skin;
+    }
+    .tag-search4{
+      @extend .tag-search1;
+      background-color: $purple;
     }
   }
 }

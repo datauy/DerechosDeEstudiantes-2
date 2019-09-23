@@ -1,6 +1,14 @@
 es:
   answers:
     index:
-      title: 'Resultados'
+      title: 'Comentarios'
       button_back: 'Volver'
       search_in: 'BUSCASTE EN'
+      search_in: 'BUSCASTE EN'
+      btn_no: 'NO'
+      btn_yes: 'SÍ'
+      we_can: '¿Pudimos responder tu duda?'
+      name: 'Nombre'
+      email: 'Correo'
+      message: 'Mensaje'
+      send: 'Enviar'

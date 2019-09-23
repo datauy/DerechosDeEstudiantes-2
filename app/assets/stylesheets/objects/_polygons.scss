@@ -87,3 +87,33 @@
   height: 1126px;
   left: 0;
 }
+
+.polygon-right-question{
+  @extend .polygon;
+  width: 289.4px;
+  height: 1076.4px;
+  right: 0;
+}
+
+
+.polygon-left-question{
+  @extend .polygon;
+  width: 234px;
+  height: 1088px;
+  left: 0;
+}
+
+.polygon-answer-right{
+  @extend .polygon;
+  width: 439px;
+  height: 1126px;
+  right: 0;
+}
+
+
+.polygon-answer-left{
+  @extend .polygon;
+  width: 458px;
+  height: 1126px;
+  left: 0;
+}

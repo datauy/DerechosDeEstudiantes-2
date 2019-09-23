@@ -1,6 +1,7 @@
 // Colors
 $purple:#AA005A;
 $light-purple:#9F4995;
+$purple: #e3d3f5;
 $yellow:#ffc107;
 $dark-yellow: #b77e00;
 $blue: #003087;
@@ -23,6 +24,7 @@ $gold: #FFB100;
 $yellow: #ffb81c;
 $light-yellow: #fbebc7;
 $gray: #9fa0a4;
+$skin: #f5e5d3;
 
 body{
     font-family: SourceSansPro;
@@ -39,7 +41,7 @@ body{
 }
 
 .left{
-    text-align: right;
+    text-align: left;
 }
 
 .center{
@@ -56,4 +58,12 @@ body{
 
 .margin-top{
     margin-top: 50px;
+}
+
+.gone{
+    display: none;
+}
+
+.visible{
+    display: flex;
 }

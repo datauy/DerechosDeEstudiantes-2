@@ -1,15 +1,15 @@
-=image_tag("polygon-top.svg",  :class => "polygon-top")
+=image_tag("polygon-top-yellow.svg",  :class => "polygon-top")
 =render "shared/navbar"
 
 .container
   .questions
+    =image_tag("polygon-right-question.svg",  :class => "polygon-right-question")
     .row.justify-content-md-center.padding-top
-      =image_tag("polygon-answer-right.svg",  :class => "polygon-answer-right")
       .col-md-8
         %a.threedbutton{:href => "#{root_path}"}
           %i.fas.fa-arrow-left=t('.button_back')
       .col-md-4
-        =image_tag("paloma.svg")
+        =image_tag("foco.svg")
     .row.justify-content-md-center.text-main
       .col-md-8
         .text-p-tags
@@ -19,27 +19,28 @@
         .tag-search2
           Secundaria
     .row.justify-content-md-center.text-main
+      =image_tag("polygon-left-question.svg",  :class => "polygon-left-question")
       .col-md-8
         .text-title
           =t('.title')
-    %div.margin-top
-    .row.justify-content-md-center
-      =image_tag("polygon-answer-left.svg",  :class => "polygon-answer-left")
-      .col-md-8
-        -3.times do |x|
-          .row
-            .col-md-10
-              .label-solid-answer
-                .p-answers
-                  ¿Me ponen falta si no voy un dia de Alerta Meteorologica?
-          .row
-            .col-md-2.center
-              =image_tag("answer.svg")
-            .col-md-10
-              .label-solid-answer
-                .p-answers
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis tincidunt ante, scelerisque molestie ante condimentum a. Aenean consectetur quis quam eget interdum.
+        .custome-list
+          %ul
+            %li La Asamblea Nacional de Estudiantes de Enseñanza Secundaria.
+            %li Las Mesas Representativas de Estudiantes.
+            %li Los Consejos de Participación Liceal.
 
+        %p.text-p-answer=t('.description')
+
+    .row.justify-content-md-center.text-main
+      .col-md-8
+        .tag-search1
+          tag 1
+        .tag-search2
+          tag 2
+        .tag-search3
+          tag 3
+        .tag-search4
+          tag 4
     %div.margin-top
     .row.justify-content-md-center.center
       .col-md-6
@@ -53,7 +54,6 @@
           .col-md-6
             %a.threedbutton2{"data-toggle": "modal", "data-target": "#sendModal"}
               =t('.btn_yes')
-
     #form-more-help.row.justify-content-md-center.gone
       .col-md-8
         .input-group
@@ -72,6 +72,29 @@
           %a.threedbutton{"data-toggle": "modal", "data-target": "#sendModal"}
             =t('.send')
 
+    .row.justify-content-md-center.center
+      .col-md-12
+        .text-we-can=t('.other_questions')
+    -2.times do |x|
+      .row.justify-content-md-center
+        .col-md-10
+          .label-solid
+            .div-title
+              .row
+                .col-md-6
+                  .tag-answer
+                    Pregunta
+                .col-md-6.right.c_gray
+                  Enviado Martes 02 de Abril 20:07
+            %hr
+            .row
+              .col-md-12
+                .text-p
+                  %p Si voy a un colegio doble horario, y practico futbol en un club federado (nacional o peñarol), puedo salir antes y que se me justifiquen las faltas de la ultima materia del dia? Si es posible, que normativa lo considera? Gracias
+            .row.justify-content-end
+              =link_to question_path(1) do
+                .btn-shape
+                  Ver detalle
 
     %div.margin-top
     .row.justify-content-md-center
@@ -92,8 +115,11 @@
                 %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 
 
+
+
 %footer-answer.sticky-footer.max-parent
   =render "shared/footer"
+
 
 :javascript
   function show_form(){

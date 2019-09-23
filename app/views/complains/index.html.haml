@@ -9,7 +9,7 @@
     =image_tag("polygon-big-center.svg",  :class => "polygon-big-center")
     .row.justify-content-md-center.padding-top
       .col-md-12
-        %a.threedbutton{:href => "#"}
+        %a.threedbutton{:href => "#{root_path}"}
           %i.fas.fa-arrow-left=t('.button_back')
     .row.justify-content-md-center.text-main
       .col-md-auto
@@ -31,17 +31,17 @@
         .input-group
           %span
             .text-input=t('.name')
-          %input.form-control{:placeholder => t('.name_placeholder'), :type => "text"}/
+          %input.form-control{:placeholder => "", :type => "text"}/
         .input-group
           %span
             .text-input=t('.email')
-          %input.form-control{:placeholder => t('.email_placeholder'), :type => "text"}/
+          %input.form-control{:placeholder => "", :type => "text"}/
         .input-group
           %span
             .text-input=t('.message')
-          %textarea.form-control{:placeholder => t('.message_placeholder')}
+          %textarea.form-control{:placeholder => ""}
         .complain-btn
-          %a.threedbutton{:href => "#"}
+          %a.threedbutton{"data-toggle": "modal", "data-target": "#sendModal"}
             =t('.send')
 %footer-complain.sticky-footer.max-parent
   =render "shared/footer"
