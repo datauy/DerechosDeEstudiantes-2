@@ -10,7 +10,8 @@
               - else
                 = question.title
         .col-md-2.right.c_blue-text
-          %i.fas.fa-arrow-right
+          =link_to question_path(question) do
+            %i.fas.fa-arrow-right
       .row.max-parent.search-row
         .col-md-12
           .tag-search1
@@ -19,6 +20,6 @@
             Secundaria
     .row.max-parent
       .col-md-6.search-buttons
-        =link_to "ver todas las respuestas", root_path
+        =link_to "Ver todas las respuestas", root_path
       .col-md-6.search-buttons
         =link_to "No encuentro la respuesta", root_path
