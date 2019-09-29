@@ -160,26 +160,6 @@
       background-color: $yellow;
     }
 
-    .tag-search1{
-      width: 110px;
-      height: 19px;
-      border-radius: 9.5px;
-      background-color: $blue-text;
-      color: white;
-      text-align: center;
-      display: inline-block;
-    }
-    .tag-search2{
-      @extend .tag-search1;
-      background-color: $light-blue;
-    }
-    .tag-search3{
-      @extend .tag-search1;
-      background-color: $skin;
-    }
-    .tag-search4{
-      @extend .tag-search1;
-      background-color: $purple;
-    }
+
   }
 }

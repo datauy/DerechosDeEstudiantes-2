@@ -1,0 +1,24 @@
+-if  @questions && @questions.size > 0
+  .input-group-search
+    -@questions.each_with_index do |question, index|
+      .row.max-parent.search-top-row
+        .col-md-10
+          .row
+            .col-md-12
+              - if question.respond_to?(:pg_search_highlight)
+                = question.pg_search_highlight.html_safe
+              - else
+                = question.title
+        .col-md-2.right.c_blue-text
+          %i.fas.fa-arrow-right
+      .row.max-parent.search-row
+        .col-md-12
+          .tag-search1
+            Derecho
+          .tag-search2
+            Secundaria
+    .row.max-parent
+      .col-md-6.search-buttons
+        =link_to "ver todas las respuestas", root_path
+      .col-md-6.search-buttons
+        =link_to "No encuentro la respuesta", root_path
