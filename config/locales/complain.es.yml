@@ -1,6 +1,6 @@
 es:
   complains:
-    index:
+    new:
       title: 'Denuncias confidenciales'
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices purus a ullamcorper egestas. Sed dui massa, con
 magna et, mattis dignissim enim.'

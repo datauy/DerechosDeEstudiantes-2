@@ -1,5 +1,5 @@
 ActiveAdmin.register Complain do
-  actions :all, :except => [:new]
+  actions :all, :except => [:new, :edit]
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #

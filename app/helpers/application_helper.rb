@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def alert_class_for(flash_type)
     case flash_type.to_sym
     when :success
