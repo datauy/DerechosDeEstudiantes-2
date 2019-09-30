@@ -17,7 +17,8 @@
         .tag-search1
           Derecho
         .tag-search2
-          Secundaria
+          -if session[:search_type]
+            =session[:search_type].capitalize
     .row.justify-content-md-center.text-main
       =image_tag("polygon-left-question.svg",  :class => "polygon-left-question")
       .col-md-8
@@ -75,7 +76,7 @@
     .row.justify-content-md-center.center
       .col-md-12
         .text-we-can=t('.other_questions')
-    -2.times do |x|
+    -@questions.each do |question|
       .row.justify-content-md-center
         .col-md-10
           .label-solid
@@ -85,14 +86,14 @@
                   .tag-answer
                     Pregunta
                 .col-md-6.right.c_gray
-                  Enviado Martes 02 de Abril 20:07
+                  Enviado #{question.created_at.to_time.strftime("%e de #{t(question.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
             %hr
             .row
               .col-md-12
                 .text-p
-                  %p Si voy a un colegio doble horario, y practico futbol en un club federado (nacional o peñarol), puedo salir antes y que se me justifiquen las faltas de la ultima materia del dia? Si es posible, que normativa lo considera? Gracias
+                  %p=question.title
             .row.justify-content-end
-              =link_to question_path(1) do
+              =link_to question_path(question) do
                 .btn-shape
                   Ver detalle
 

@@ -16,6 +16,9 @@ class Question < ApplicationRecord
     where(school_type: search_type)
   }
 
+  scope :by_school_type_not_current, ->(search_type, question_current) {
+    where(school_type: search_type).where.not(id: question_current.id).order("RANDOM()").limit(2)
+  }
 
 
 end
