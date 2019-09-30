@@ -1,4 +1,4 @@
--if  @questions && @questions.size > 0
+-if @questions && @questions.size > 0
   .input-group-search
     -@questions.each_with_index do |question, index|
       .row.max-parent.search-top-row
@@ -17,9 +17,10 @@
           .tag-search1
             Derecho
           .tag-search2
-            Secundaria
+            =question.school_type
     .row.max-parent
       .col-md-6.search-buttons
         =link_to "Ver todas las respuestas", root_path
       .col-md-6.search-buttons
         =link_to "No encuentro la respuesta", root_path
+

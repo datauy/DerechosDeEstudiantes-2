@@ -21,4 +21,9 @@ module_function :alert_class_for
       "has-errors"
     end
   end
+  def is_activated(value)
+    if value
+      "active"
+    end
+  end
 end
