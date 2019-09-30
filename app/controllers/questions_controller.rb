@@ -1,9 +1,10 @@
 class QuestionsController < ApplicationController
   def index
-    @users = User.order(:email).page params[:page]
+    @questions = Question.by_school_type(session[:search_type]).order(:title).page params[:page]
   end
 
   def show
-    @users = User.order(:email).page params[:page]
+    @question = Question.find(params[:id])
+    @questions = Question.by_school_type_not_current(session[:search_type], @question )
   end
 end

@@ -40,6 +40,15 @@ es:
       message_send: 'Gracias por reportar y ayudar'
       close: 'Cerrar'
 
+  activerecord:
+    errors:
+      models:
+        complain:
+          attributes:
+            email:
+              invalid:
+                "Correo sin formato correcto"
+
   date:
     abbr_day_names:
     - dom
@@ -101,3 +110,15 @@ es:
       default: "%d/%m/%Y %H:%M"
       short: "%b %d"
       long: "%B %d, %Y"
+  January: 'Enero'
+  February: 'Febrero'
+  March: 'Marzo'
+  April: 'Abril'
+  May: 'Mayo'
+  June: 'Junio'
+  July: 'Julio'
+  August: 'Agosto'
+  September: 'Septiembre'
+  October: 'Octubre'
+  November: 'Noviembre'
+  December: 'Diciembre'

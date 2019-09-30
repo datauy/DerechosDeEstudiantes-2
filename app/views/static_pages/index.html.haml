@@ -21,10 +21,10 @@
         .text-know-subtitle
           =t('.know.subtitle')
         .btn-group.btn-group-toggle{"data-toggle" => "buttons"}
-          %label.btn.btn-secondary.active
+          %label.btn.btn-secondary#option1{class: is_activated(session[:search_type]=="secundaria")}
             %input#option1{:autocomplete => "off", :checked => "checked", :name => "options", :type => "radio"}/
             Secundaria
-          %label.btn.btn-secondary
+          %label.btn.btn-secondary#option2{class: is_activated(session[:search_type]=="utu")}
             %input#option2{:autocomplete => "off", :name => "options", :type => "radio"}/
             UTU
     .row.justify-content-md-center
@@ -54,7 +54,7 @@
 
     .row.justify-content-md-center
       .col-md-8
-        =link_to t('.complain.button_ok'), complains_path, class: "btn btn-outline-primary-yellow"
+        =link_to t('.complain.button_ok'), new_complain_path, class: "btn btn-outline-primary-yellow"
     =image_tag("polygon-right-down.svg",  :class => "polygon-right-down")
 
     %div.margin-top
@@ -119,6 +119,17 @@
   $("#search").keyup(function (e) {
     root_path="#{root_path}"
     $.ajax({ type: "GET", url: root_path+"?search="+$('#search').val(), success: function(result){
+    }});
+  });
 
+  $("#option1").click(function() {
+    root_path="#{root_path}"
+    $.ajax({ type: "GET", url: root_path+"?search_type=secundaria", success: function(result){
+    }});
+  });
+
+  $("#option2").click(function() {
+    root_path="#{root_path}"
+    $.ajax({ type: "GET", url: root_path+"?search_type=utu", success: function(result){
     }});
   });

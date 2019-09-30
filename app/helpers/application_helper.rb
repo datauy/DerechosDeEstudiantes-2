@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def alert_class_for(flash_type)
     case flash_type.to_sym
     when :success
@@ -18,6 +19,11 @@ module_function :alert_class_for
   def form_errors_class(object)
     if object.send(:errors).present?
       "has-errors"
+    end
+  end
+  def is_activated(value)
+    if value
+      "active"
     end
   end
 end
