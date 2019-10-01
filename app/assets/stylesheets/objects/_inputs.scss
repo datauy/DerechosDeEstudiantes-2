@@ -11,6 +11,20 @@
     box-shadow: none;
   }
 }
+
+select{
+  border: none;
+  width: 88%;
+  background-color: #fff;
+  margin-left: 10px;
+  margin-top: 5px;
+  &:focus, &:active, &:focus{
+    outline: none;
+    border: none;
+    outline: 0px;
+    box-shadow: none;
+  }
+}
 .fa-search{
   text-align: center;
   top: 50%;

@@ -1,0 +1,30 @@
+/ Modal question
+#questionModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "questionModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog.modal-lg{:role => "document"}
+    .modal-content
+      .modal-body
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+        =image_tag("paloma.svg", class: "logo")
+        %p.text-p=t('.title_html')
+
+        .row.justify-content-md-center
+          .input-group
+            %span
+              .text-input=t('.depto')
+            %input.form-control{:placeholder => "", :type => "text"}/
+          .input-group
+            %span
+              .text-input=t('.institution')
+            =select(:institution, :institution_id, @json_establecimientos['establecimientos'].map {|v| [ v['nombre'], v['id'] ] }, class: "form-control")
+          .input-group
+            %span
+              .text-input=t('.grade')
+            %input.form-control{:placeholder =>  "", :type => "text"}/
+          .input-group
+            %span
+              .text-input=t('.question')
+            %textarea.form-control{:placeholder =>  ""}
+          .complain-btn
+            %a.threedbutton{"aria-label" => "Close", "data-dismiss" => "modal", "data-toggle": "modal", "data-target": "#sendModal"}
+              =t('.send')

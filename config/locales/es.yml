@@ -28,7 +28,13 @@ es:
   shared:
     footer:
       copyright: '© 2019 Derechos del Estudiante'
-
+    modal_form:
+      title_html: 'Envianos tu pregunta y te vamos<br>a responder lo antes posible'
+      institution: 'Institución'
+      grade: 'Grado'
+      depto: 'Departamento'
+      question: 'Pregunta'
+      send: 'Enviar'
     navbar:
       title_html: 'Envianos tu pregunta y te vamos<br>a responder lo antes posible'
       institution: 'Institución'

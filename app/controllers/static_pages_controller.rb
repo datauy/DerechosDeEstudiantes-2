@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   before_action :set_serch_type, only: [:index]
+  before_action :get_establecimientos_json
 
   def index
     if params[:search]
@@ -25,5 +26,10 @@ class StaticPagesController < ApplicationController
     else
       session[:search_type] = "secundaria"
     end
+  end
+
+  def get_establecimientos_json
+    @json_establecimientos = get_establecimientos(session[:search_type])
+    puts @json_establecimientos
   end
 end
