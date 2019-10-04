@@ -6,4 +6,108 @@
     object-fit: contain;
   }
 }
+/****** MENU *****/
+.menu-btn {
+    display: none;
+}
+.menu-icon {
+  cursor: pointer;
+  margin: 20px 1rem 0 auto;
+  padding: 24px 0;
+  width: 50px;
+  height: 50px;
+  border: solid 2.5px $medium-gray;
+  background-color: #ffdd6e;
+  border-radius: 25px;
+  z-index: 6;
+  & .navicon {
+    height: 3px;
+    width: 25px;
+    margin: 0 10px;
+    border-radius: 1.5px;
+    background-color: $medium-gray;
+    display: block;
+    position: relative;
+    transition: background .2s ease-out;
+  }
+  & .navicon::before,
+  & .navicon::after {
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: $medium-gray;
+    content: '';
+    display: block;
+    position: absolute;
+    transition: all .2s ease-out;
+  }
+  & .navicon::after {
+    top: -4.9px;
+    width: 100%;
+    margin-top: -3px;
+  }
+  & .navicon::before {
+    top: 4.9px;
+    width: 11px;
+    left: 14px;
+    margin-top: 3px;
+  }
+}
+#menu-wrapper {
+  display: none;
+  background-color: $blue-text;
+  position: absolute;
+  z-index: 2;
+  min-height: 100vh;
+  width: 90%;
+  top: 0;
+  left: 10%;
+  border-top-left-radius: 71px;
+  padding: 108px 0 0 20%;
+}
+.menu-logo {
+  margin: 46px 0;
+  float: left;
+}
+/* Menu Open */
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+.menu-btn:checked ~ .menu-icon .navicon::after {
+    transform: rotate(50deg);
+    width: 130%;
+    left: -2px;
+    top: 1px;
+}
+.menu-btn:checked ~ .menu-icon .navicon::before {
+  transform: rotate(-50deg);
+  width: 130%;
+  left: -2px;
+  top: -5px;
+}
+.menu-btn:checked ~ #menu-wrapper {
+  display: block;
 
+}
+
+/* Menu Links */
+.menu-link {
+  font-size: 22px;
+  color: #fff;
+  width: 100%;
+  float: left;
+  margin: 20px 0;
+}
+.menu-link.active {
+  font-weight: bold;
+    color: #003087;
+}
+.menu-link.active::before {
+  width: 60px;
+  height: 1px;
+  border: solid 2px #003087;
+  content: '';
+  display: block;
+  position: relative;
+  left: -73px;
+  top: 22px;
+}
