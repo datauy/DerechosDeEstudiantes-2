@@ -27,9 +27,4 @@ class StaticPagesController < ApplicationController
       session[:search_type] = "secundaria"
     end
   end
-
-  def get_establecimientos_json
-    @json_establecimientos = get_establecimientos(session[:search_type])
-    puts @json_establecimientos
-  end
 end

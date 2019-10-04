@@ -1,4 +1,5 @@
 class ComplainsController < ApplicationController
+  before_action :get_establecimientos_json
   def index
   end
 
