@@ -1,9 +1,9 @@
 class StaticPagesController < ApplicationController
   before_action :set_serch_type, only: [:index]
-  before_action :get_establecimientos_json
+  before_action :get_institutions_json, :get_locations_json
 
   def index
-    if params[:search]
+    if params[:search] || params[:search_type]
       @questions = Question.by_school_type(session[:search_type]).search_by_full_name(params[:search]).with_pg_search_highlight
       respond_to do |format|
           format.js{

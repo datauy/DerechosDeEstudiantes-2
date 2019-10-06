@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :get_establecimientos_json
+  before_action :get_institutions_json, :get_locations_json
 
   def index
     @questions = Question.by_school_type(session[:search_type]).order(:title).page params[:page]
