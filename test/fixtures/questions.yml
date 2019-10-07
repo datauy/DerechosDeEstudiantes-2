@@ -1,7 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  location: MyString
+  institution: MyString
+  grade: 1
+  question: MyText
 
 two:
-  title: MyString
+  location: MyString
+  institution: MyString
+  grade: 1
+  question: MyText

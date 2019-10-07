@@ -4,7 +4,8 @@ class StaticPagesController < ApplicationController
 
   def index
     if params[:search] || params[:search_type]
-      @questions = Question.by_school_type(session[:search_type]).search_by_full_name(params[:search]).with_pg_search_highlight
+      @questions = Question.search_by_full_name(params[:search]).with_pg_search_highlight
+      @rights = Right.by_school_type(session[:search_type]).search_by_full_title(params[:search]).with_pg_search_highlight
       respond_to do |format|
           format.js{
             render :template => "static_pages/index.js.haml",
