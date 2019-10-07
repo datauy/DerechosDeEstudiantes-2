@@ -16,7 +16,7 @@
         .row.max-parent.search-row
           .col-md-12
             .tag-search1
-              Derecho
+              Pregunta
       -@rights.each_with_index do |right, index|
         .row.max-parent.search-top-row
           .col-md-10
@@ -32,13 +32,13 @@
         .row.max-parent.search-row
           .col-md-12
             .tag-search1
-              Pregunta
+              Derecho
             .tag-search2
               =right.school_type
     .input-group-btn
       .row.max-parent
         .col-md-6.search-buttons
-          =link_to "Ver todas las respuestas", questions_path
+          =link_to "Ver todas las preguntas", questions_path
         .col-md-6.search-buttons
-          =link_to "No encuentro la respuesta", questions_path
+          =link_to "No encuentro el derecho", rights_path
 

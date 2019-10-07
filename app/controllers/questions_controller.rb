@@ -2,11 +2,24 @@ class QuestionsController < ApplicationController
   before_action :get_institutions_json, :get_locations_json
 
   def index
-    @questions = Question.by_school_type(session[:search_type]).order(:title).page params[:page]
+    @questions = Question.all.order(:message).page params[:page]
   end
 
   def show
     @question = Question.find(params[:id])
-    @questions = Question.by_school_type_not_current(session[:search_type], @question )
+  end
+
+  def create
+    @question = Question.new(question_params)
+    respond_to do |format|
+      if @question.save
+        return true
+      end
+    end
+  end
+
+  private
+  def question_params
+    params.require(:question).permit(:location, :institution, :grade, :message)
   end
 end

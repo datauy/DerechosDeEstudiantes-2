@@ -7,6 +7,6 @@ class RightsController < ApplicationController
 
   def show
     @right = Right.find(params[:id])
-    @rights = Right.by_school_type_not_current(session[:search_type], @rights)
+    @rights = Right.by_school_type_not_current(session[:search_type], @right)
   end
 end
