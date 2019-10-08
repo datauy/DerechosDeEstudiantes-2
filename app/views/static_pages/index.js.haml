@@ -1,3 +1,4 @@
 :plain
+  $('.table-responsive').html("#{escape_javascript(render 'searcher')}");
   $('.modal_form').html("#{escape_javascript(render 'shared/modal_form')}");
-  $('.table-responsive').html("#{escape_javascript(render 'questions')}");
+  $('.buttons-selected').html("#{escape_javascript(render 'buttons')}");

@@ -28,20 +28,19 @@ es:
   shared:
     footer:
       copyright: '© 2019 Derechos del Estudiante'
+    dialog_error:
+      search:
+        error: 'Antes de buscar, tenés que seleccionar si sos estudiante de Secundaria o UTU aquí.'
     modal_form:
       title_html: 'Envianos tu pregunta y te vamos<br>a responder lo antes posible'
+      name: 'Nombre'
+      email: 'Correo'
       institution: 'Institución'
       grade: 'Grado'
-      depto: 'Departamento'
+      depto: 'Localidad'
       question: 'Pregunta'
       send: 'Enviar'
     navbar:
-      title_html: 'Envianos tu pregunta y te vamos<br>a responder lo antes posible'
-      institution: 'Institución'
-      grade: 'Grado'
-      depto: 'Departamento'
-      question: 'Pregunta'
-      send: 'Enviar'
       title_send: 'Tu mensaje fue enviado'
       message_send: 'Gracias por reportar y ayudar'
       close: 'Cerrar'

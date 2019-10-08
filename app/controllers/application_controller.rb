@@ -1,11 +1,22 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  helper_method :get_establecimientos
-  def get_establecimientos(name)
+  def get_json_response(url)
     require 'open-uri'
-    url = "https://ee-backend.development.datauy.org/api/busca-establecimientos?nombre=arti&subsis=#{name}"
     return JSON.load(open(url))
   end
 
+  helper_method :get_institutions_json
+  def get_institutions_json
+    @json_institutions = get_json_response(
+      "https://ee-backend.development.datauy.org/api/busca-establecimientos?nombre=arti&subsis=#{session[:search_type]}"
+    )
+  end
+
+  helper_method :get_locations_json
+  def get_locations_json
+    @json_locations = get_json_response(
+      "https://ee-backend.development.datauy.org/api/ubicaciones"
+    )
+  end
 end

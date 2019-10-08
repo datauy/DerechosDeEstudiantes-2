@@ -51,6 +51,8 @@ select{
   z-index: 1000000;
   margin-top: 15px;
   width: 97%;
+  height: 400px;
+  padding-top: 20px;
   border-radius: 27.6px;
   border: 1.2px $medium-gray solid;
   text-align: left;
@@ -63,6 +65,14 @@ select{
   letter-spacing: normal;
   color: #000000;
   position: absolute;
+  .input-group-btn{
+    border-top: 1.2px $medium-gray solid;
+  }
+  .div-scroll{
+    height: 270px;
+    overflow:scroll;
+    overflow-x:hidden;
+  }
   a{
     color: $blue-text;
   }

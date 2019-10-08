@@ -14,7 +14,7 @@
         .text-p-tags
           =t('.search_in')
         .tag-search1
-          Pregunta
+          Derecho
         .tag-search2
           -if session[:search_type]
             =session[:search_type].capitalize
@@ -25,7 +25,7 @@
     %div.margin-top
     =image_tag("polygon-big-right.svg",  :class => "polygon-big-right")
     =image_tag("polygon-big-left.svg",  :class => "polygon-big-left")
-    -@questions.each do |question|
+    -@rights.each do |right|
       .row.justify-content-md-center
         .col-md-10
           .label-solid
@@ -33,19 +33,19 @@
               .row
                 .col-md-6
                   .tag-answer
-                    Pregunta
+                    Derecho
                 .col-md-6.right.c_gray
-                  Enviado #{question.created_at.to_time.strftime("%e de #{t(question.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
+                  Enviado #{right.created_at.to_time.strftime("%e de #{t(right.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
             %hr
             .row
               .col-md-12
                 .text-p
-                  %p=question.message
+                  %p=right.title
             .row.justify-content-end
-              =link_to question_path(question) do
+              =link_to right_path(right) do
                 .btn-shape
                   Ver detalle
     .row.pagination.justify-content-center
-      = paginate @questions, outer_window: 4
+      = paginate @rights, outer_window: 4
 %footer-answer.sticky-footer.max-parent
   =render "shared/footer"

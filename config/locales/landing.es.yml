@@ -1,5 +1,8 @@
 es:
   static_pages:
+    buttons:
+      secundaria: 'SECUNDARIA'
+      utu: 'UTU'
     index:
       search:
         placeholder: 'Por ejemplo: Alerta meteorológica...'

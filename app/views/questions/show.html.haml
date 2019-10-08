@@ -1,47 +1,48 @@
-=image_tag("polygon-top-yellow.svg",  :class => "polygon-top")
+=image_tag("polygon-top.svg",  :class => "polygon-top")
 =render "shared/navbar"
 
-.container
+.container.question-container
   .questions
-    =image_tag("polygon-right-question.svg",  :class => "polygon-right-question")
     .row.justify-content-md-center.padding-top
+      =image_tag("polygon-answer-right.svg",  :class => "polygon-answer-right")
       .col-md-8
         %a.threedbutton{:href => "#{root_path}"}
           %i.fas.fa-arrow-left=t('.button_back')
       .col-md-4
-        =image_tag("foco.svg")
+        =image_tag("paloma.svg")
     .row.justify-content-md-center.text-main
       .col-md-8
         .text-p-tags
           =t('.search_in')
         .tag-search1
-          Derecho
+          Pregunta
         .tag-search2
           -if session[:search_type]
             =session[:search_type].capitalize
     .row.justify-content-md-center.text-main
-      =image_tag("polygon-left-question.svg",  :class => "polygon-left-question")
       .col-md-8
         .text-title
-          =t('.title')
-        .custome-list
-          %ul
-            %li La Asamblea Nacional de Estudiantes de Enseñanza Secundaria.
-            %li Las Mesas Representativas de Estudiantes.
-            %li Los Consejos de Participación Liceal.
-
-        %p.text-p-answer=t('.description')
-
-    .row.justify-content-md-center.text-main
+          =@question.message
+    %div.margin-top
+    .row.justify-content-md-center
+      =image_tag("polygon-answer-left.svg",  :class => "polygon-answer-left")
       .col-md-8
-        .tag-search1
-          tag 1
-        .tag-search2
-          tag 2
-        .tag-search3
-          tag 3
-        .tag-search4
-          tag 4
+        -@answers.each do |answer|
+          -if answer.is_user
+            .row
+              .col-md-10
+                .label-solid-answer
+                  .p-answers
+                    =answer.message
+          -else
+            .row
+              .col-md-2.center
+                =image_tag("answer.svg")
+              .col-md-10
+                .label-solid-answer
+                  .p-answers
+                  =answer.message
+
     %div.margin-top
     .row.justify-content-md-center.center
       .col-md-6
@@ -55,6 +56,7 @@
           .col-md-6
             %a.threedbutton2{"data-toggle": "modal", "data-target": "#sendModal"}
               =t('.btn_yes')
+
     #form-more-help.row.justify-content-md-center.gone
       .col-md-8
         .input-group
@@ -73,29 +75,6 @@
           %a.threedbutton{"data-toggle": "modal", "data-target": "#sendModal"}
             =t('.send')
 
-    .row.justify-content-md-center.center
-      .col-md-12
-        .text-we-can=t('.other_questions')
-    -@questions.each do |question|
-      .row.justify-content-md-center
-        .col-md-10
-          .label-solid
-            .div-title
-              .row
-                .col-md-6
-                  .tag-answer
-                    Pregunta
-                .col-md-6.right.c_gray
-                  Enviado #{question.created_at.to_time.strftime("%e de #{t(question.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
-            %hr
-            .row
-              .col-md-12
-                .text-p
-                  %p=question.title
-            .row.justify-content-end
-              =link_to question_path(question) do
-                .btn-shape
-                  Ver detalle
 
     %div.margin-top
     .row.justify-content-md-center
@@ -116,11 +95,8 @@
                 %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 
 
-
-
 %footer-answer.sticky-footer.max-parent
   =render "shared/footer"
-
 
 :javascript
   function show_form(){

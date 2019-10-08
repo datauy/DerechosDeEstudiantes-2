@@ -20,22 +20,23 @@
       .col-md-auto
         .text-know-subtitle
           =t('.know.subtitle')
-        .btn-group.btn-group-toggle{"data-toggle" => "buttons"}
-          %label.btn.btn-secondary#option1{class: is_activated(session[:search_type]=="secundaria")}
-            %input#option1{:autocomplete => "off", :checked => "checked", :name => "options", :type => "radio"}/
-            Secundaria
-          %label.btn.btn-secondary#option2{class: is_activated(session[:search_type]=="utu")}
-            %input#option2{:autocomplete => "off", :name => "options", :type => "radio"}/
-            UTU
+    %div.margin-top
+    .buttons-selected
+      =render "buttons"
+
     .row.justify-content-md-center
       .col-md-8
         .input-group
           %input.form-control{:placeholder => t('.search.placeholder'), :type => "text", :id=> "search"}/
-          =link_to questions_path do
-            %span.dot
-              %i.fas.fa-search{"aria-hidden" => "true"}
+          %span.dot
+            %i.fas.fa-search{"aria-hidden" => "true"}
         .table-responsive
-          =render 'questions'
+          =render 'searcher'
+
+    .row.justify-content-md-center
+      .col-md-8
+        .dialog-error
+
 
     .row.justify-content-md-center
       .col-md-auto
@@ -113,23 +114,29 @@
 %footer-landing.sticky-footer.max-parent
   =render "shared/footer"
 
-
-
 :javascript
   $("#search").keyup(function (e) {
-    root_path="#{root_path}"
-    $.ajax({ type: "GET", url: root_path+"?search="+$('#search').val(), success: function(result){
-    }});
+    if ($(".unclic")[0]){
+      root_path="#{root_path}"
+      $.ajax({ type: "GET", url: root_path+"?search="+$('#search').val(), success: function(result){
+      }});
+    }else{
+      $('.dialog-error').html("#{escape_javascript(render 'shared/dialog_error')}");
+      $(".alert").delay(2000).slideUp(200, function() {
+        if ($.isFunction($(this).alert)) {
+          $(this).alert('close');
+        }
+      });
+    }
   });
 
-  $("#option1").click(function() {
-    root_path="#{root_path}"
-    $.ajax({ type: "GET", url: root_path+"?search_type=secundaria", success: function(result){
-    }});
-  });
-
-  $("#option2").click(function() {
-    root_path="#{root_path}"
-    $.ajax({ type: "GET", url: root_path+"?search_type=utu", success: function(result){
-    }});
+  $("#search").click(function (e) {
+   if (!$(".unclic")[0]){
+      $('.dialog-error').html("#{escape_javascript(render 'shared/dialog_error')}");
+      $(".alert").delay(2000).slideUp(200, function() {
+        if ($.isFunction($(this).alert)) {
+          $(this).alert('close');
+        }
+      });
+    }
   });
