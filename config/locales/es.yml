@@ -28,6 +28,9 @@ es:
   shared:
     footer:
       copyright: '© 2019 Derechos del Estudiante'
+    dialog_error:
+      search:
+        error: 'Antes de buscar, tenés que seleccionar si sos estudiante de Secundaria o UTU aquí.'
     modal_form:
       title_html: 'Envianos tu pregunta y te vamos<br>a responder lo antes posible'
       institution: 'Institución'

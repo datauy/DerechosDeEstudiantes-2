@@ -20,12 +20,8 @@ class StaticPagesController < ApplicationController
 
   private
   def set_serch_type
-    if session[:search_type]
-      if params[:search_type]
-        session[:search_type] = params[:search_type]
-      end
-    else
-      session[:search_type] = "secundaria"
+    if params[:search_type]
+      session[:search_type] = params[:search_type]
     end
   end
 end
