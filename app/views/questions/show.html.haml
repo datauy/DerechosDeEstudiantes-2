@@ -1,7 +1,7 @@
 =image_tag("polygon-top.svg",  :class => "polygon-top")
 =render "shared/navbar"
 
-.container
+.container.question-container
   .questions
     .row.justify-content-md-center.padding-top
       =image_tag("polygon-answer-right.svg",  :class => "polygon-answer-right")
@@ -27,19 +27,21 @@
     .row.justify-content-md-center
       =image_tag("polygon-answer-left.svg",  :class => "polygon-answer-left")
       .col-md-8
-        -3.times do |x|
-          .row
-            .col-md-10
-              .label-solid-answer
-                .p-answers
-                  ¿Me ponen falta si no voy un dia de Alerta Meteorologica?
-          .row
-            .col-md-2.center
-              =image_tag("answer.svg")
-            .col-md-10
-              .label-solid-answer
-                .p-answers
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis tincidunt ante, scelerisque molestie ante condimentum a. Aenean consectetur quis quam eget interdum.
+        -@answers.each do |answer|
+          -if answer.is_user
+            .row
+              .col-md-10
+                .label-solid-answer
+                  .p-answers
+                    =answer.message
+          -else
+            .row
+              .col-md-2.center
+                =image_tag("answer.svg")
+              .col-md-10
+                .label-solid-answer
+                  .p-answers
+                  =answer.message
 
     %div.margin-top
     .row.justify-content-md-center.center

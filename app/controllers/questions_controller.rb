@@ -7,6 +7,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+    @answers = Answer.by_question(@question)
   end
 
   def create

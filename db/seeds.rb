@@ -7,6 +7,7 @@ if Rails.env.development?
   grades = [1,2,3]
   25.times do
     Question.create({location: locations.sample, institution: institutions.sample, grade:  grades.sample, message: FFaker::LoremIE.question})
+
   end
 
   institutions=['CECAP - ARTIGAS', 'ESCUELA TECNICA ARTIGAS', 'ESCUELA AGRARIA ARTIGAS', 'C. E. C. SAN MARTIN']
