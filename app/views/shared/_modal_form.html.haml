@@ -11,6 +11,14 @@
           .row.justify-content-md-center
             .input-group
               %span
+                .text-input=t('.name')
+              =f.text_field "name", id: "name", :class => "form-control"
+            .input-group
+              %span
+                .text-input=t('.email')
+              =f.email_field "email", id: "email", :class => "form-control"
+            .input-group
+              %span
                 .text-input=t('.depto')
               =f.select(:location, @json_locations.collect {|v| [ v['nombre'], v['nombre'] ] }, class: "form-control")
             .input-group
@@ -31,8 +39,8 @@
 
 :javascript
   $('#send_question').click(function() {
-    if($('#message').val() === ""){
-      toastr.error('Por favor dejanos una pregunta', 'Error!')
+    if($('#message').val() === "" || $('#name').val() === "" || $('#email').val() === ""){
+      toastr.error('Por favor llena todos los datos', 'Error!')
     }
     else{
       $( "form" ).first().submit();

@@ -16,11 +16,12 @@ class QuestionsController < ApplicationController
       if @question.save
         return true
       end
+      return false
     end
   end
 
   private
   def question_params
-    params.require(:question).permit(:location, :institution, :grade, :message)
+    params.require(:question).permit(:name, :email, :location, :institution, :grade, :message)
   end
 end
