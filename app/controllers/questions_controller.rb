@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
 
   def index
     @questions = Question.all.order(:message).page params[:page]
+    @rights = Right.by_school_type(session[:search_type]).order(:title).page params[:page]
   end
 
   def show

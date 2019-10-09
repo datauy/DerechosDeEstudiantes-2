@@ -28,7 +28,7 @@
                 - if question.respond_to?(:pg_search_highlight)
                   = question.pg_search_highlight.html_safe
                 - else
-                  = question.title
+                  = question.message
           .col-md-2.right.c_blue-text
             =link_to question_path(question) do
               %i.fas.fa-arrow-right
