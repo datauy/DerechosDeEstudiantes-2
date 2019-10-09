@@ -62,10 +62,9 @@
     .row.justify-content-md-center
       .col-md-8.center
         .text-know-title.max-parent
-          Lorem Ipsum
+          =t('.title_section_two')
         .text-know-p.max-parent
-          consectetuer adipiscing
-
+          =t('.description_section_two')
     .row.justify-content-md-center.section_main
       .col-md-10
         .label-solid
@@ -74,16 +73,16 @@
               =image_tag("section_1.svg",  :class => "icono")
             .col-md-6
               .text-title
-                Titulo sección
+                =t('.card_one_title')
               %hr
               .text-p
                 %p
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                  =t('.card_one_description')
           .row.justify-content-end
             .col-md-6
               .btn-shape
                 .subtext-title
-                  Compartí este derecho en
+                  =t('.shared')
                   =image_tag("facebook.svg")
                   =image_tag("twitter.svg")
 
@@ -94,11 +93,11 @@
           .row.padding-section-main
             .col-md-6
               .text-title
-                Titulo sección
+                =t('.card_two_title')
               %hr
               .text-p
                 %p
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                  =t('.card_two_description')
             .col-md-6
               =image_tag("section_2.svg",  :class => "icono")
 
@@ -106,7 +105,7 @@
             .col-md-6.left
               .btn-shape-left
                 .subtext-title
-                  Compartí este derecho en
+                  =t('.shared')
                   =image_tag("facebook.svg")
                   =image_tag("twitter.svg")
             .col-md-6
