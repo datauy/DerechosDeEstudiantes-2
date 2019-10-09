@@ -1,16 +1,15 @@
 es:
   complains:
     new:
-      title: 'Denuncias confidenciales'
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices purus a ullamcorper egestas. Sed dui massa, con
-magna et, mattis dignissim enim.'
+      title: 'Denuncias anónimas'
+      description: 'Tu denuncia será recibida directamente en el Consejo de Educación Secundaria (CES) o la Unidad Coordinadora de Atención al Estudiante (UCAE, UTU), no por tu centro de estudio. Se tratará con confidencialidad en todo el proceso. Este formulario es exclusivamente para temas que requieran confidencialidad por ser delicados y/o exponer a personas involucradas. Para consultas regulares, utilizar el formulario de consultas.'
       button_back: 'Volver'
-      instructions_title: 'No publicaremos ninguno de tus datos'
-      instructions_p: 'Te responderemos a tu email'
+      instructions_title: 'Las denuncias en este formulario no quedarán visibles en el sitio web.'
+      instructions_p: 'Pedimos un correo electrónico para comunicar respuestas o ampliar la información.'
       name_placeholder: 'Nombre apellido'
       email_placeholder: 'correo@mail.com'
       message_placeholder: 'Describe ...'
-      name: 'Nombre'
+      name: 'Nombre (opcional)'
       email: 'Correo'
       message: 'Mensaje'
       send: 'Enviar'
