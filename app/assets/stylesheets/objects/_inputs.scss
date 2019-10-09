@@ -2,14 +2,37 @@
   border: none;
   margin-left: 5px;
   margin-right: 5px;
-
+  font-family: SourceSansPro-It;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.34px;
   &:focus, &:active, &:focus{
     outline: none;
     border: none;
     outline:0px;
     -webkit-appearance:none;
     box-shadow: none;
+    opacity: 1;
+    font-style: normal;
   }
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-style: italic;
+  opacity: 0.33;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-style: italic;
+  opacity: 0.33;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  font-style: italic;
+  opacity: 0.33;
 }
 
 select{
@@ -36,7 +59,6 @@ select{
 }
 
 .input-group{
-  margin-top: 30px;
   border-radius: 27.6px;
   border: 1.2px $medium-gray solid;
   padding: 10px;
