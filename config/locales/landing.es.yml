@@ -9,22 +9,22 @@ es:
       secundaria: 'SECUNDARIA'
       utu: 'UTU'
     index:
-      title_section_two: 'Lorem Ipsum'
-      description_section_two: 'consectetuer adipiscing'
-      card_one_title: 'Titulo sección'
-      card_one_description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.'
-      shared: 'Compartí este derecho en'
-      card_two_title: 'Titulo sección'
-      card_two_description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.'
+      title_section_two: 'Sugerencias'
+      description_section_two: 'Para hacer valer tus derechos.'
+      card_one_title: 'Elijo Estudiar'
+      card_one_description: 'Conocé todas las opciones, cursos y centros para estudiar en Educación Pública Inicial, Primaria, Secundaria, UTU y Formación en Educación en <a href="http://elujoestudiar.edu.uy">ElijoEstudiar.edu.uy</a>.'
+      shared: 'Compartir'
+      card_two_title: 'VOS'
+      card_two_description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="https://www.anep.edu.uy">Descargala aquí</a>.'
       search:
         placeholder: 'Por ejemplo: Alerta meteorológica...'
       know:
         title: '¿Qué querés saber?'
-        description: 'Este es un espacio para que puedas conocer más sobre los derechos que tenés como estudiante de educación secundaria.'
-        subtitle: 'SELECCIONÁ DONDE BUSCAMOS'
+        description: 'Buscá sobre cualquier tema que tengas dudas. Si no encontrás la respuesta, no te preocupes, vas a poder hacer una nueva consulta y recibir una respuesta.'
+        subtitle: 'SELECCIONÁ DONDE ESTÁS ESTUDIANDO:'
       complain:
         title: 'Denuncias anónimas'
-        description: 'Este es un espacio para que puedas conocer más sobre los derechos que tenés como estudiante de educación secundaria.'
+        description: 'Si querés contarnos una situación que no querés o podés hacer públicamente, usá este formulario. No queda visible en la web, ni le llega a las autoridades de tu centro educativo.'
         button_ok: 'Reportar aquí'
     about_us:
       title: 'Sobre Nosotros'
