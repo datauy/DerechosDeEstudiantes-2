@@ -4,6 +4,9 @@ es:
       title: 'Resultados'
       button_back: 'Volver'
       search_in: 'BUSCASTE EN'
+      right: 'Derecho'
+      question: 'Pregunta'
+      details: 'Ver detalle'
     show:
       title: 'Tenés espacios de participación en'
       button_back: 'Volver'

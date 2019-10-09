@@ -1,15 +1,27 @@
 es:
   static_pages:
+    searcher:
+      not_answers: 'No encuentro la respuesta'
+      show_all_questions: 'Ver todas las respuestas'
+      right: 'Derecho'
+      question: 'Pregunta'
     buttons:
       secundaria: 'SECUNDARIA'
       utu: 'UTU'
     index:
+      title_section_two: 'Lorem Ipsum'
+      description_section_two: 'consectetuer adipiscing'
+      card_one_title: 'Titulo sección'
+      card_one_description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.'
+      shared: 'Compartí este derecho en'
+      card_two_title: 'Titulo sección'
+      card_two_description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.'
       search:
         placeholder: 'Por ejemplo: Alerta meteorológica...'
       know:
         title: '¿Qué querés saber?'
         description: 'Este es un espacio para que puedas conocer más sobre los derechos que tenés como estudiante de educación secundaria.'
-        subtitle: 'BUSCAR EN'
+        subtitle: 'SELECCIONÁ DONDE BUSCAMOS'
       complain:
         title: 'Denuncias anónimas'
         description: 'Este es un espacio para que puedas conocer más sobre los derechos que tenés como estudiante de educación secundaria.'

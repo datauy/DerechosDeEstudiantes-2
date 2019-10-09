@@ -1,22 +1,6 @@
 -if (@questions && @questions.size > 0)|| (@rights && @rights.size > 0)
   .input-group-search
     .div-scroll
-      -@questions.each_with_index do |question, index|
-        .row.max-parent.search-top-row
-          .col-md-10
-            .row
-              .col-md-12
-                - if question.respond_to?(:pg_search_highlight)
-                  = question.pg_search_highlight.html_safe
-                - else
-                  = question.title
-          .col-md-2.right.c_blue-text
-            =link_to question_path(question) do
-              %i.fas.fa-arrow-right
-        .row.max-parent.search-row
-          .col-md-12
-            .tag-search1
-              Pregunta
       -@rights.each_with_index do |right, index|
         .row.max-parent.search-top-row
           .col-md-10
@@ -32,13 +16,29 @@
         .row.max-parent.search-row
           .col-md-12
             .tag-search1
-              Derecho
+              =t('.right')
             .tag-search2
               =right.school_type
+
+      -@questions.each_with_index do |question, index|
+        .row.max-parent.search-top-row
+          .col-md-10
+            .row
+              .col-md-12
+                - if question.respond_to?(:pg_search_highlight)
+                  = question.pg_search_highlight.html_safe
+                - else
+                  = question.message
+          .col-md-2.right.c_blue-text
+            =link_to question_path(question) do
+              %i.fas.fa-arrow-right
+        .row.max-parent.search-row
+          .col-md-12
+            .tag-search1
+              =t('.question')
     .input-group-btn
       .row.max-parent
         .col-md-6.search-buttons
-          =link_to "Ver todas las preguntas", questions_path
+          =link_to t('.show_all_questions'), questions_path
         .col-md-6.search-buttons
-          =link_to "No encuentro el derecho", rights_path
-
+          =link_to t('.not_answers'), rights_path, "data-toggle": "modal", "data-target": "#questionModal", id: "link-open-modal"

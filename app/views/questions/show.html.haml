@@ -57,24 +57,24 @@
             %a.threedbutton2{"data-toggle": "modal", "data-target": "#sendModal"}
               =t('.btn_yes')
 
-    #form-more-help.row.justify-content-md-center.gone
-      .col-md-8
-        .input-group
-          %span
-            .text-input=t('.name')
-          %input.form-control{:placeholder => "", :type => "text"}/
-        .input-group
-          %span
-            .text-input=t('.email')
-          %input.form-control{:placeholder => "", :type => "text"}/
-        .input-group
-          %span
-            .text-input=t('.message')
-          %textarea.form-control{:placeholder => ""}
-        .complain-btn
-          %a.threedbutton{"data-toggle": "modal", "data-target": "#sendModal"}
-            =t('.send')
-
+    = form_for :question, :url => {:controller => :questions, action: :create} do |f|
+      #form-more-help.row.justify-content-md-center.gone
+        .col-md-8
+          .input-group
+            %span
+              .text-input=t('.name')
+            =f.text_field "name", id: "name", :class => "form-control", value: ""
+          .input-group
+            %span
+              .text-input=t('.email')
+            =f.email_field "email", id: "email", :class => "form-control", value: ""
+          .input-group
+            %span
+              .text-input=t('.message')
+            =f.text_area "message", id: "message", :class => "form-control", value: ""
+          .complain-btn
+            %a.threedbutton{id: "send_answer", :submit => "form"}
+              =t('.send')
 
     %div.margin-top
     .row.justify-content-md-center
@@ -102,3 +102,17 @@
   function show_form(){
     $('#form-more-help').removeClass("gone").addClass("visible");
   }
+
+  $('#send_answer').click(function() {
+    if($('#email').val() === "" || $('#message').val() === ""){
+      toastr.error('Por favor llena al menos corroe y mensaje', 'Error!')
+    }
+    else{
+      $( "form" ).first().submit();
+    }
+  });
+  $( document ).ready(function() {
+    if("#{@message}"=="true"){
+      $('#sendModal').modal('show');
+    }
+  });

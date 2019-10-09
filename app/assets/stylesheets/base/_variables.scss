@@ -45,7 +45,7 @@ body{
 }
 
 .center{
-    text-align: center;
+    text-align: center !important;
 }
 
 .bottom{
@@ -59,6 +59,15 @@ body{
 .margin-top{
     margin-top: 50px;
 }
+
+.margin-top-big{
+    margin-top: 150px;
+}
+
+.margin-top-small{
+    margin-top: 20px;
+}
+
 .margin-bottom{
     margin-bottom: 30px;
 }

@@ -9,9 +9,9 @@
       .col-md-auto
         =image_tag("polygon-center.svg",  :class => "polygon-center")
         .row
-          .col-md-6
+          .col-md-5
             =image_tag("icono_saber.svg",  :class => "icono")
-          .col-md-6
+          .col-md-7
             .text-know-title
               =t('.know.title')
             .text-know-p
@@ -20,7 +20,7 @@
       .col-md-auto
         .text-know-subtitle
           =t('.know.subtitle')
-    %div.margin-top
+    %div
     .buttons-selected
       =render "buttons"
 
@@ -39,7 +39,7 @@
 
 
     .row.justify-content-md-center
-      .col-md-auto
+      .col-md-6
         .text-complain-title
           =t('.complain.title')
     .row.justify-content-md-center
@@ -47,7 +47,7 @@
         =image_tag("polygon-center.svg",  :class => "polygon-center-right")
         .row
           .col-md-6
-            %hr
+            %hr-title
             .text-complain-p
               =t('.complain.description')
           .col-md-6.right
@@ -58,13 +58,13 @@
         =link_to t('.complain.button_ok'), new_complain_path, class: "btn btn-outline-primary-yellow"
     =image_tag("polygon-right-down.svg",  :class => "polygon-right-down")
 
-    %div.margin-top
+    %div.margin-top-big
     .row.justify-content-md-center
       .col-md-8.center
-        .text-know-title.max-parent
-          Lorem Ipsum
-        .text-know-p.max-parent
-          consectetuer adipiscing
+        .text-know-title.max-parent.center
+          =t('.title_section_two')
+        .text-subsection-know-p.max-parent.center
+          =t('.description_section_two')
 
     .row.justify-content-md-center.section_main
       .col-md-10
@@ -72,19 +72,19 @@
           .row.padding-section-main
             .col-md-6
               =image_tag("section_1.svg",  :class => "icono")
-            .col-md-6
+            .col-md-6.space-right
               .text-title
-                Titulo sección
+                =t('.card_one_title')
               %hr
               .text-p
                 %p
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                  =t('.card_one_description')
           .row.justify-content-end
             .col-md-6
               .btn-shape
                 .subtext-title
-                  Compartí este derecho en
-                  =image_tag("facebook.svg")
+                  =t('.shared')
+                  .space=image_tag("facebook.svg")
                   =image_tag("twitter.svg")
 
 
@@ -92,13 +92,13 @@
       .col-md-10
         .label-solid
           .row.padding-section-main
-            .col-md-6
+            .col-md-6.space-left
               .text-title
-                Titulo sección
+                =t('.card_two_title')
               %hr
               .text-p
                 %p
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                  =t('.card_two_description')
             .col-md-6
               =image_tag("section_2.svg",  :class => "icono")
 
@@ -106,8 +106,8 @@
             .col-md-6.left
               .btn-shape-left
                 .subtext-title
-                  Compartí este derecho en
-                  =image_tag("facebook.svg")
+                  =t('.shared')
+                  .space=image_tag("facebook.svg")
                   =image_tag("twitter.svg")
             .col-md-6
 
