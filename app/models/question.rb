@@ -1,7 +1,7 @@
 class Question < ApplicationRecord
   has_many :answers
 
-  validates :message, :email,:name, presence: true
+  validates :message, :email, :name, :location, :institution, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
 
