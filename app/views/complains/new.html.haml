@@ -32,7 +32,7 @@
           .input-group
             %span
               .text-input=t('.name')
-            =f.text_field "name", id: "name", :class => "form-control"
+            =f.text_field "name", id: "name_complain", :class => "form-control"
           .input-group
             %span
               .text-input=t('.email')
@@ -40,7 +40,7 @@
           .input-group
             %span
               .text-input=t('.message')
-            =f.text_area "message", id: "message", :class => "form-control"
+            =f.text_area "message", id: "message_complain", :class => "form-control"
           .complain-btn
             %a.threedbutton{id: "send_complain", :submit => "form"}
               =t('.send')
@@ -49,11 +49,11 @@
 
 :javascript
   $('#send_complain').click(function() {
-    if($('#email').val() === "" || $('#message').val() === ""){
+    if($('#email_complain').val() === "" || $('#message_complain').val() === ""){
       toastr.error('Por favor llena al menos correo y mensaje', 'Error!')
     }
     else{
-      $( "form" ).first().submit();
+      $( "form" ).last().submit();
     }
   });
   $( document ).ready(function() {

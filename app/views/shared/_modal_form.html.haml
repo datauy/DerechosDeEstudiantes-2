@@ -22,14 +22,11 @@
                 .text-input=t('.depto')
               .autocomplete
                 =f.text_field "location", id: "location", :class => "form-control not-border", :value => "", :type => "text"
-
-              =#f.select(:location, @json_locations.collect {|v| [ v['nombre'], v['nombre'] ] })
             .input-group
               %span
                 .text-input=t('.institution')
               .autocomplete
                 =f.text_field "institution", id: "institution", :class => "form-control not-border", :value => "", :type => "text"
-              =#.select(:institution, @json_institutions['establecimientos'].collect {|v| [ v['nombre'], v['nombre'] ] }, class: "form-control")
             .input-group
               %span
                 .text-input=t('.grade')
