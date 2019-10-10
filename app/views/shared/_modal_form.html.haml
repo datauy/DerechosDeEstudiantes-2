@@ -20,11 +20,16 @@
             .input-group
               %span
                 .text-input=t('.depto')
-              =f.select(:location, @json_locations.collect {|v| [ v['nombre'], v['nombre'] ] }, class: "form-control")
+              .autocomplete
+                =f.text_field "location", id: "location", :class => "form-control not-border", :placeholder => "", :type => "text"
+
+              =#f.select(:location, @json_locations.collect {|v| [ v['nombre'], v['nombre'] ] })
             .input-group
               %span
                 .text-input=t('.institution')
-              =f.select(:institution, @json_institutions['establecimientos'].collect {|v| [ v['nombre'], v['nombre'] ] }, class: "form-control")
+              .autocomplete
+                =f.text_field "institution", id: "institution", :class => "form-control not-border", :placeholder => "", :type => "text"
+              =#.select(:institution, @json_institutions['establecimientos'].collect {|v| [ v['nombre'], v['nombre'] ] }, class: "form-control")
             .input-group
               %span
                 .text-input=t('.grade')
@@ -48,3 +53,10 @@
       $('#sendModal').modal('show');
     }
   });
+  $( document ).ready(function() {
+    var locations = "#{@array_locations}".split(',')
+    var institutions = "#{@array_institutions}".split(',')
+    autocomplete(document.getElementById("location"), locations);
+     autocomplete(document.getElementById("institution"), institutions);
+  });
+

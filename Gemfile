@@ -30,8 +30,6 @@ gem 'bootstrap', '~> 4.2.1'
 gem 'jquery-rails'
 gem "haml-rails", "~> 1.0"
 gem 'font-awesome-sass', '~> 5.9.0'
-gem 'bootstrap-datepicker-rails'
-
 gem 'devise'
 gem 'i18n'
 gem 'activeadmin'
@@ -40,7 +38,6 @@ gem 'kaminari'
 gem 'pg_search'
 gem 'toastr-rails'
 gem 'ffaker'
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
