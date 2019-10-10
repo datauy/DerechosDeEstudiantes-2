@@ -44,7 +44,7 @@
 
 :javascript
   $('#send_question').click(function() {
-    if($('#message').val() === "" || $('#name').val() === "" || $('#email').val() === ""){
+    if($('#message').val() === "" || $('#name').val() === "" || $('#email').val() === "" || $('#institution').val() === "" || $('#location').val() === ""){
       toastr.error('Por favor llena todos los datos', 'Error!')
     }
     else{
