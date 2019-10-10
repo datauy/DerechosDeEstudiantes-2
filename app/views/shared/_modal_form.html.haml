@@ -12,23 +12,23 @@
             .input-group
               %span
                 .text-input=t('.name')
-              =f.text_field "name", id: "name", :class => "form-control"
+              =f.text_field "name", id: "name", :class => "form-control", :value => ""
             .input-group
               %span
                 .text-input=t('.email')
-              =f.email_field "email", id: "email", :class => "form-control"
+              =f.email_field "email", id: "email", :class => "form-control", :value => ""
             .input-group
               %span
                 .text-input=t('.depto')
               .autocomplete
-                =f.text_field "location", id: "location", :class => "form-control not-border", :placeholder => "", :type => "text"
+                =f.text_field "location", id: "location", :class => "form-control not-border", :value => "", :type => "text"
 
               =#f.select(:location, @json_locations.collect {|v| [ v['nombre'], v['nombre'] ] })
             .input-group
               %span
                 .text-input=t('.institution')
               .autocomplete
-                =f.text_field "institution", id: "institution", :class => "form-control not-border", :placeholder => "", :type => "text"
+                =f.text_field "institution", id: "institution", :class => "form-control not-border", :value => "", :type => "text"
               =#.select(:institution, @json_institutions['establecimientos'].collect {|v| [ v['nombre'], v['nombre'] ] }, class: "form-control")
             .input-group
               %span
@@ -37,7 +37,7 @@
             .input-group
               %span
               .text-input=t('.question')
-              =f.text_area "message", id: "message", :class => "form-control"
+              =f.text_area "message", id: "message", :class => "form-control", :value => ""
             .complain-btn
               %a.threedbutton{id: "send_question", :submit => "form"}
                 =t('.send')
