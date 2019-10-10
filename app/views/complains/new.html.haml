@@ -14,9 +14,9 @@
     .row.justify-content-md-center.text-main
       .col-md-auto
         .row
-          .col-md-6
+          .col-md-5
             =image_tag("complain.svg",  :class => "icono")
-          .col-md-6
+          .col-md-7
             .text-title
               =t('.title')
             .text-p
@@ -50,7 +50,7 @@
 :javascript
   $('#send_complain').click(function() {
     if($('#email').val() === "" || $('#message').val() === ""){
-      toastr.error('Por favor llena al menos corroe y mensaje', 'Error!')
+      toastr.error('Por favor llena al menos correo y mensaje', 'Error!')
     }
     else{
       $( "form" ).first().submit();
