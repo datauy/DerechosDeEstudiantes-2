@@ -21,6 +21,7 @@
             =session[:search_type].capitalize
     .row.justify-content-md-center.text-main
       .col-md-8
+        = render partial: "shared/messages", flash: flash
         .text-title
           =@question.message
     %div.margin-top
@@ -57,7 +58,7 @@
             %a.threedbutton2{"data-toggle": "modal", "data-target": "#sendModal"}
               =t('.btn_yes')
 
-    = form_for :question, :url => {:controller => :questions, action: :create} do |f|
+    = form_for :answer, :url => {:controller => :answers, action: :create} do |f|
       #form-more-help.row.justify-content-md-center.gone
         .col-md-8
           .input-group
@@ -67,11 +68,13 @@
           .input-group
             %span
               .text-input=t('.email')
-            =f.email_field "email", id: "email", :class => "form-control", value: ""
+            =f.email_field "email", id: "email_answer", :class => "form-control", value: ""
           .input-group
             %span
               .text-input=t('.message')
-            =f.text_area "message", id: "message", :class => "form-control", value: ""
+            =f.text_area "message", id: "message_answer", :class => "form-control", value: ""
+
+          = hidden_field_tag 'question_id', @question.id
           .complain-btn
             %a.threedbutton{id: "send_answer", :submit => "form"}
               =t('.send')
@@ -104,11 +107,11 @@
   }
 
   $('#send_answer').click(function() {
-    if($('#email').val() === "" || $('#message').val() === ""){
-      toastr.error('Por favor llena al menos corroe y mensaje', 'Error!')
+    if($('#email_answer').val() === "" || $('#message_answer').val() === ""){
+      toastr.error('Por favor llena al menos correo y mensaje', 'Error!')
     }
     else{
-      $( "form" ).first().submit();
+      $( "form" ).last().submit();
     }
   });
   $( document ).ready(function() {
