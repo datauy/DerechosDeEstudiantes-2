@@ -15,7 +15,7 @@ es:
       card_one_description_html: 'Conocé todas las opciones, cursos y centros para estudiar en Educación Pública Inicial, Primaria, Secundaria, UTU y Formación en Educación en <a href="http://elujoestudiar.edu.uy">ElijoEstudiar.edu.uy</a>.'
       shared: 'Compartir'
       card_two_title: 'VOS'
-      card_two_description_html: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="https://www.anep.edu.uy">Descargala aquí</a>.'
+      card_two_description_html: 'Próximamente podrás acceder a la App VOS. En ella encontrarás tus calificaciones, horarios de clase, asistencias, entre otras cosas. <a href="https://www.anep.edu.uy">Descargala aquí</a>.'
       search:
         placeholder: 'Por ejemplo: Alerta meteorológica...'
       know:
@@ -28,9 +28,54 @@ es:
         button_ok: 'Reportar aquí'
     about_us:
       title: 'Sobre Nosotros'
-      text_left_html: 'Esta herramienta fue co-creada por el Consejo de Educación Secundaria (CES), UNICEF Uruguay y DATA Uruguay y permite a estudiantes, padres y actores educativos consultar fichas con información actualizada y completa sobre derechos de los estudiantes.<br><br> Además brinda una herramienta de consulta directa a los estudiantes, para que puedan conocer más sobre sus derechos, más allá de los temas cubiertos por las fichas. <br><br>En los casos donde la información buscada no se encuentra dentro del contenido existente, ni las consultas anteriores de otros estudiantes, un sencillo formulario permite enviar una consulta, que es'
-      text_right_html: 'recibida por diversos actores a nivel local de la institución de consulta y a nivel central, con participación de los representantes estudiantiles. De esta forma, se busca colaborar en fomentar la complementación en diversos niveles, procurando que existan respuestas para todas las consultas. La herramienta evolucionará con la participación de los estudiantes, actualizando su contenido para reflejar las inquietudes planteadas, así como los nuevos derechos adquiridos. <br><br>Si te interesa dar disfusión a este proyecto en tu liceo, barrio o en cualquier otro lugar, dejamos a disposición materiales de difusión para imprimir y/o usar en redes sociales.'
+      text_left_html: ''
+      text_right_html: ''
       button_back: 'volver'
+      
       subtitle-origen: 'Origen'
-      box_text_left_origen: 'En el marco de la colaboración entre el Consejo de Educación Secundaria (CES) y UNICEF Uruguay, se realizó como apoyo a las Mesas Representativas de Estudiantes de Secundaria una sistematización de toda la normativa interna del CES/ANEP reflejada en reglamentos, resoluciones y circulares que involucra derechos y deberes de los estudiantes. <br>El objetivo fue resumir y ordenar esa información dispersa y hacerla más accesible.'
-      box_text_right_origen: 'De allí nace una serie de fichas que buscan transmitir y acercar a los estudiantes información accesible, directa y breve sobre sus derechos en relación a diferentes áreas. Gracias a ese trabajo de sistematización, alumnos, docentes, adscriptos y padres pueden conocer mejor los derechos de los estudiantes. <br><br>Para dar difusión a esos derechos y al proyecto, se suma la organización de la sociedad civil DATA Uruguay, en busca de aportar desde la tecnología cívica.'
+      box_text_left_origen: 'Esta herramienta fue co-creada en por el <a href="http://www.ces.edu.uy/ces/">Consejo de Educación Secundaria</a> (CES), <a href="https://www.utu.edu.uy/">Consejo de Educación Técnico Profesional</a> (CETP/UTU), <a href="https://www.anep.edu.uy/">Administración Nacional de Educación Pública</a> (ANEP),  <a href="http://www.unicef.org/uruguay/spanish/">UNICEF Uruguay</a> y <a href="http://www.datauy.org/">DATA Uruguay</a> y permite a estudiantes, padres y actores educativos consultar preguntas con información actualizada y completa sobre derechos de estudiantes.<br>
+Además brinda una herramienta de consulta directa a estudiantes, para que puedan conocer más sobre sus derechos y recibir respuestas personalizadas a sus problemas e inquietudes.'
+      box_text_right_origen: 'En los casos donde la información buscada no se encuentra dentro del contenido existente, ni las consultas anteriores de estudiantes, un sencillo formulario permite enviar una consulta, que es recibida por el consejo correspondiente, que canaliza o realiza las consultas necesarias.<br>
+La herramienta evoluciona con la participación de los estudiantes, actualizando su contenido para reflejar las inquietudes planteadas, así como los nuevos derechos adquiridos.'
+      
+      subtitle-objetivos: 'Objetivos'
+      box_text_left_objetivos: 'El proyecto busca difundir los derechos de los y las estudiantes en los consejos participantes, así como fomentar una cultura de defensa, acceso y demanda de estos derechos.'
+      box_text_right_objetivos: 'En primer lugar, haciendo fácilmente accesible información sobre los mismos, pero también a través de los mecanismos de consulta y denuncia anónima, que permiten abordar situaciones particulares.'
+      
+      subtitle-antecedentes: 'Antecedentes'
+      box_text_left_antecedentes: 'En los años 2015-2016, dentro del marco de la colaboración entre el <a href="http://www.ces.edu.uy/ces/">Consejo de Educación Secundaria</a> (CES) y <a href="http://www.unicef.org/uruguay/spanish/">UNICEF Uruguay</a>, se realizó como apoyo a las Mesas Representativas de Estudiantes de Secundaria una sistematización de toda la normativa interna del CES/ANEP reflejada en reglamentos, resoluciones y circulares que involucra derechos y deberes de los estudiantes. El objetivo fue resumir y ordenar esa información dispersa y hacerla más accesible. De allí nace una serie de fichas que buscan transmitir y acercar a los estudiantes información accesible, directa y breve sobre sus derechos en relación a diferentes áreas.<br>
+Gracias a ese trabajo de sistematización, alumnos, docentes, adscriptos y padres pueden conocer mejor los derechos de los estudiantes. Para dar difusión a esos derechos y al proyecto, se suma la organización de la sociedad civil <a href="http://www.datauy.org/">DATA Uruguay</a>, en busca de aportar desde la tecnología cívica, ya que ha trabajado junto a diversas organizaciones aliadas en una serie de herramientas de temáticas como salud, servicios públicos, derechos humanos y sostenibilidad, entre otros temas (por más detalles consultar <a href="https://datauy.org/">sitio web</a> o <a href="https://drive.google.com/open?id=1oPDSaUWg_cR9TxxdhleIS2ZcucI2XazJ-aCkOaa6o2s">Dossier DATA Uruguay</a>).'
+      box_text_right_antecedentes: 'En junio de 2016 se lanza la primera versión de DerechosDelEstudiante.edu.uy (ahora DerechosDeEstudiantes.edu.uy) en base a esa información del CES. En 2019, en base al éxito de la herramienta y un crecimiento sostenido desde su lanzamiento, se decide crear una nueva versión con mejoras de usabilidad, interfaz y diseño, pero crucialmente, incorporando al <a href="https://www.utu.edu.uy/">Consejo de Educación Técnico Profesional</a> (CETP/UTU) y la <a href="https://www.anep.edu.uy/">Administración Nacional de Educación Pública</a> (ANEP) al proyecto, llegando a su conformación actual.<br>
+Al momento del cambio de versión (octubre 2019), con tres años y cuatro meses en línea, la versión 1.0 de la herramienta sumó aproximadamente 85.000 usuarios/as únicos/as, más de 100.000 sesiones y aprox. 325.000 páginas vistas.'
+      
+      subtitle-da: 'Datos Abiertos que utiliza la aplicación'
+      box_text_left_da: 'Los datos utilizados en esta aplicación se encuentran disponibles para su reutilización a través del <a href="https://catalogodatos.gub.uy/">Catálogo Nacional de Datos Abiertos</a> de AGESIC y otras fuentes, como <a href="http://opendefinition.org/od/2.1/es/">datos abiertos</a>, en formatos abiertos.
+<br>
+<ul>
+<li><a href="https://catalogodatos.gub.uy/dataset?organization=anep&q=ANEP">ANEP - Centros educativos y oferta educativa</a>
+<li><a href="https://catalogodatos.gub.uy/dataset/localidades-del-uruguay">IDE.uy - Localidades de Uruguay</a>
+</li>
+</ul>'
+      box_text_right_da: 'Los organismos estatales del sector público recogen, producen, reproducen y difunden datos para cumplir con su función pública. Incorporar la publicación de datos públicos en formatos abiertos abre la puerta a la posibilidad de que los mismos sean reutilizados en nuevos proyectos, que puedan combinarse con otras fuentes de datos y generar nuevas aplicaciones desarrolladas por el gobierno, por la sociedad civil, organizaciones, empresas o ciudadanos en general.'
+      
+      subtitle-procesamiento: 'Procesamiento de datos'
+      box_text_left_procesamiento: 'Los análisis y visualizaciones provistos por esta aplicación son realizados por DATA Uruguay. Estas operaciones están disponibles para consulta a través del <a href="https://github.com/datauy/DerechosDeEstudiantes2">código de la aplicación disponible en GitHub</a>, así como el resto del código fuente.'
+      box_text_right_procesamiento: ''
+      
+      subtitle-disponibilidad: 'Disponibilidad del código como software libre'
+      box_text_left_disponibilidad: 'DATA Uruguay incentiva la reutilización de este software para cualquier propósito, brindándolo bajo licencia GPLv3 para que otras organizaciones, gobiernos, empresas o ciudadanos puedan sacar provecho del trabajo aquí realizado.
+<br>
+<a href="https://github.com/datauy/DerechosDeEstudiantes2">https://github.com/datauy/DerechosDeEstudiantes2</a>'
+      box_text_right_disponibilidad: ''
+      
+      subtitle-contacto: 'Contacto'
+      box_text_left_contacto: 'En caso de consultas sobre la aplicación, DATA Uruguay o contactos de prensa puede dirigirse a <a href="mailto:contacto@datauy.org">contacto@datauy.org</a>. También estamos disponibles a través de nuestras cuentas de <a href="https://twitter.com/datauy">Twitter</a>, <a href="https://www.facebook.com/DATAUruguay/">Facebook</a> e <a href="https://www.instagram.com/datauy/">Instagram</a>. Como la mayoría de los proyectos que trabajan con datos abiertos y software libre, la retroalimentación de los usuarios es una herramienta fundamental para la mejora de los datos y su tratamiento.'
+      box_text_right_contacto: 'Agradecemos e incentivamos la recepción de ideas, sugerencias o correcciones. En la <a href="http://data.org.uy">web de DATA</a> puede encontrarse un kit de prensa de la organización conteniendo material gráfico, así como un kit de prensa del proyecto.'
+      
+      subtitle-tyc: 'Términos y condiciones'
+      box_text_left_tyc: 'La prestación de este servicio tiene carácter gratuito para los/as usuarios/as. Los usuarios/as se obligan a hacer buen uso del sitio web y de sus contenidos, respetando la normativa nacional vigente, las buenas costumbres y el orden público, comprometiéndose en todos los casos a no causar daños al mismo ni a ningún tercero. A tal efecto, el usuario/a se abstendrá de utilizar cualquiera de los servicios con fines o efectos ilícitos, prohibidos en los presentes Términos y condiciones, lesivos de los derechos e intereses de terceros, o que de cualquier forma puedan dañar, inutilizar, sobrecargar, deteriorar o impedir la normal utilización de los servicios, documentos y toda clase de contenidos en cualquier equipo informático o de otros usuarios/as.'
+      box_text_right_tyc: 'Para asegurarnos de que la aplicación esté acorde a las necesidades de nuestros usuarios/as, e intentar mejorarla utilizamos Google Analytics para recolectar información sobre cómo se utiliza. Google Analytics almacena información como qué páginas ha visitado, cuánto tiempo ha navegado en las mismas, cómo llegó a la página, qué elementos clikea e información sobre qué navegador utiliza. Su dirección IP es enmascarada (parcialmente almacenada) y la información personal sólo es reportada en forma no individualizada (agregada). No permitimos a Google usar o compartir nuestros datos analíticos para ningún propósito además de proveernos de información analítica y recomendamos que todo usuario de Google Analytics siga la misma política.'
+
+      subtitle-lenguaje: 'Lenguaje inclusivo'
+      box_text_left_lenguaje: 'En la elaboración de este material se ha buscado que el lenguaje no invisibilice ni discrimine a las mujeres y a la vez que el uso reiterado de “ /o”, “/a”, “los y las”, etcétera, no dificulte la lectura. En la página 9 de la siguiente publicación se puede encontrar recomendaciones al respecto: <a href="http://www.inmujeres.gub.uy/innovaportal/file/21498/1/15guia_de_lenguaje_inclusivo.pdf">Guía de Lenguaje Inclusivo - INMUJERES</a>.'
+      box_text_right_lenguaje: ''
