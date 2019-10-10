@@ -1,4 +1,5 @@
 class Right < ApplicationRecord
+  has_many :doubts
   enum school_type: [ :secundaria, :utu ]
 
 

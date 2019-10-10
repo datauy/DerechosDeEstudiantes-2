@@ -1,5 +1,4 @@
 class AnswersController < ApplicationController
-  before_action :get_institutions_json, :get_locations_json
 
   def create
     @answer = Answer.new(answer_params)
