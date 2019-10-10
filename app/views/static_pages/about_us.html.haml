@@ -1,4 +1,5 @@
 =image_tag("polygon-top.svg",  :class => "polygon-top")
+=image_tag("polygon-right-down2.svg",  :class => "polygon-right-down")
 =render "shared/navbar"
 
 .container
@@ -15,7 +16,6 @@
           =t('.title')
         %hr
     .row.justify-content-md-center
-      =image_tag("polygon-right-down2.svg",  :class => "polygon-right-down")
       .col-md-8
         .row
           .col-md-6
@@ -30,13 +30,113 @@
           .row
             .col-md-6
               .text-title
-                =t('.subtitle')
+                =t('.subtitle-origen')
               %hr
               .text-p
-                %p=t('.box_text_left_html')
+                %p=t('.box_text_left_origen')
             .col-md-6
               .text-p-no-top
-                %p=t('.box_text_right_html')
+                %p=t('.box_text_right_origen')
+    .row.justify-content-md-center
+      .col-md-10
+        .row
+          .col-md-6
+            .text-title
+              =t('.subtitle-objetivos')
+            %hr
+            .text-p
+              %p=t('.box_text_left_objetivos')
+          .col-md-6
+            .text-p-no-top
+              %p=t('.box_text_right_objetivos')
+    .row.justify-content-md-center
+      .col-md-10
+        .label-solid
+          .row
+            .col-md-6
+              .text-title
+                =t('.subtitle-antecedentes')
+              %hr
+              .text-p
+                %p=t('.box_text_left_antecedentes')
+            .col-md-6
+              .text-p-no-top
+                %p=t('.box_text_right_antecedentes')
+    .row.justify-content-md-center
+      .col-md-10
+        .row
+          .col-md-6
+            .text-title
+              =t('.subtitle-da')
+            %hr
+            .text-p
+              %p=t('.box_text_left_da')
+          .col-md-6
+            .text-p-no-top
+              %p=t('.box_text_right_da')
+    .row.justify-content-md-center
+      .col-md-10
+        .label-solid
+          .row
+            .col-md-6
+              .text-title
+                =t('.subtitle-procesamiento')
+              %hr
+              .text-p
+                %p=t('.box_text_left_procesamiento')
+            .col-md-6
+              .text-p-no-top
+                %p=t('.box_text_right_procesamiento')
+    .row.justify-content-md-center
+      .col-md-10
+        .row
+          .col-md-6
+            .text-title
+              =t('.subtitle-disponibilidad')
+            %hr
+            .text-p
+              %p=t('.box_text_left_disponibilidad')
+          .col-md-6
+            .text-p-no-top
+              %p=t('.box_text_right_disponibilidad')
+    .row.justify-content-md-center
+      .col-md-10
+        .label-solid
+          .row
+            .col-md-6
+              .text-title
+                =t('.subtitle-contacto')
+              %hr
+              .text-p
+                %p=t('.box_text_left_contacto')
+            .col-md-6
+              .text-p-no-top
+                %p=t('.box_text_right_contacto')
+    .row.justify-content-md-center
+      .col-md-10
+        .row
+          .col-md-6
+            .text-title
+              =t('.subtitle-tyc')
+            %hr
+            .text-p
+              %p=t('.box_text_left_tyc')
+          .col-md-6
+            .text-p-no-top
+              %p=t('.box_text_right_tyc')
+    .row.justify-content-md-center
+      .col-md-10
+        .label-solid
+          .row
+            .col-md-6
+              .text-title
+                =t('.subtitle-lenguaje')
+              %hr
+              .text-p
+                %p=t('.box_text_left_lenguaje')
+            .col-md-6
+              .text-p-no-top
+                %p=t('.box_text_right_lenguaje')
 
 %footer-about-us.sticky-footer.max-parent
   =render "shared/footer"
