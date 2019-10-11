@@ -1,6 +1,6 @@
 ActiveAdmin.register Complain do
   actions :all, :except => [:new, :edit]
-  permit_params :list, :of, :attributes, :on, :model
+  permit_params :name, :email, :message
 
   index do
     selectable_column

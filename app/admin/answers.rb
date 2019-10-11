@@ -1,5 +1,5 @@
 ActiveAdmin.register Answer do
-  permit_params :list, :of, :attributes, :on, :model
+  permit_params :name, :email, :message, :question_id
   belongs_to :question, optional: true
 
   index do
@@ -10,7 +10,7 @@ ActiveAdmin.register Answer do
     column :message
     column :is_user
     column :question_id do |q|
-      link_to q.question.message, admin_question_path(q.question)
+      link_to "#{q.question.id}: #{q.question.message}", admin_question_path(q.question)
     end
     column :created_at
     actions
@@ -19,13 +19,14 @@ ActiveAdmin.register Answer do
   filter :name
   filter :email
   filter :is_user
+  filter :question_id
 
   form do |f|
     f.inputs do
       f.input :name
       f.input :email
       f.input :message
-      f.input :question_id
+      f.input :question_id, :label => 'Pregunta', :as => :select, :collection => Question.all.map{|q| ["#{q.id}: #{q.message}", q.id]}
     end
     f.actions
   end

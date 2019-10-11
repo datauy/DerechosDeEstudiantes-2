@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   before_action :get_institutions_json, :get_locations_json
 
   def index
-    @questions = Question.all.order(:message).page params[:page]
+    @questions = Question.are_publics().order(:message).page params[:page]
     @rights = Right.by_school_type(session[:search_type]).order(:title).page params[:page]
   end
 

@@ -1,5 +1,5 @@
 ActiveAdmin.register Right do
-  permit_params :list, :of, :attributes, :on, :model
+  permit_params :title, :description, :tag_one, :tag_two, :tag_three, :tag_four
 
   index do
     selectable_column
