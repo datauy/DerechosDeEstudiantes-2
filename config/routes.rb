@@ -8,6 +8,12 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :admin do
+    resources :rights do
+      resources :doubts
+    end
+  end
+
   resources :complains
   resources :questions
   resources :answers

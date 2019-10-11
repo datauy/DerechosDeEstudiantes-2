@@ -1,6 +1,7 @@
 ActiveAdmin.register Doubt do
   actions :all, :except => [:new, :edit]
   permit_params :list, :of, :attributes, :on, :model
+  belongs_to :right, optional: true
 
   index do
     selectable_column
@@ -8,7 +9,9 @@ ActiveAdmin.register Doubt do
     column :name
     column :email
     column :message
-    column :right_id
+    column :right_id do |q|
+      link_to q.right.title, admin_right_path(q.right)
+    end
     column :created_at
     actions
   end

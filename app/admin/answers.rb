@@ -1,5 +1,6 @@
 ActiveAdmin.register Answer do
   permit_params :list, :of, :attributes, :on, :model
+  belongs_to :question, optional: true
 
   index do
     selectable_column
@@ -8,7 +9,9 @@ ActiveAdmin.register Answer do
     column :email
     column :message
     column :is_user
-    column :question_id
+    column :question_id do |q|
+      link_to q.question.message, admin_question_path(q.question)
+    end
     column :created_at
     actions
   end
