@@ -22,7 +22,6 @@ ActiveAdmin.register Answer do
       f.input :name
       f.input :email
       f.input :message
-      f.input :is_user
       f.input :question_id
     end
     f.actions
