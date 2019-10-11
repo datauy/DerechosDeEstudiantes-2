@@ -11,12 +11,12 @@
       .col-md-6
         =image_tag("page.svg")
     .row.justify-content-md-center.text-main
-      .col-md-8
+      .col-md-9
         .text-title
           =t('.title')
         %hr
     .row.justify-content-md-center
-      .col-md-8
+      .col-md-9
         .row
           .col-md-6
             .text-p
@@ -24,7 +24,7 @@
           .col-md-6
             .text-p
               %p=t('.text_right_html')
-    .row.justify-content-md-center
+    .row.justify-content-md-center.margin-top
       .col-md-10
         .label-solid
           .row
@@ -33,23 +33,23 @@
                 =t('.subtitle-origen')
               %hr
               .text-p
-                %p=t('.box_text_left_origen')
+                %p=t('.box_text_left_origen_html')
             .col-md-6
               .text-p-no-top
-                %p=t('.box_text_right_origen')
-    .row.justify-content-md-center
-      .col-md-10
+                %p=t('.box_text_right_origen_html')
+    .row.justify-content-md-center.margin-top
+      .col-md-9
         .row
           .col-md-6
             .text-title
               =t('.subtitle-objetivos')
             %hr
             .text-p
-              %p=t('.box_text_left_objetivos')
+              %p=t('.box_text_left_objetivos_html')
           .col-md-6
             .text-p-no-top
-              %p=t('.box_text_right_objetivos')
-    .row.justify-content-md-center
+              %p=t('.box_text_right_objetivos_html')
+    .row.justify-content-md-center.margin-top
       .col-md-10
         .label-solid
           .row
@@ -58,48 +58,43 @@
                 =t('.subtitle-antecedentes')
               %hr
               .text-p
-                %p=t('.box_text_left_antecedentes')
+                %p=t('.box_text_left_antecedentes_html')
             .col-md-6
               .text-p-no-top
-                %p=t('.box_text_right_antecedentes')
-    .row.justify-content-md-center
-      .col-md-10
+                %p=t('.box_text_right_antecedentes_html')
+    .row.justify-content-md-center.margin-top
+      .col-md-9
         .row
           .col-md-6
             .text-title
               =t('.subtitle-da')
             %hr
             .text-p
-              %p=t('.box_text_left_da')
+              %p=t('.box_text_left_da_html')
           .col-md-6
             .text-p-no-top
-              %p=t('.box_text_right_da')
-    .row.justify-content-md-center
+              %p=t('.box_text_right_da_html')
+    .row.justify-content-md-center.margin-top
       .col-md-10
         .label-solid
           .row
-            .col-md-6
+            .col-md-12
               .text-title
                 =t('.subtitle-procesamiento')
               %hr
               .text-p
-                %p=t('.box_text_left_procesamiento')
-            .col-md-6
-              .text-p-no-top
-                %p=t('.box_text_right_procesamiento')
-    .row.justify-content-md-center
-      .col-md-10
+                %p=t('.box_text_left_procesamiento_html')
+
+    .row.justify-content-md-center.margin-top
+      .col-md-9
         .row
-          .col-md-6
+          .col-md-12
             .text-title
               =t('.subtitle-disponibilidad')
             %hr
             .text-p
-              %p=t('.box_text_left_disponibilidad')
-          .col-md-6
-            .text-p-no-top
-              %p=t('.box_text_right_disponibilidad')
-    .row.justify-content-md-center
+              %p=t('.box_text_left_disponibilidad_html')
+    .row.justify-content-md-center.margin-top
       .col-md-10
         .label-solid
           .row
@@ -108,35 +103,32 @@
                 =t('.subtitle-contacto')
               %hr
               .text-p
-                %p=t('.box_text_left_contacto')
+                %p=t('.box_text_left_contacto_html')
             .col-md-6
               .text-p-no-top
-                %p=t('.box_text_right_contacto')
-    .row.justify-content-md-center
-      .col-md-10
+                %p=t('.box_text_right_contacto_html')
+    .row.justify-content-md-center.margin-top
+      .col-md-9
         .row
           .col-md-6
             .text-title
               =t('.subtitle-tyc')
             %hr
             .text-p
-              %p=t('.box_text_left_tyc')
+              %p=t('.box_text_left_tyc_html')
           .col-md-6
             .text-p-no-top
-              %p=t('.box_text_right_tyc')
-    .row.justify-content-md-center
+              %p=t('.box_text_right_tyc_html')
+    .row.justify-content-md-center.margin-top
       .col-md-10
         .label-solid
           .row
-            .col-md-6
+            .col-md-12
               .text-title
                 =t('.subtitle-lenguaje')
               %hr
               .text-p
-                %p=t('.box_text_left_lenguaje')
-            .col-md-6
-              .text-p-no-top
-                %p=t('.box_text_right_lenguaje')
+                %p=t('.box_text_left_lenguaje_html')
 
 %footer-about-us.sticky-footer.max-parent
   =render "shared/footer"
