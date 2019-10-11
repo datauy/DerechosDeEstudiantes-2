@@ -1,6 +1,6 @@
 es:
   routes:
-    users: 'usuarios'
+    users: 'estudiante'
     admin: 'admin'
     questions: 'preguntas'
     answers: 'respuestas'
@@ -9,6 +9,6 @@ es:
     complains: 'denuncias'
     static_pages: 'paginas'
     about_us: 'sobre_nosotros'
-    new: 'nuevo'
+    new: 'nueva'
     edit: 'editar'
-    login: 'inicio_sesion'
+    login: 'inicia_sesion'
