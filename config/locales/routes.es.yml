@@ -1,0 +1,14 @@
+es:
+  routes:
+    users: 'usuarios'
+    admin: 'admin'
+    questions: 'preguntas'
+    answers: 'respuestas'
+    rights: 'derechos'
+    doubts: 'dudas'
+    complains: 'denuncias'
+    static_pages: 'paginas'
+    about_us: 'sobre_nosotros'
+    new: 'nuevo'
+    edit: 'editar'
+    login: 'inicio_sesion'
