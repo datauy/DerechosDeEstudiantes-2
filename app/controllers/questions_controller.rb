@@ -9,6 +9,9 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @answers = Answer.by_question(@question)
+    if params['finished']
+      @message=true
+    end
   end
 
   def create

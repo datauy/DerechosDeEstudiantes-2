@@ -57,7 +57,7 @@
           .col-md-6
             %a.threedbutton2{"data-toggle": "modal", "data-target": "#sendModal"}
               =t('.btn_yes')
-    = form_for :answer, :url => {:controller => :answers, action: :create} do |f|
+    = form_for :doubt, :url => {:controller => :doubts, action: :create} do |f|
       #form-more-help.row.justify-content-md-center.margin-top-small.gone
         .col-md-8
           .input-group
