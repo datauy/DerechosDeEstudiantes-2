@@ -51,6 +51,7 @@ es:
         institution: "Institución"
         location: "Localidad"
         created_at: "Creado en"
+        is_public: "¿Público?"
         updated_at: "Actualizado en"
       right:
         title: 'Titulo'
