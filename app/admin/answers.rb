@@ -31,4 +31,8 @@ ActiveAdmin.register Answer do
     f.actions
   end
 
+  after_create do |answer|
+    AdminMailer.with(answer: answer, url: question_url(answer.question.id)).send_answer.deliver
+  end
+
 end
