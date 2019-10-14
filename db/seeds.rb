@@ -6,7 +6,11 @@ locations=['CANELONES', 'CERRO LARGO', 'COLONIA', 'DURAZNO', 'FLORES', 'FLORIDA'
 institutions=['ARTIGAS DEPTAL', 'ARTIGAS N 2', 'ARTIGAS N 3 - MTRO. VALERIANO RENART', 'ARTIGAS N 4', 'MONTEVIDEO N34 -   RAFAELA VILLAGRAN DE ARTIGAS', 'MONTEVIDEO N4-  JUAN ZORRILLA DE SAN MARTIN', 'ARTIGAS N 5 (PINTADITO)']
 grades = [1,2,3]
 25.times do
-  Question.create({location: locations.sample, institution: institutions.sample, grade:  grades.sample, message: FFaker::LoremIE.question})
+  Question.create({
+    location: locations.sample,
+    institution: institutions.sample,
+    grade:  grades.sample,
+    message: FFaker::LoremIE.question})
 end
 
 institutions=['CECAP - ARTIGAS', 'ESCUELA TECNICA ARTIGAS', 'ESCUELA AGRARIA ARTIGAS', 'C. E. C. SAN MARTIN']

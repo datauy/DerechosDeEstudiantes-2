@@ -40,6 +40,7 @@ es:
       depto: 'Localidad'
       question: 'Pregunta'
       send: 'Enviar'
+      subtitle: 'SELECCIONÁ EL COLEGIO:'
     navbar:
       title_send: 'Tu mensaje fue enviado'
       message_send: 'Gracias por reportar y ayudar'

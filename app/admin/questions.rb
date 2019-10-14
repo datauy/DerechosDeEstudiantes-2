@@ -1,5 +1,5 @@
 ActiveAdmin.register Question do
-  permit_params :name, :email, :message, :grade, :institution, :location, :is_public
+  permit_params :name, :email, :message, :grade, :institution, :location, :is_public, :collage
 
   index do
     selectable_column
@@ -11,6 +11,7 @@ ActiveAdmin.register Question do
     column :institution
     column :location
     column :is_public
+    column :collage
     column :created_at
     actions
   end
@@ -18,6 +19,7 @@ ActiveAdmin.register Question do
   filter :name
   filter :email
   filter :is_public
+  filter :collage
   filter :created_at
 
   form do |f|
@@ -28,6 +30,7 @@ ActiveAdmin.register Question do
       f.input :grade
       f.input :institution
       f.input :location
+      f.input :collage, :label => 'Colegio', :as => :select, :collection => Right.school_types.keys.map{|r| [r, r]}
       f.input :is_public
     end
     f.actions

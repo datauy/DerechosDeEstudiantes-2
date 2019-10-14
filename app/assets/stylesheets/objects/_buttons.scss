@@ -192,9 +192,10 @@ a.threedbutton2:after { /* pseudo element to construct 3D side of button */
 a.threedbutton2:active {
   top: 12px; /* shift button down 12px when depressed. Change 12px to match button's "bottom" property above */
   bottom: 0;
-  -moz-box-shadow: 0 -20px 5px $blue inset, 1px 1px 2px #eee;
-  -webkit-box-shadow: 0 -20px 5px $blue inset, 1px 1px 2px #eee;
-  box-shadow: 0 -20px 5px $blue inset, 1px 1px 2px #eee;
+  box-shadow: 10px -20px 5px $yellow inset, 0px 0px 0px $yellow;
+  border: solid 1.2px black;
+  color: $black !important;
+  background-color: $yellow;
 }
 
 a.threedbutton2:not([href]):not([tabindex]) {
