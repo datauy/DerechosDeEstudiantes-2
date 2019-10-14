@@ -1,11 +1,12 @@
 .tag-search1{
-  width: 110px;
+  width: 100px;
   height: 19px;
   border-radius: 9.5px;
   background-color: $blue-text;
   color: white;
   text-align: center;
   display: inline-block;
+  margin-top: 5px;
 }
 .tag-search2{
   @extend .tag-search1;
@@ -18,4 +19,12 @@
 .tag-search4{
   @extend .tag-search1;
   background-color: $purple;
+}
+.tag-search5{
+  @extend .tag-search1;
+  background-color: $lime;
+}
+.tag-search6{
+  @extend .tag-search1;
+  background-color: $yellow;
 }
