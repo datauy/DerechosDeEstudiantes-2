@@ -2,15 +2,15 @@ class Right < ApplicationRecord
   has_many :doubts
   enum school_type: [ :secundaria, :utu ]
 
-
   include PgSearch
-  pg_search_scope :search_by_full_title, against: [:title],
-  using: {
-    tsearch: {
-      prefix: true,
-      negation: true
+  pg_search_scope :search_by_full_title,
+    against: [:title, :tag_one, :tag_two, :tag_three, :tag_four],
+    using: {
+      tsearch: {
+        prefix: true,
+        negation: true
+      }
     }
-  }
 
 
   scope :by_school_type, ->(search_type) {
@@ -23,3 +23,5 @@ class Right < ApplicationRecord
 
 
 end
+
+

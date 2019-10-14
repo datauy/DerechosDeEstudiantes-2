@@ -4,7 +4,6 @@ class Question < ApplicationRecord
   validates :message, :email, :name, :location, :institution, :grade, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
-
   scope :are_publics, ->() {
     where(is_public: true)
   }

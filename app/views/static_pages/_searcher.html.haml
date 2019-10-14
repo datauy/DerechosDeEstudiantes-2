@@ -6,10 +6,7 @@
           .col-md-10
             .row
               .col-md-12
-                - if right.respond_to?(:pg_search_highlight)
-                  = right.pg_search_highlight.html_safe
-                - else
-                  = right.title
+                = right.title
           .col-md-2.right.c_blue-text
             =link_to right_path(right) do
               %i.fas.fa-arrow-right
@@ -19,6 +16,14 @@
               =t('.right')
             .tag-search2
               =right.school_type
+            .tag-search3
+              =right.tag_one
+            .tag-search4
+              =right.tag_two
+            .tag-search5
+              =right.tag_three
+            .tag-search6
+              =right.tag_four
 
       -@questions.each_with_index do |question, index|
         .row.max-parent.search-top-row
