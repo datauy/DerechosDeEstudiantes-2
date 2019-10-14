@@ -1,23 +1,23 @@
 .row.justify-content-md-center.center.margin-bottom
-  .col-md-6
+  .col-md-5
     .row
       -if is_activated(session[:search_type]=="utu")
-        .col-md-6.margin-top-small
+        .col-md-6.margin-top-xsmall
           %a.threedbutton2#option1
             =t('.secundaria')
-        .col-md-6.unclic.margin-top-small
+        .col-md-6.unclic.margin-top-xsmall
           =link_to t('.utu'), "", class: "btn btn-outline-primary-yellow not-cursor", id: "btn_utu"
       -elsif is_activated(session[:search_type]=="secundaria")
-        .col-md-6.unclic.margin-top-small
+        .col-md-6.unclic.margin-top-xsmall
           =link_to t('.secundaria'), "", class: "btn btn-outline-primary-yellow not-cursor", id: "btn_secundaria"
-        .col-md-6.margin-top-small
+        .col-md-6.margin-top-xsmall
           %a.threedbutton2#option2
             =t('.utu')
       -else
-        .col-md-6.margin-top-small
+        .col-md-6.margin-top-xsmall
           %a.threedbutton2#option1
             =t('.secundaria')
-        .col-md-6.margin-top-small
+        .col-md-6.margin-top-xsmall
           %a.threedbutton2#option2
             =t('.utu')
 

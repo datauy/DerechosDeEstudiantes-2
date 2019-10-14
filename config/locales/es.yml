@@ -27,7 +27,7 @@ es:
           ok: "Aceptar"
   shared:
     footer:
-      copyright: '© 2019 Derechos del Estudiante'
+      copyright: '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" class"cc-icon"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><span>Derechos de Estudiantes está bajo licencia</span><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 Int.</a>'
     dialog_error:
       search:
         error: 'Antes de buscar, tenés que seleccionar si sos estudiante de Secundaria o UTU aquí.'

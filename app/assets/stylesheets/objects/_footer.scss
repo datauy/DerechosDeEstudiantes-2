@@ -8,9 +8,38 @@ footer{
 
 footer-landing{
   @extend footer;
-  top: 300px;
+  top: 55px;
+  padding-top: 140px;
+  margin-top: auto;
+  height: 291px;
 }
-
+footer-landing .col-md-12 {
+  display: inline-flex;
+}
+footer-landing .logo {
+  width: 35%;
+  margin: 0 auto;
+}
+.logo.data {
+  margin-top: -28px;
+}
+footer-landing .row.between .logo {
+  margin-top: -10px;
+  width: 50%;
+}
+footer-landing .row.first {
+  width: 50%;
+}
+footer-landing .row.between {
+  margin-bottom: 0;
+  width: 25%;
+}
+footer-landing .row.last {
+  width: 30%;
+}
+footer-landing span {
+  margin: 0 7px;
+}
 footer-complain{
   @extend footer;
   top: 550px;
@@ -23,4 +52,21 @@ footer-about-us{
 footer-answer{
   @extend footer;
   top: 300px;
+}
+.cc-icon {
+  font-family: "cc-fontello";
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  opacity: .8;
+  line-height: 1em;
+}
+.cc-icon-cc::before {
+  @extend .cc-icon;
+  content: '\e804';
+}
+.cc-icon-cc-by {
+  @extend .cc-icon;
 }

@@ -5,111 +5,109 @@
   .landing
     =image_tag("polygon-right.svg",  :class => "polygon-right")
     =image_tag("polygon.svg",  :class => "polygon-left")
-    .row.justify-content-md-center
-      .col-md-auto
-        =image_tag("polygon-center.svg",  :class => "polygon-center")
-        .row
-          .col-md-5
-            =image_tag("icono_saber.svg",  :class => "icono")
-          .col-md-7
-            .text-know-title
-              =t('.know.title')
-            .text-know-p
-              =t('.know.description')
-    .row.justify-content-md-center
-      .col-md-auto
-        .text-know-subtitle
-          =t('.know.subtitle')
-    %div
-    .buttons-selected
-      =render "buttons"
 
-    .row.justify-content-md-center
-      .col-md-8
-        .input-group
-          %input.form-control{:placeholder => t('.search.placeholder'), :type => "text", :id=> "search"}/
-          %span.dot
-            %i.fas.fa-search{"aria-hidden" => "true"}
-        .table-responsive
-          =render 'searcher'
+    .col-md-12.section
+      .row.justify-content-md-center
+        .col-md-8
+          .row
+            .col-md-5
+              =image_tag("saber.svg",  :class => "icono")
+            .col-md-7
+              .text-know-title
+                =t('.know.title')
+              .text-know-p
+                =t('.know.description')
+      .row.justify-content-md-center
+        .col-md-auto
+          .text-know-subtitle
+            =t('.know.subtitle')
+      .buttons-selected
+        =render "buttons"
 
-    .row.justify-content-md-center
-      .col-md-8
-        .dialog-error
+      .row.justify-content-md-center
+        .col-md-6
+          .input-group
+            %input.form-control{:placeholder => t('.search.placeholder'), :type => "text", :id=> "search"}/
+            %span.dot
+              %i.fas.fa-search{"aria-hidden" => "true"}
+          .table-responsive
+            =render 'searcher'
 
+      .row.justify-content-md-center
+        .col-md-8
+          .dialog-error
 
-    .row.justify-content-md-center
-      .col-md-6
-        .text-complain-title
-          =t('.complain.title')
-    .row.justify-content-md-center
-      .col-md-auto
-        =image_tag("polygon-center.svg",  :class => "polygon-center-right")
-        .row
-          .col-md-6
-            %hr-title
-            .text-complain-p
-              =t('.complain.description')
-          .col-md-6.right
-            =image_tag("complain.svg",  :class => "icono")
+    .col-md-12.section
+      .row.justify-content-md-center.complains
+        .col-md-4
+          .row.justify-content-md-center.mm-x
+            .col-md-12
+              %hr-title
+              .text-complain-title
+                =t('.complain.title')
+            .col-md-12
+              .text-complain-p
+                =t('.complain.description')
+            .col-md-12
+              =link_to t('.complain.button_ok'), new_complain_path, class: "btn btn-outline-primary-yellow btn-max"
+        .col-md-3.right
+          .row.justify-content-md-center
+            =image_tag("queja.svg",  :class => "icono sm-y")
 
-    .row.justify-content-md-center
-      .col-md-8
-        =link_to t('.complain.button_ok'), new_complain_path, class: "btn btn-outline-primary-yellow"
+        .row.justify-content-md-center
     =image_tag("polygon-right-down.svg",  :class => "polygon-right-down")
 
-    %div.margin-top-big
-    .row.justify-content-md-center
-      .col-md-8.center
-        .text-know-title.max-parent.center
-          =t('.title_section_two')
-        .text-subsection-know-p.max-parent.center
-          =t('.description_section_two')
+    .col-md-12.section
+      .row.justify-content-md-center
+        .col-md-8.center
+          .text-know-title.max-parent.center
+            =t('.title_section_two')
+          .text-subsection-know-p.max-parent.center
+            =t('.description_section_two')
+      .row.justify-content-md-center.section_main
+        .col-md-8
+          .label-solid
+            .row.padding-section-main
+              .col-md-6
+                =image_tag("section_1.svg",  :class => "icono")
+              .col-md-6.space-right
+                .text-title
+                  =t('.card_one_title')
+                %hr
+                .text-p
+                  %p
+                    =t('.card_one_description_html')
+            .row.justify-content-end
+              .col-md-6
+                .btn-shape
+                  .subtext-title
+                    =t('.shared')
+                    .space=image_tag("facebook.svg")
+                    =image_tag("twitter.svg")
 
-    .row.justify-content-md-center.section_main
-      .col-md-10
-        .label-solid
-          .row.padding-section-main
-            .col-md-6
-              =image_tag("section_1.svg",  :class => "icono")
-            .col-md-6.space-right
-              .text-title
-                =t('.card_one_title')
-              %hr
-              .text-p
-                %p
-                  =t('.card_one_description_html')
-          .row.justify-content-end
-            .col-md-6
-              .btn-shape
-                .subtext-title
-                  =t('.shared')
-                  .space=image_tag("facebook.svg")
-                  =image_tag("twitter.svg")
 
+      .row.justify-content-md-center.section_main
+        .col-md-8
+          .label-solid
+            .row.padding-section-main
+              .col-md-6.space-left
+                .text-title
+                  =t('.card_two_title')
+                %hr
+                .text-p
+                  %p
+                    =t('.card_two_description_html')
+              .col-md-6
+                =image_tag("section_2.svg",  :class => "icono")
 
-    .row.justify-content-md-center.section_main
-      .col-md-10
-        .label-solid
-          .row.padding-section-main
-            .col-md-6.space-left
-              .text-title
-                =t('.card_two_title')
-              %hr
-              .text-p
-                %p
-                  =t('.card_two_description_html')
-            .col-md-6
-              =image_tag("section_2.svg",  :class => "icono")
-
-          .row.justify-content-end
-            .col-md-6.left
-              .btn-shape-left
-                .subtext-title
-                  =t('.shared')
-                  .space=image_tag("facebook.svg")
-                  =image_tag("twitter.svg")
-            .col-md-6
+            .row.justify-content-end
+              .col-md-6.left
+                .btn-shape-left
+                  .subtext-title
+                    =t('.shared')
+                    .space=image_tag("facebook.svg")
+                    =image_tag("twitter.svg")
+              .col-md-6
 
 %footer-landing.sticky-footer.max-parent
   =render "shared/footer"

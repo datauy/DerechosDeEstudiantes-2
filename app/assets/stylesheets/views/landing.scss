@@ -1,6 +1,5 @@
 .container{
   .landing{
-    margin-top: 120px;
     hr{
       width: 64px;
       height: 3px;
@@ -9,7 +8,9 @@
     }
     hr-title{
       @extend hr;
-      margin-block-start: -15px;
+      width: 51.2px;
+      height: 2.4px;
+      top: 10px;
       @media only screen and (max-width: 800px) {
         margin-block-start: 5px;
       }
@@ -19,73 +20,47 @@
       height: 215px;
       object-fit: contain;
     }
+
     .text-know-title{
-      height: 47px;
       font-family: 'Source Sans Pro', sans-serif;
       font-size: 38px;
       font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
       letter-spacing: 0.81px;
       text-align: left;
-      margin-left: 10px;
-      margin-top: 30px;
+      margin-top: 78px;
       color: #00a6d6;
     }
 
     .text-know-p{
-      width: 381px;
-      height: 104px;
       font-family: 'Source Sans Pro', sans-serif;
       font-size: 17px;
       margin-top: 25px;
       font-size: 17px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
       line-height: 1.66;
-      letter-spacing: normal;
-      margin-left: 10px;
       color: $medium-gray;
     }
 
-    .text-know-subtitle{
+    .text-know-subtitle {
       font-size: 14.4px;
       font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
       line-height: 1.44;
       letter-spacing: 1.12px;
       text-align: center;
       color: $medium-gray;
-      margin-top: 0px;
+      margin: 6px auto 16px;
     }
 
-    .text-complain-title{
-      margin-top: 100px;
-      width: 201px;
-      height: 28px;
+    .text-complain-title {
       font-size: 22px;
       font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      margin-left: 30px;
+      margin-left: 77px;
       color: rgba(0, 0, 0, 0.85);
     }
 
-    .text-complain-p{
-      width: 381px;
-      height: 104px;
-      margin-top: 50px;
+    .text-complain-p {
+      margin: 28px 0;
       font-size: 17px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
       line-height: 1.66;
-      letter-spacing: normal;
       color: $medium-gray;
     }
 

@@ -27,12 +27,11 @@
 }
 
 .btn-outline-primary-yellow{
-  margin-left: 5px;
-  margin-right: 5px;
   height: 40px;
   border-radius: 19.8px;
   border: solid 1.2px black;
-  width: 208px;
+  border-bottom: 2px solid black;
+  width: 100%;
   color: $black;
   background-color: $yellow;
   font-size: 12.8px;
@@ -88,7 +87,7 @@
 a.threedbutton {
   cursor: pointer;
   text-align: center;
-  width: 208px;
+  width: 100%;
   height: 35px;
   background:$yellow; /* background color of button */
   color: black;
@@ -141,7 +140,7 @@ a.threedbutton:active {
 a.threedbutton2 {
   cursor: pointer;
   text-align: center;
-  width: 208px;
+  width: 100%;
   height: 40px;
   background:$blue; /* background color of button */
   color: white;
@@ -200,4 +199,8 @@ a.threedbutton2:active {
 
 a.threedbutton2:not([href]):not([tabindex]) {
   color: white;
+}
+
+.btn-max {
+  max-width: 260px;
 }

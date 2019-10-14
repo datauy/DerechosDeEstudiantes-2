@@ -67,7 +67,9 @@ body{
 .margin-top-small{
     margin-top: 20px;
 }
-
+.margin-top-xsmall {
+  margin-top: 9px;
+}
 .margin-bottom{
     margin-bottom: 30px;
 }
@@ -78,4 +80,9 @@ body{
 
 .visible{
     display: flex;
+}
+
+.section {
+  margin-top: 60px;
+  margin-bottom: 120px;
 }

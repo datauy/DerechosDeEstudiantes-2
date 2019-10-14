@@ -3,13 +3,11 @@
     =image_tag("polygon-left-down.svg",  :class => "polygon-left-down")
     .footer-copyright.text-center.py-3
       .row.justify-content-end
-        .col-md-9
-          .row
-            .col-md-4.bottom
-              =t('.copyright')
-            .col-md-2.bottom
-              =image_tag("unicef.svg")
-            .col-md-2.bottom
-              =image_tag("data.svg")
-            .col-md-2.bottom
-              =image_tag("ces.svg")
+        .col-md-12
+          .row.first
+            =image_tag("unicef.svg", :class => "logo")
+            =image_tag("data.svg", :class => "logo data")
+          .row.between
+            =image_tag("ces.svg", :class => "logo")
+          .row.last
+            =raw t('.copyright')

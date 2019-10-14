@@ -20,6 +20,7 @@
   width: 275px;
   height: 1126px;
   left: 0;
+  top: 56%;
 }
 
 .polygon-left-down {
@@ -116,4 +117,28 @@
   width: 458px;
   height: 1126px;
   left: 0;
+}
+
+.polygon-mobile {
+  @extend .polygon;
+  display: none;
+}
+.polygon-mobile-top {
+  @extend .polygon-mobile;
+  width: 80%;
+  top: 0;
+  background-image: url(polygon-mobile-top.svg);
+  height: 200px;
+}
+.polygon-mobile-middle {
+  @extend .polygon-mobile;
+  width: 100%;
+  top: 112%;
+  background-image: url(polygon-mobile-middle.svg);
+  height: 524px;
+}
+.polygon-mobile-bottom {
+  @extend .polygon-mobile;
+  width: 100%;
+  bottom: 0;
 }
