@@ -16,6 +16,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
+    @question.collage = session[:search_type]
     respond_to do |format|
       if @question.save
         return true

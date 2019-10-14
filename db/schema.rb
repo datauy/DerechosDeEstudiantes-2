@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_11_215710) do
+ActiveRecord::Schema.define(version: 2019_10_14_024129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2019_10_11_215710) do
     t.string "name"
     t.string "email"
     t.boolean "is_public", default: false
+    t.string "collage"
   end
 
   create_table "rights", force: :cascade do |t|
