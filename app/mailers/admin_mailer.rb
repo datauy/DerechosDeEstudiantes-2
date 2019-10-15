@@ -20,4 +20,12 @@ class AdminMailer < ApplicationMailer
     @url  = admin_right_url(@doubt.right.id)
     mail(to: @admin.email, subject: 'Nueva duda de un derecho')
   end
+
+  def new_complain
+    @admin =  params[:admin]
+    @complain = params[:complain]
+    mail(to: @admin.email, subject: 'Nueva denuncia')
+  end
+
+
 end

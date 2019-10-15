@@ -24,6 +24,7 @@ es:
         email: 'Correo'
         school_type: 'Subsistema'
         admin_type: 'Tipo'
+        for_complain: 'Recibe denuncias'
       answer:
         name: 'Nombre'
         email: 'Correo'

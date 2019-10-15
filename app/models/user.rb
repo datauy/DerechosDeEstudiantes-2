@@ -11,4 +11,9 @@ class User < ApplicationRecord
   scope :by_collage, ->(id) {
     where(admin_type: "moderador", school_type: id)
   }
+
+  scope :for_complains, ->() {
+    where(for_complain: true)
+  }
+
 end
