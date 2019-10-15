@@ -31,4 +31,14 @@ ActiveAdmin.register Doubt do
     end
     f.actions
   end
+
+  controller do
+    def scoped_collection
+      if current_user.school_type.nil?
+        resource_class
+      else
+        resource_class.where(right_id: Right.where(school_type: current_user.school_type).pluck(:id))
+      end
+    end
+  end
 end

@@ -31,6 +31,16 @@ ActiveAdmin.register Answer do
     f.actions
   end
 
+  controller do
+    def scoped_collection
+      if current_user.school_type.nil?
+        resource_class
+      else
+        resource_class.where(question_id: Question.where(collage: current_user.school_type).pluck(:id))
+      end
+    end
+  end
+
   after_create do |answer|
     AdminMailer.with(answer: answer, url: question_url(answer.question.id)).send_answer.deliver
   end

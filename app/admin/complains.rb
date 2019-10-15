@@ -1,4 +1,5 @@
 ActiveAdmin.register Complain do
+  menu :if => proc{ can? :manage, Complain }
   actions :all, :except => [:new, :edit]
   permit_params :name, :email, :message
 
@@ -16,5 +17,4 @@ ActiveAdmin.register Complain do
   filter :email
   filter :message
   filter :created_at
-
 end

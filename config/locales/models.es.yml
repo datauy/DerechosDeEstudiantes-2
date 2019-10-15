@@ -22,6 +22,8 @@ es:
     attributes:
       user:
         email: 'Correo'
+        school_type: 'Subsistema'
+        admin_type: 'Tipo'
       answer:
         name: 'Nombre'
         email: 'Correo'
@@ -62,4 +64,5 @@ es:
         tag_three: "Etiqueta 3"
         tag_four: "Etiqueta 4"
         created_at: "Creado en"
+        school_type: "Subsistema"
         updated_at: "Actualizado en"

@@ -19,7 +19,7 @@ ActiveAdmin.register Question do
   filter :name
   filter :email
   filter :is_public
-  filter :collage
+  filter :collage, as: :select, collection: Question.collages
   filter :created_at
 
   form do |f|
@@ -30,9 +30,20 @@ ActiveAdmin.register Question do
       f.input :grade
       f.input :institution
       f.input :location
-      f.input :collage, :label => 'Subsistema', :as => :select, :collection => Right.school_types.keys.map{|r| [r, r]}
+      f.input :collage, :label => 'Subsistema', :as => :select, :collection => Question.collages.keys.map{|r| [r, r]}
       f.input :is_public
     end
     f.actions
   end
+
+  controller do
+    def scoped_collection
+      if current_user.school_type.nil?
+        resource_class
+      else
+        resource_class.where(collage: current_user.school_type)
+      end
+    end
+  end
+
 end

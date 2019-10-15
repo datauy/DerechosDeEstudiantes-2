@@ -41,18 +41,24 @@ footer-landing span {
   margin: 0 7px;
 }
 footer-complain{
-  @extend footer;
+  @extend footer-landing;
   top: 550px;
 }
 footer-about-us{
-  @extend footer;
+  @extend footer-landing;
   top: 300px;
 }
 
 footer-answer{
-  @extend footer;
+  @extend footer-landing;
   top: 300px;
 }
+
+footer-right{
+  @extend footer-landing;
+  top: 300px;
+}
+
 .cc-icon {
   font-family: "cc-fontello";
   display: inline-block;

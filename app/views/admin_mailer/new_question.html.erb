@@ -1,0 +1,10 @@
+<h1>Hola, <%= @admin.email%>!</h1>
+<p>Se generó una nueva pregunta el dia <%= @question.created_at%><br>
+</p>
+<p>
+  Haz click en el vinculo debajo ver la pregunta:
+  <br>
+
+  <%= link_to "ir a la pregunta", @url %>.
+</p>
+<p>Si recibiste este correo por equivocación podes ignorarlo</p>
