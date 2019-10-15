@@ -127,14 +127,14 @@
   @extend .polygon-mobile;
   width: 80%;
   top: 0;
-  background-image: url(polygon-mobile-top.svg);
+  background-image: url(asset-path('polygon-mobile-top.svg'));
   height: 200px;
 }
 .polygon-mobile-middle {
   @extend .polygon-mobile;
   width: 100%;
   top: 112%;
-  background-image: url(polygon-mobile-middle.svg);
+  background-image: url(asset-path('polygon-mobile-middle.svg'));
   height: 524px;
 }
 .polygon-mobile-bottom {
