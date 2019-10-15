@@ -52,6 +52,7 @@ es:
         location: "Localidad"
         created_at: "Creado en"
         is_public: "¿Público?"
+        collage: "Subsistema"
         updated_at: "Actualizado en"
       right:
         title: 'Titulo'

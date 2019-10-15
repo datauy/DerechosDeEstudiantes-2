@@ -5,18 +5,18 @@
     #navbarResponsive.collapse.navbar-collapse
       %ul.navbar-nav.ml-auto
         %li.nav-item
-          =link_to "Hacer una consulta", static_pages_about_us_path, class: "btn btn-outline-primary", "data-toggle": "modal", "data-target": "#questionModal"
+          =link_to "Hacer una consulta", about_us_path, class: "btn btn-outline-primary", "data-toggle": "modal", "data-target": "#questionModal"
         %li.nav-item
-          =link_to "Sobre nosotros", static_pages_about_us_path, class: "btn btn-outline-primary"
+          =link_to "Sobre nosotros", about_us_path, class: "btn btn-outline-primary"
     %input#menu-btn.menu-btn{:type => "checkbox"}
     %label.menu-icon.navbar-toggler{:for => "menu-btn"}
       %span.navicon
     #menu-wrapper
       =link_to root_path, class: "menu-logo" do
         =image_tag("logo-w.svg", class: "logo")
-      =link_to "Hacer una consulta", static_pages_about_us_path, class: "menu-link active", "data-toggle": "modal", "data-target": "#questionModal"
-      =link_to "Sobre nosotros", static_pages_about_us_path, class: "menu-link"
-      =link_to "Denuncias", static_pages_about_us_path, class: "menu-link", "data-toggle": "modal", "data-target": "#questionModal"
+      =link_to "Hacer una consulta", about_us_path, class: "menu-link active", "data-toggle": "modal", "data-target": "#questionModal"
+      =link_to "Sobre nosotros", about_us_path, class: "menu-link"
+      =link_to "Denuncias", about_us_path, class: "menu-link", "data-toggle": "modal", "data-target": "#questionModal"
 
 .modal_form
   =render "shared/modal_form"

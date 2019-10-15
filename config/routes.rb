@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   localized do
-    get 'static_pages/about_us'
-
+    get 'about_us', to: 'static_pages#about_us'
     ActiveAdmin.routes(self)
     devise_for :users, ActiveAdmin::Devise.config
     namespace :admin do

@@ -30,7 +30,7 @@ ActiveAdmin.register Question do
       f.input :grade
       f.input :institution
       f.input :location
-      f.input :collage, :label => 'Colegio', :as => :select, :collection => Right.school_types.keys.map{|r| [r, r]}
+      f.input :collage, :label => 'Subsistema', :as => :select, :collection => Right.school_types.keys.map{|r| [r, r]}
       f.input :is_public
     end
     f.actions
