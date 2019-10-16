@@ -17,8 +17,8 @@
           Pregunta
         .tag-search2
           Derecho
-        .tag-search3
-          -if session[:search_type]
+        -if session[:search_type]
+          .tag-search3
             =session[:search_type].capitalize
     .row.justify-content-md-center.text-main
       .col-md-8

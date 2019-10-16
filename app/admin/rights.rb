@@ -39,9 +39,11 @@ ActiveAdmin.register Right do
   controller do
     def scoped_collection
       if current_user.school_type.nil?
-        resource_class
+        return resource_class
       else
-        resource_class.where(school_type: current_user.school_type)
+        school_type_relation = resource_class.where(school_type: current_user.school_type).pluck(:id)
+        both_relation = resource_class.where(school_type: "ambas").pluck(:id)
+        return resource_class.where(id: (school_type_relation + both_relation))
       end
     end
   end
