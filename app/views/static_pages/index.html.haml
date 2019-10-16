@@ -82,8 +82,11 @@
                 .btn-shape
                   .subtext-title
                     =t('.shared')
-                    .space=image_tag("facebook.svg")
-                    =image_tag("twitter.svg")
+                    .space
+                    %a.fbsharelink{"data-shareurl" => "http://elujoestudiar.edu.uy/"}
+                      =image_tag("facebook.svg")
+                    %a.twsharelink{"data-shareurl" => "http://elujoestudiar.edu.uy/"}
+                      =image_tag("twitter.svg")
 
 
       .row.justify-content-md-center.section_main
@@ -105,8 +108,11 @@
                 .btn-shape-left
                   .subtext-title
                     =t('.shared')
-                    .space=image_tag("facebook.svg")
-                    =image_tag("twitter.svg")
+                    .space
+                    %a.fbsharelink{"data-shareurl" => "https://www.anep.edu.uy/"}
+                      =image_tag("facebook.svg")
+                    %a.twsharelink{"data-shareurl" => "https://www.anep.edu.uy/"}
+                      =image_tag("twitter.svg")
               .col-md-6
 
 %footer-landing.sticky-footer.max-parent
@@ -137,4 +143,19 @@
         }
       });
     }
+  });
+
+  $('.fbsharelink').click( function()
+  {
+      var shareurl = $(this).data('shareurl');
+      window.open('https://www.facebook.com/sharer/sharer.php?u='+escape(shareurl)+'&t='+document.title, '',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+      return false;
+  });
+
+  $('.twsharelink').click( function()
+  {
+      var shareurl = $(this).data('shareurl');
+      window.open('https://twitter.com/share?url=' + escape(shareurl), 'twitter-popup', 'height=350,width=600');
+      return false;
   });

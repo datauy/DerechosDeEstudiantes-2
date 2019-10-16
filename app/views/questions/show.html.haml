@@ -79,23 +79,26 @@
             %a.threedbutton.btn-max{id: "send_answer", :submit => "form"}
               =t('.send')
 
-    %div.margin-top
-    .row.justify-content-md-center
-      .col-md-10
-        .label-solid
-          .div-title
+    -if @question.is_public
+      %div.margin-top
+      .row.justify-content-md-center
+        .col-md-10
+          .label-solid
+            .div-title
+              .row
+                .col-md-6
+                  .subtext-title
+                    Compartir esta pregunta
+                    %hr
+                .col-md-6.right
+                  %a.fbsharelink{"data-shareurl" => "#{question_url(@question.id)}"}
+                    =image_tag("facebook.svg")
+                  %a.twsharelink{"data-shareurl" =>  "#{question_url(@question.id)}"}
+                    =image_tag("twitter.svg")
             .row
-              .col-md-6
-                .subtext-title
-                  Compartir este derecho
-                  %hr
-              .col-md-6.right
-                =image_tag("facebook.svg")
-                =image_tag("twitter.svg")
-          .row
-            .col-md-12
-              .text-p
-                %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+              .col-md-12
+                .text-p
+                  %p=t('.right_share')
 
 
 %footer-answer.sticky-footer.max-parent
@@ -119,3 +122,19 @@
       $('#sendModal').modal('show');
     }
   });
+
+  $('.fbsharelink').click( function()
+  {
+      var shareurl = $(this).data('shareurl');
+      window.open('https://www.facebook.com/sharer/sharer.php?u='+escape(shareurl)+'&t='+document.title, '',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+      return false;
+  });
+
+  $('.twsharelink').click( function()
+  {
+      var shareurl = $(this).data('shareurl');
+      window.open('https://twitter.com/share?url=' + escape(shareurl), 'twitter-popup', 'height=350,width=600');
+      return false;
+  });
+
