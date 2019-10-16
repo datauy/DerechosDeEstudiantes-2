@@ -6,7 +6,7 @@
     =image_tag("polygon-right-question.svg",  :class => "polygon-right-question")
     .row.justify-content-md-center.padding-top
       .col-md-8
-        %a.threedbutton{:href => "#{root_path}"}
+        %a.threedbutton.btn-max{:href => "#{root_path}"}
           %i.fas.fa-arrow-left=t('.button_back')
       .col-md-4
         =image_tag("foco.svg")
@@ -75,7 +75,7 @@
 
           = hidden_field_tag 'right_id', @right.id
           .complain-btn
-            %a.threedbutton{id: "send_doubt", :submit => "form"}
+            %a.threedbutton.btn-max{id: "send_doubt", :submit => "form"}
               =t('.send')
 
 

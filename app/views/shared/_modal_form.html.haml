@@ -41,7 +41,7 @@
               .text-input=t('.question')
               =f.text_area "message", id: "message", :class => "form-control", :value => ""
             .complain-btn
-              %a.threedbutton{id: "send_question", :submit => "form"}
+              %a.threedbutton.btn-max{id: "send_question", :submit => "form"}
                 =t('.send')
 
 :javascript

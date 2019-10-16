@@ -6,7 +6,7 @@
   .about_us
     .row.justify-content-md-center.padding-top
       .col-md-6
-        %a.threedbutton{:href => "#{root_path}"}
+        %a.threedbutton.btn-max{:href => "#{root_path}"}
           %i.fas.fa-arrow-left=t('.button_back')
       .col-md-6
         =image_tag("page.svg")
@@ -40,15 +40,12 @@
     .row.justify-content-md-center.margin-top
       .col-md-9
         .row
-          .col-md-6
+          .col-md-12
             .text-title
               =t('.subtitle-objetivos')
             %hr
             .text-p
               %p=t('.box_text_left_objetivos_html')
-          .col-md-6
-            .text-p-no-top
-              %p=t('.box_text_right_objetivos_html')
     .row.justify-content-md-center.margin-top
       .col-md-10
         .label-solid
@@ -110,15 +107,12 @@
     .row.justify-content-md-center.margin-top
       .col-md-9
         .row
-          .col-md-6
+          .col-md-12
             .text-title
               =t('.subtitle-tyc')
             %hr
             .text-p
               %p=t('.box_text_left_tyc_html')
-          .col-md-6
-            .text-p-no-top
-              %p=t('.box_text_right_tyc_html')
     .row.justify-content-md-center.margin-top
       .col-md-10
         .label-solid
@@ -129,6 +123,7 @@
               %hr
               .text-p
                 %p=t('.box_text_left_lenguaje_html')
+
 
 %footer-about-us.sticky-footer.max-parent
   =render "shared/footer"
