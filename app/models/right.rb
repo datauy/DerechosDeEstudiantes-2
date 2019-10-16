@@ -1,6 +1,6 @@
 class Right < ApplicationRecord
   has_many :doubts
-  enum school_type: [ :secundaria, :utu ]
+  enum school_type: [ :secundaria, :utu , :ambas]
 
   include PgSearch
   pg_search_scope :search_by_full_title,
@@ -14,7 +14,9 @@ class Right < ApplicationRecord
 
 
   scope :by_school_type, ->(search_type) {
-    where(school_type: search_type)
+    school_type_relation = where(school_type: search_type).pluck(:id)
+    both_relation = where(school_type: "ambas").pluck(:id)
+    return where(id: (school_type_relation + both_relation))
   }
 
   scope :by_school_type_not_current, ->(search_type, question_current) {
