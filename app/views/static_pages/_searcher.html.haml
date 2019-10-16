@@ -16,14 +16,18 @@
               =t('.right')
             .tag-search2
               =right.school_type
-            .tag-search3
-              =right.tag_one
-            .tag-search4
-              =right.tag_two
-            .tag-search5
-              =right.tag_three
-            .tag-search6
-              =right.tag_four
+            -if right.tag_one
+              .tag-search3
+                =right.tag_one.truncate(12)
+            -if ight.tag_two
+              .tag-search4
+                =right.tag_two.truncate(12)
+            -if right.tag_three
+              .tag-search5
+                =right.tag_three.truncate(12)
+            -if right.tag_four
+              .tag-search6
+                =right.tag_four.truncate(12)
 
       -@questions.each_with_index do |question, index|
         .row.max-parent.search-top-row
