@@ -28,7 +28,7 @@ es:
         button_ok: 'Reportar aquí'
     about_us:
       title: 'Sobre Nosotros'
-      text_left_html: ''
+      text_left_html: 'En esta sección vas a encontrar información sobre cómo fue hecha esta herramienta, quiénes la hicimos, y cómo vos podés hacer uso de la misma, o reutilizar los datos y el código desarrollado.'
       text_right_html: ''
       button_back: 'volver'
       subtitle-origen: 'Origen'
