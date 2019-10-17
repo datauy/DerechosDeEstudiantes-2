@@ -51,13 +51,8 @@ es:
       Al momento del cambio de versión (octubre 2019), con tres años y cuatro meses en línea, la versión 1.0 de la herramienta sumó aproximadamente 85.000 usuarios/as únicos/as, más de 100.000 sesiones y aprox. 325.000 páginas vistas.'
 
       subtitle-da: 'Datos Abiertos que utiliza la aplicación'
-      box_text_left_da_html: 'Los datos utilizados en esta aplicación se encuentran disponibles para su reutilización a través del <a href="https://catalogodatos.gub.uy/">Catálogo Nacional de Datos Abiertos</a> de AGESIC y otras fuentes, como <a href="http://opendefinition.org/od/2.1/es/">datos abiertos</a>, en formatos abiertos.'
-      box_text_right_da_html: '<ul>
-      <li><a href="https://catalogodatos.gub.uy/dataset?organization=anep&q=ANEP">ANEP - Centros educativos y oferta educativa</a>
-      <li><a href="https://catalogodatos.gub.uy/dataset/localidades-del-uruguay">IDE.uy - Localidades de Uruguay</a>
-      </li>
-      <br>
-      </ul>Los organismos estatales del sector público recogen, producen, reproducen y difunden datos para cumplir con su función pública. Incorporar la publicación de datos públicos en formatos abiertos abre la puerta a la posibilidad de que los mismos sean reutilizados en nuevos proyectos, que puedan combinarse con otras fuentes de datos y generar nuevas aplicaciones desarrolladas por el gobierno, por la sociedad civil, organizaciones, empresas o ciudadanos en general.'
+      box_text_left_da_html: 'Los datos utilizados en esta aplicación se encuentran disponibles para su reutilización a través del <a href="https://catalogodatos.gub.uy/">Catálogo Nacional de Datos Abiertos</a> de AGESIC y otras fuentes, como <a href="http://opendefinition.org/od/2.1/es/">datos abiertos</a>, en formatos abiertos.<ul><li><a href="https://catalogodatos.gub.uy/dataset?organization=anep&q=ANEP">ANEP - Centros educativos y oferta educativa</a><li><a href="https://catalogodatos.gub.uy/dataset/localidades-del-uruguay">IDE.uy - Localidades de Uruguay</a></li></ul>'
+      box_text_right_da_html: '</ul>Los organismos estatales del sector público recogen, producen, reproducen y difunden datos para cumplir con su función pública. Incorporar la publicación de datos públicos en formatos abiertos abre la puerta a la posibilidad de que los mismos sean reutilizados en nuevos proyectos, que puedan combinarse con otras fuentes de datos y generar nuevas aplicaciones desarrolladas por el gobierno, por la sociedad civil, organizaciones, empresas o ciudadanos en general.'
 
       subtitle-procesamiento: 'Procesamiento de datos'
       box_text_left_procesamiento_html: 'Los análisis y visualizaciones provistos por esta aplicación son realizados por DATA Uruguay. Estas operaciones están disponibles para consulta a través del <a href="https://github.com/datauy/DerechosDeEstudiantes2">código de la aplicación disponible en GitHub</a>, así como el resto del código fuente.'
