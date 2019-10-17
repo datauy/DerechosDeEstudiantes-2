@@ -30,7 +30,7 @@ es:
       copyright: '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" class"cc-icon"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><span>Derechos de Estudiantes está bajo licencia</span><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 Int.</a>'
     dialog_error:
       search:
-        error: 'Antes de buscar, tenés que seleccionar si sos estudiante de Secundaria o UTU aquí.'
+        error: 'Antes de buscar, tenés que seleccionar si sos estudiante de Secundaria o UTU.'
     modal_form:
       title_html: 'Envianos tu pregunta y te vamos<br>a responder lo antes posible'
       name: 'Nombre'
@@ -40,7 +40,7 @@ es:
       depto: 'Localidad'
       question: 'Pregunta'
       send: 'Enviar'
-      subtitle: 'SELECCIONÁ EL COLEGIO:'
+      subtitle: 'SELECCIONÁ DONDE ESTÁS ESTUDIANDO:'
     navbar:
       title_send: 'Tu mensaje fue enviado'
       message_send: 'Gracias por reportar y ayudar'
