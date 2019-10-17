@@ -81,7 +81,7 @@ Rails.application.configure do
   # SMTP settings
   config.action_mailer.smtp_settings = {
   :address              => "freyja.datauy.org",
-  :port                 => 587,
+  :port                 => 993,
   :domain               => Rails.application.credentials[:domain],
   :user_name            => Rails.application.credentials[:mail_username],
   :password             => Rails.application.credentials[:mail_password],
