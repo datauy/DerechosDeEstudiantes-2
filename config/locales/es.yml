@@ -1,0 +1,130 @@
+es:
+  users:
+    sessions:
+      new:
+        new_session:
+          email: "Correo"
+          email_hint: "correo@mail.com"
+          password: "Contraseña"
+          password_hint: "********"
+          password_lost: "Recuperar contraseña"
+          title: "Iniciar sesión"
+          remember: "Recordar"
+          ok: "Aceptar"
+    passwords:
+      new:
+        new_session:
+          reset_password: "Recuperar contraseña"
+          instruction: "Recibirás un correo con instrucciones para reiniciar tu contraseña en unos minutos."
+          email_hint: "usuaria@mail.com"
+          ok: "Aceptar"
+      edit:
+        new_session:
+          title_password: "Cambiar contraseña"
+          password: "Contraseña"
+          password_confirmation: "Confirmar contraseña"
+          password_hint: "***********"
+          ok: "Aceptar"
+  shared:
+    footer:
+      copyright: '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" class"cc-icon"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><span>Derechos de Estudiantes está bajo licencia</span><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 Int.</a>'
+    dialog_error:
+      search:
+        error: 'Antes de buscar, tenés que seleccionar si sos estudiante de Secundaria o UTU aquí.'
+    modal_form:
+      title_html: 'Envianos tu pregunta y te vamos<br>a responder lo antes posible'
+      name: 'Nombre'
+      email: 'Correo'
+      institution: 'Institución'
+      grade: 'Grado'
+      depto: 'Localidad'
+      question: 'Pregunta'
+      send: 'Enviar'
+      subtitle: 'SELECCIONÁ EL COLEGIO:'
+    navbar:
+      title_send: 'Tu mensaje fue enviado'
+      message_send: 'Gracias por reportar y ayudar'
+      close: 'Cerrar'
+
+  activerecord:
+    errors:
+      models:
+        complain:
+          attributes:
+            email:
+              invalid:
+                "Correo sin formato correcto"
+
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    -
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%A, %d de %B de %Y"
+      short: "%d de %b"
+      day_month: "%d de %B"
+      day_month_short: "%d %B"
+      mont_year: "%B/%Y"
+    month_names:
+    -
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
+      short: "%b %d"
+      long: "%B %d, %Y"
+  January: 'Enero'
+  February: 'Febrero'
+  March: 'Marzo'
+  April: 'Abril'
+  May: 'Mayo'
+  June: 'Junio'
+  July: 'Julio'
+  August: 'Agosto'
+  September: 'Septiembre'
+  October: 'Octubre'
+  November: 'Noviembre'
+  December: 'Diciembre'

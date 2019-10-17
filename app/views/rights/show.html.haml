@@ -1,0 +1,164 @@
+=image_tag("polygon-top-yellow.svg",  :class => "polygon-top")
+=render "shared/navbar"
+
+.container
+  .questions
+    =image_tag("polygon-right-question.svg",  :class => "polygon-right-question")
+    .row.justify-content-md-center.padding-top
+      .col-md-8
+        %a.threedbutton.btn-max{:href => "#{root_path}"}
+          %i.fas.fa-arrow-left=t('.button_back')
+      .col-md-4
+        =image_tag("foco.svg")
+    .row.justify-content-md-center.text-main
+      .col-md-8
+        .text-p-tags
+          =t('.search_in')
+        .tag-search1
+          Derecho
+        .tag-search2
+          -if session[:search_type]
+            =session[:search_type].capitalize
+    .row.justify-content-md-center.text-main
+      =image_tag("polygon-left-question.svg",  :class => "polygon-left-question")
+      .col-md-8
+        = render partial: "shared/messages", flash: flash
+        .text-title
+          =@right.title
+        .custome-list
+          =@right.description.html_safe
+    .row.justify-content-md-center.text-main
+      .col-md-8
+        -if @right.tag_one
+          .tag-search1
+            =@right.tag_one
+
+        -if @right.tag_two
+          .tag-search2
+            =@right.tag_two
+
+        -if @right.tag_three
+          .tag-search3
+            =@right.tag_three
+
+        -if @right.tag_four
+          .tag-search4
+            =@right.tag_four
+    %div.margin-top
+    .row.justify-content-md-center.center
+      .col-md-6
+        .text-we-can=t('.we_can')
+    .row.justify-content-md-center.center
+      .col-md-6
+        .row
+          .col-md-6
+            %a.threedbutton2{:onclick=>"show_form()"}
+              =t('.btn_no')
+          .col-md-6
+            %a.threedbutton2{"data-toggle": "modal", "data-target": "#sendModal"}
+              =t('.btn_yes')
+    = form_for :doubt, :url => {:controller => :doubts, action: :create} do |f|
+      #form-more-help.row.justify-content-md-center.margin-top-small.gone
+        .col-md-8
+          .input-group
+            %span
+              .text-input=t('.name')
+            =f.text_field "name", id: "name", :class => "form-control", value: ""
+          .input-group
+            %span
+              .text-input=t('.email')
+            =f.email_field "email", id: "email_doubt", :class => "form-control", value: ""
+          .input-group
+            %span
+              .text-input=t('.message')
+            =f.text_area "message", id: "message_doubt", :class => "form-control", value: ""
+
+          = hidden_field_tag 'right_id', @right.id
+          .complain-btn
+            %a.threedbutton.btn-max{id: "send_doubt", :submit => "form"}
+              =t('.send')
+
+
+    .row.justify-content-md-center.center
+      .col-md-12
+        .text-we-can=t('.other_questions')
+    -@rights.each do |right|
+      .row.justify-content-md-center
+        .col-md-10
+          .label-solid
+            .div-title
+              .row
+                .col-md-6
+                  .tag-answer
+                    Derecho
+                .col-md-6.right.c_gray
+                  Enviado #{right.created_at.to_time.strftime("%e de #{t(right.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
+            %hr
+            .row
+              .col-md-12
+                .text-p
+                  %p=right.title
+            .row.justify-content-end
+              =link_to right_path(right) do
+                .btn-shape
+                  Ver detalle
+
+    %div.margin-top
+    .row.justify-content-md-center
+      .col-md-10
+        .label-solid
+          .div-title
+            .row
+              .col-md-6
+                .subtext-title
+                  Compartir este derecho
+                  %hr
+              .col-md-6.right
+                %a.fbsharelink{"data-shareurl" => "#{right_url(@right.id)}"}
+                  =image_tag("facebook.svg")
+                %a.twsharelink{"data-shareurl" => "#{right_url(@right.id)}"}
+                  =image_tag("twitter.svg")
+          .row
+            .col-md-12
+              .text-p
+                %p=t('.right_share')
+
+
+%footer-right.sticky-footer.max-parent
+  =render "shared/footer"
+
+
+:javascript
+  function show_form(){
+    $('#form-more-help').removeClass("gone").addClass("visible");
+  }
+
+  $('#send_doubt').click(function() {
+    if($('#email_doubt').val() === "" || $('#message_doubt').val() === ""){
+      toastr.error('Por favor llena al menos correo y mensaje', 'Error!')
+    }
+    else{
+      $( "form" ).last().submit();
+    }
+  });
+  $( document ).ready(function() {
+    if("#{@message}"=="true"){
+      $('#sendModal').modal('show');
+    }
+  });
+
+  $('.fbsharelink').click( function()
+  {
+      var shareurl = $(this).data('shareurl');
+      window.open('https://www.facebook.com/sharer/sharer.php?u='+escape(shareurl)+'&t='+document.title, '',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+      return false;
+  });
+
+  $('.twsharelink').click( function()
+  {
+      var shareurl = $(this).data('shareurl');
+      window.open('https://twitter.com/share?url=' + escape(shareurl), 'twitter-popup', 'height=350,width=600');
+      return false;
+  });
+

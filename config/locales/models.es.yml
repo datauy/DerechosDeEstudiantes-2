@@ -1,0 +1,69 @@
+es:
+  activerecord:
+    models:
+      user:
+        one: 'Usuario'
+        other: 'Usuarios'
+      answer:
+        one: 'Respuesta'
+        other: 'Respuestas'
+      complain:
+        one: 'Denuncia'
+        other: 'Denuncias'
+      doubt:
+        one: 'Duda'
+        other: 'Dudas'
+      question:
+        one: 'Pregunta'
+        other: 'Preguntas'
+      right:
+        one: 'Derecho'
+        other: 'Derechos'
+    attributes:
+      user:
+        email: 'Correo'
+        school_type: 'Subsistema'
+        admin_type: 'Tipo'
+        for_complain: 'Recibe denuncias'
+      answer:
+        name: 'Nombre'
+        email: 'Correo'
+        message: "Mensaje"
+        is_user: "¿De usuario?"
+        question_id: "Pregunta"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      complain:
+        name: 'Nombre'
+        email: 'Correo'
+        message: "Mensaje"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      doubt:
+        name: 'Nombre'
+        email: 'Correo'
+        message: "Mensaje"
+        created_at: "Creado en"
+        right_id: "Derecho"
+        updated_at: "Actualizado en"
+      question:
+        name: 'Nombre'
+        email: 'Correo'
+        message: "Mensaje"
+        grade: "Grado"
+        institution: "Institución"
+        location: "Localidad"
+        created_at: "Creado en"
+        is_public: "¿Público?"
+        collage: "Subsistema"
+        updated_at: "Actualizado en"
+      right:
+        title: 'Titulo'
+        description: 'Descripción'
+        tag_one: "Etiqueta 1"
+        tag_two: "Etiqueta 2"
+        tag_three: "Etiqueta 3"
+        tag_four: "Etiqueta 4"
+        created_at: "Creado en"
+        school_type: "Subsistema"
+        updated_at: "Actualizado en"

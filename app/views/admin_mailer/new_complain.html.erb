@@ -1,0 +1,13 @@
+<h1>Hola, <%= @admin.email%>!</h1>
+<p>Se generó una nueva denuncia el día <%= @complain.created_at%> por el usuario: <%= "#{@complain.name} #{@complain.email}"%><br></p>
+<p>
+  Con el siguiente mensaje:
+<br>
+
+<%= @complain.message%>
+
+<br>
+
+<b>Es importante el seguimiento</b>
+</p>
+<p>Si recibiste este correo por equivocación podes ignorarlo</p>

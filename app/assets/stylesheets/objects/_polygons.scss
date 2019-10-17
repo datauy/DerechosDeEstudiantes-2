@@ -1,0 +1,144 @@
+.polygon{
+  object-fit: contain;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  z-index: -1000;
+}
+
+.polygon-top {
+  @extend .polygon;
+  width: 411px;
+  height: 238px;
+  left: 60px;
+  top: 0;
+}
+
+.polygon-left {
+  @extend .polygon;
+  width: 275px;
+  height: 1126px;
+  left: 0;
+  top: 56%;
+}
+
+.polygon-left-down {
+  @extend .polygon;
+  width: 291px;
+  height: 291px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.polygon-right{
+  @extend .polygon;
+  width: 137px;
+  height: 524px;
+  right: 0;
+}
+
+.polygon-right-down {
+  @extend .polygon;
+  width: 260px;
+  height: 1126px;
+  right: 0px;
+}
+
+
+.polygon-center{
+  @extend .polygon;
+  width: 218px;
+  height: 215px;
+  opacity: 0.43;
+  top: -50px;
+  left: -20px;
+}
+
+.polygon-center-right{
+  @extend .polygon;
+  width: 218px;
+  height: 215px;
+  opacity: 0.43;
+  bottom: -50px;
+  right: 0px;
+}
+
+.polygon-big-center{
+  @extend .polygon;
+  width: 942px;
+  height: 1088px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.polygon-big-right{
+  @extend .polygon;
+  width: 669px;
+  height: 1126px;
+  right: 0;
+}
+
+.polygon-big-left {
+  @extend .polygon;
+  width: 450px;
+  height: 1126px;
+  left: 0;
+}
+
+.polygon-right-question{
+  @extend .polygon;
+  width: 289.4px;
+  height: 1076.4px;
+  right: 0;
+}
+
+
+.polygon-left-question{
+  @extend .polygon;
+  width: 234px;
+  height: 1088px;
+  left: 0;
+}
+
+.polygon-answer-right{
+  @extend .polygon;
+  width: 439px;
+  height: 1126px;
+  right: 0;
+}
+
+
+.polygon-answer-left{
+  @extend .polygon;
+  width: 458px;
+  height: 1126px;
+  left: 0;
+}
+
+.polygon-mobile {
+  @extend .polygon;
+  display: none;
+}
+.polygon-mobile-top {
+  @extend .polygon-mobile;
+  width: 80%;
+  top: 0;
+  background-image: url(asset-path('polygon-mobile-top.svg'));
+  height: 200px;
+}
+.polygon-mobile-middle {
+  @extend .polygon-mobile;
+  width: 100%;
+  top: 112%;
+  background-image: url(asset-path('polygon-mobile-middle.svg'));
+  height: 524px;
+}
+.polygon-mobile-bottom {
+  @extend .polygon-mobile;
+  width: 100%;
+  bottom: 0;
+}

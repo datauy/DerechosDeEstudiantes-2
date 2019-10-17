@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title Derechos de Estudiantes
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', 'href':'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400i,600,700&display=swap'
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    =image_tag("polygon-mobile-top.svg",  :class => "polygon-mobile-top")
+    .polygon-mobile-middle
+    = yield
+    %script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=UA-34702401-13"}
+    :javascript
+      window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-34702401-13');

@@ -1,0 +1,10 @@
+<h1>Hola, <%= @admin.email%>!</h1>
+<p>Se generó una nueva duda el dia <%= @doubt.created_at%> para el derecho: <%= @doubt.right.title%><br>
+</p>
+<p>
+  Haz click en el vinculo debajo ver la duda:
+  <br>
+
+  <%= link_to "ir a la duda", @url %>.
+</p>
+<p>Si recibiste este correo por equivocación podes ignorarlo</p>

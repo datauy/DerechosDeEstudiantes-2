@@ -1,0 +1,75 @@
+/ Modal question
+#questionModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "questionModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog.modal-lg{:role => "document"}
+    .modal-content
+      .modal-body
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+        =image_tag("paloma.svg", class: "logo")
+        %p.text-p=t('.title_html')
+        .row.justify-content-md-center
+          .col-md-12.margin-top
+            %b=t('.subtitle')
+            .buttons-selecteded
+              =render "shared/buttons_modal"
+        = form_for :question, :url => {:controller => :questions, action: :create} do |f|
+          .row.justify-content-md-center
+            .input-group
+              %span
+                .text-input=t('.name')
+              =f.text_field "name", id: "name", :class => "form-control", :value => ""
+            .input-group
+              %span
+                .text-input=t('.email')
+              =f.email_field "email", id: "email", :class => "form-control", :value => ""
+            .input-group
+              %span
+                .text-input=t('.depto')
+              .autocomplete
+                =f.text_field "location", id: "location", :class => "form-control not-border", :value => "", :type => "text"
+            .input-group
+              %span
+                .text-input=t('.institution')
+              .autocomplete
+                =f.text_field "institution", id: "institution", :class => "form-control not-border", :value => "", :type => "text"
+            .input-group
+              %span
+                .text-input=t('.grade')
+              =f.number_field "grade", id: "grade", :class => "form-control", :min=>"1",  :max=>"9", :value => 1
+            .input-group
+              %span
+              .text-input=t('.question')
+              =f.text_area "message", id: "message", :class => "form-control", :value => ""
+            .complain-btn
+              %a.threedbutton.btn-max{id: "send_question", :submit => "form"}
+                =t('.send')
+
+:javascript
+  $('#send_question').click(function() {
+    if ($(".unclic-modal")[0]){
+      if($('#message').val() === "" || $('#name').val() === "" || $('#email').val() === "" || $('#institution').val() === "" || $('#location').val() === ""){
+        toastr.error('Por favor llena todos los datos', 'Error!')
+      }
+      else{
+        $( "form" ).first().submit();
+        $('#questionModal').modal('hide');
+        $('#sendModal').modal('show');
+      }
+    }else{
+      toastr.error('Por favor selecciona el colegio', 'Error!')
+    }
+  });
+  $( document ).ready(function() {
+    var locations = "#{@array_locations}".split(',')
+    var institutions = "#{@array_institutions}".split(',')
+    autocomplete(document.getElementById("location"), locations);
+    autocomplete(document.getElementById("institution"), institutions);
+    if (!$(".unclic-modal")[0]){
+      $('#message').prop( "disabled", true );
+      $('#name').prop( "disabled", true );
+      $('#email').prop( "disabled", true );
+      $('#grade').prop( "disabled", true );
+      $('#institution').prop( "disabled", true );
+      $('#location').prop( "disabled", true );
+    }
+  });

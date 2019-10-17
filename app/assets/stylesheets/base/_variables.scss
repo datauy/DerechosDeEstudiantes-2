@@ -1,0 +1,88 @@
+// Colors
+$purple:#AA005A;
+$light-purple:#9F4995;
+$purple: #e3d3f5;
+$yellow:#ffc107;
+$dark-yellow: #b77e00;
+$blue: #003087;
+$dark-blue: #4a90e2;
+$blue-text: #00a6d6;
+$light-blue: #d3edf5;
+$blue-title: #84a1d5;
+$blue-input: #2b91b1;
+$medium-gray: #383a48;
+$dark-gray: #243033;
+$light-gray: #E9EDF2;
+$gray-purple: #4C4D66;
+$lime: #BBD53B;
+$light-green: #59C186;
+$dark-green:#28a745;
+$red:#ff0000;
+$orange:#ffb81c;
+$green:#00B14D;
+$gold: #FFB100;
+$yellow: #ffb81c;
+$light-yellow: #fbebc7;
+$gray: #9fa0a4;
+$skin: #f5e5d3;
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.44;
+}
+
+.max-parent{
+    width: 100% !important;
+}
+.right{
+    text-align: right;
+}
+
+.left{
+    text-align: left;
+}
+
+.center{
+    text-align: center !important;
+}
+
+.bottom{
+    display: flex;
+    align-items: flex-end;
+}
+.padding-top{
+    padding-top: 20px;
+}
+
+.margin-top{
+    margin-top: 50px;
+}
+
+.margin-top-big{
+    margin-top: 150px;
+}
+
+.margin-top-small{
+    margin-top: 20px;
+}
+.margin-top-xsmall {
+  margin-top: 9px;
+}
+.margin-bottom{
+    margin-bottom: 30px;
+}
+
+.gone{
+    display: none;
+}
+
+.visible{
+    display: flex;
+}
+
+.section {
+  margin-top: 60px;
+  margin-bottom: 120px;
+}

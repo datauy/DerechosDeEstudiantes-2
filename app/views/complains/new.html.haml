@@ -1,0 +1,64 @@
+=image_tag("polygon-top-yellow.svg",  :class => "polygon-top")
+
+=render "shared/navbar"
+
+
+.container
+  .complain
+    =image_tag("polygon-big-center.svg",  :class => "polygon-big-center")
+    .row.justify-content-md-center.padding-top
+      .col-md-12
+        %a.threedbutton.btn-max{:href => "#{root_path}"}
+          %i.fas.fa-arrow-left=t('.button_back')
+      = render partial: "shared/messages", flash: flash
+    .row.justify-content-md-center.text-main
+      .col-md-auto
+        .row
+          .col-md-5
+            =image_tag("complain.svg",  :class => "icono")
+          .col-md-7
+            .text-title
+              =t('.title')
+            .text-p
+              =t('.description')
+    .row.justify-content-md-center
+      .col-md-8
+        .label-doted
+          .blue-title=t('.instructions_title')
+          .blue-subtitle=t('.instructions_p')
+    = form_for :complain, :url => {:controller => :complains, action: :create} do |f|
+      .row.justify-content-md-center
+        .col-md-8
+          .input-group
+            %span
+              .text-input=t('.name')
+            =f.text_field "name", id: "name_complain", :class => "form-control"
+          .input-group
+            %span
+              .text-input=t('.email')
+            =f.email_field "email", id: "email", :class => "form-control"
+          .input-group
+            %span
+              .text-input=t('.message')
+            =f.text_area "message", id: "message_complain", :class => "form-control"
+          .complain-btn
+            %a.threedbutton.btn-max{id: "send_complain", :submit => "form"}
+              =t('.send')
+%footer-complain.sticky-footer.max-parent
+  =render "shared/footer"
+
+:javascript
+  $('#send_complain').click(function() {
+    if($('#email_complain').val() === "" || $('#message_complain').val() === ""){
+      toastr.error('Por favor llena al menos correo y mensaje', 'Error!')
+    }
+    else{
+      $( "form" ).last().submit();
+    }
+  });
+  $( document ).ready(function() {
+    if("#{@message}"=="true"){
+      $('#sendModal').modal('show');
+    }
+  });
+

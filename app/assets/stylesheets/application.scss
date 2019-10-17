@@ -1,0 +1,28 @@
+@import 'bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "toastr";
+//////////Base//////////
+@import 'base/variables';
+@import 'base/color';
+@import 'base/flashes';
+//////////objects//////////
+@import 'objects/navbar';
+@import 'objects/footer';
+@import 'objects/polygons';
+@import 'objects/buttons';
+@import 'objects/inputs';
+@import 'objects/paginator';
+@import 'objects/modal';
+@import 'objects/list';
+@import 'objects/tags';
+@import 'objects/alerts';
+@import 'objects/autocomplete';
+@import 'objects/graphics';
+//////////views//////////
+@import 'views/login';
+@import 'views/landing';
+@import 'views/complain';
+@import 'views/about_us';
+@import 'views/questions';
+@import 'views/media';

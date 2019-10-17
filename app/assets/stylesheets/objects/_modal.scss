@@ -1,0 +1,50 @@
+.modal-content{
+  padding: 20px;
+  border-radius: 29.4px;
+  border: solid 1.8px $medium-gray;
+  margin-bottom: 30px;
+  background-color: white;
+  box-shadow: 0 8px 0 $medium-gray, 0 15px 20px rgba(0, 0, 0, .35);
+  -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+  -moz-transition: -moz-box-shadow .1s ease-in-out;
+  -o-transition: -o-box-shadow .1s ease-in-out;
+  transition: box-shadow .1s ease-in-out;
+  z-index: -1;
+
+  .text-p{
+    font-size: 21px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 0.45px;
+    margin-top: 20px;
+    color: $medium-gray;
+  }
+  .complain-btn{
+    margin-top: 15px;
+    text-align: right;
+    width: 100%;
+  }
+  .text-input{
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $blue-input;
+    margin-top: 10px;
+  }
+
+  .send-title{
+    font-size: 21px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 0.45px;
+    color: $medium-gray;
+  }
+
+}

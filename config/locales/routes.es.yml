@@ -1,0 +1,14 @@
+es:
+  routes:
+    users: 'estudiante'
+    admin: 'admin'
+    questions: 'preguntas'
+    answers: 'respuestas'
+    rights: 'derechos'
+    doubts: 'dudas'
+    complains: 'denuncias'
+    static_pages: 'paginas'
+    about_us: 'sobre-nosotros'
+    new: 'nueva'
+    edit: 'editar'
+    login: 'inicia_sesion'

@@ -1,0 +1,10 @@
+<h1>Hola, <%= @answer.question.name  || @answer.question.email%>!</h1>
+<p>Te respondimos por tu consulta que hiciste el dia <%= @answer.question.created_at%><br>
+</p>
+<p>
+  Haz click en el vinculo debajo ver la respuesta:
+  <br>
+
+  <%= link_to "ir a mi pregunta", @url %>.
+</p>
+<p>Si recibiste este correo por equivocación podes ignorarlo</p>

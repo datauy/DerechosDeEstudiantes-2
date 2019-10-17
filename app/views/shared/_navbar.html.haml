@@ -1,0 +1,38 @@
+%nav.navbar.navbar-expand-lg.static-top
+  .container
+    =link_to root_path, class: "navbar-brand" do
+      =image_tag("logo.svg", class: "logo")
+    #navbarResponsive.collapse.navbar-collapse
+      %ul.navbar-nav.ml-auto
+        %li.nav-item
+          =link_to "Hacer una consulta", about_us_path, class: "btn btn-outline-primary", "data-toggle": "modal", "data-target": "#questionModal"
+        %li.nav-item
+          =link_to "Sobre nosotros", about_us_path, class: "btn btn-outline-primary"
+    %input#menu-btn.menu-btn{:type => "checkbox"}
+    %label.menu-icon.navbar-toggler{:for => "menu-btn"}
+      %span.navicon
+    #menu-wrapper
+      =link_to root_path, class: "menu-logo" do
+        =image_tag("logo-w.svg", class: "logo")
+      =link_to "Hacer una consulta", about_us_path, class: "menu-link active", "data-toggle": "modal", "data-target": "#questionModal"
+      =link_to "Sobre nosotros", about_us_path, class: "menu-link"
+      =link_to "Denuncias", about_us_path, class: "menu-link", "data-toggle": "modal", "data-target": "#questionModal"
+
+.modal_form
+  =render "shared/modal_form"
+
+/modal thanks
+#sendModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "sendModalLabel", :role => "dialog", :tabindex => "-2"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-body
+        .row
+          .col-md-4
+            =image_tag("mail.svg", class: "logo")
+          .col-md-8.center
+            %p.send-title
+              =t('.title_send')
+            %p
+              =t('.message_send')
+            %a.threedbutton.btn-max{"aria-label" => "Close", "data-dismiss" => "modal"}
+              =t('.close')

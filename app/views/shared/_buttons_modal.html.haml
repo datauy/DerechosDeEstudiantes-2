@@ -1,0 +1,48 @@
+.row.justify-content-md-center.center.margin-bottom
+  .col-md-8
+    .row
+      -if is_activated(session[:search_type]=="utu")
+        .col-md-6.margin-top-small
+          %a.threedbutton2#option1_modal
+            =t('.secundaria')
+        .col-md-6.unclic-modal.margin-top-small
+          =link_to t('.utu'), "", class: "btn btn-outline-primary-yellow not-cursor", id: "btn_utu_modal"
+      -elsif is_activated(session[:search_type]=="secundaria")
+        .col-md-6.unclic-modal.margin-top-small
+          =link_to t('.secundaria'), "", class: "btn btn-outline-primary-yellow not-cursor", id: "btn_secundaria_modal"
+        .col-md-6.margin-top-small
+          %a.threedbutton2#option2_modal
+            =t('.utu')
+      -else
+        .col-md-6.margin-top-small
+          %a.threedbutton2#option1_modal
+            =t('.secundaria')
+        .col-md-6.margin-top-small
+          %a.threedbutton2#option2_modal
+            =t('.utu')
+
+
+:javascript
+  $("#option1_modal").click(function() {
+    root_path="#{root_path}"
+    $('#questionModal').modal('hide');
+    $.ajax({ type: "GET", url: root_path+"?search_type=secundaria", success: function(result){
+      $('#questionModal').modal('show');
+    }});
+  });
+
+  $("#option2_modal").click(function() {
+    root_path="#{root_path}"
+     $('#questionModal').modal('hide');
+    $.ajax({ type: "GET", url: root_path+"?search_type=utu", success: function(result){
+      $('#questionModal').modal('show');
+    }});
+  });
+
+  $("#btn_utu_modal").click(function() {
+    return false;
+  });
+
+  $("#btn_secundaria_modal").click(function() {
+    return false;
+  });

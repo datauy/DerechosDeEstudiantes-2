@@ -1,0 +1,169 @@
+.container{
+  .questions{
+    margin-top: 100px;
+    hr{
+      width: 100%;
+      height: 1px;
+      background-color: $black;
+    }
+    .icono{
+      width: 218px;
+      height: 153px;
+      object-fit: contain;
+    }
+    .text-title{
+      font-size: 38px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.81px;
+      color: $blue-text;
+    }
+    .subtext-title{
+      font-size: 23px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.49px;
+      color: $blue-text;
+      text-align: left;
+      hr{
+        width: 53px;
+        height: 3px;
+        position: absolute;
+        background-color: $blue-text;
+      }
+    }
+    .text-p-tags{
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 1.16px;
+      margin-bottom: 30px;
+      display: inline-block;
+    }
+
+    .div-title{
+      padding: 20px 50px 0px 50px;
+    }
+
+    .text-date{
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #9fa0a4;
+    }
+
+    .text-p{
+      font-size: 17px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.66;
+      letter-spacing: normal;
+      color: $medium-gray;
+      padding: 20px 0px 0px 50px;
+    }
+    .text-we-can{
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 1.16px;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .text-p-answer{
+      font-size: 17px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.66;
+      letter-spacing: normal;
+      color: $medium-gray;
+      margin-top: 20px;
+      margin-top: 20px;
+    }
+    .label-solid{
+      border-radius: 29.4px;
+      border: solid 1.8px $medium-gray;
+      margin-bottom: 30px;
+      background-color: white;
+      box-shadow: 0 8px 0 $medium-gray, 0 15px 20px rgba(0, 0, 0, .35);
+      -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+      -moz-transition: -moz-box-shadow .1s ease-in-out;
+      -o-transition: -o-box-shadow .1s ease-in-out;
+      transition: box-shadow .1s ease-in-out;
+      a{
+        color: $medium-gray;
+        text-decoration: none !important;
+      }
+    }
+
+    .label-solid-answer{
+      border-radius: 29.4px;
+      border: solid 1.8px $medium-gray;
+      margin-bottom: 30px;
+      background-color: white;
+      padding: 15px;
+    }
+    .btn-shape{
+      text-align: center;
+      width: 232px;
+      height: 40px;
+      margin-right: 13px;
+      font-weight: bold;
+      border-top-left-radius: 16.4px;
+      border-bottom-right-radius: 16.4px;
+      padding-top: 10px;
+      border: solid 1.8px $medium-gray;
+    }
+    .complain-btn{
+      margin-top: 15px;
+      text-align: right;
+      width: 100%;
+    }
+    .text-input{
+      font-size: 16px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $blue-input;
+      margin-top: 10px;
+    }
+
+    .tag-answer{
+      width: 127px;
+      height: 19px;
+      padding-top: 2px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 1.9px;
+      border-radius: 9.5px;
+      background-color: $yellow;
+    }
+
+
+  }
+}
+
+.question-container{
+  min-height: 1400px;
+}

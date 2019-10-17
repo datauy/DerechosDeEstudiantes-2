@@ -1,0 +1,26 @@
+.page-item.active .page-link {
+  z-index: 1;
+  color: $medium-gray;
+  background-color: $light-yellow;
+  border-color: $light-yellow;
+  border-radius: 50px;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: $medium-gray;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+
+.page-link:hover{
+  color: $medium-gray;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 0px solid transparent;
+}

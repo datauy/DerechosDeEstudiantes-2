@@ -1,0 +1,195 @@
+.container{
+  .landing{
+    hr{
+      width: 64px;
+      height: 3px;
+      position: absolute;
+      background-color: $orange;
+    }
+    hr-title{
+      @extend hr;
+      width: 51.2px;
+      height: 2.4px;
+      top: 10px;
+      @media only screen and (max-width: 800px) {
+        margin-block-start: 5px;
+      }
+    }
+    .icono{
+      width: 245px;
+      height: 215px;
+      object-fit: contain;
+    }
+
+    .text-know-title{
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 38px;
+      font-weight: bold;
+      letter-spacing: 0.81px;
+      text-align: left;
+      margin-top: 78px;
+      color: #00a6d6;
+    }
+
+    .text-know-p{
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 17px;
+      margin-top: 25px;
+      font-size: 17px;
+      line-height: 1.66;
+      color: $medium-gray;
+    }
+
+    .text-know-subtitle {
+      font-size: 14.4px;
+      font-weight: bold;
+      line-height: 1.44;
+      letter-spacing: 1.12px;
+      text-align: center;
+      color: $medium-gray;
+      margin: 6px auto 16px;
+    }
+
+    .text-complain-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-left: 77px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    .text-complain-p {
+      margin: 28px 0;
+      font-size: 17px;
+      line-height: 1.66;
+      color: $medium-gray;
+    }
+
+    .btn-group{
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .label-solid{
+      border-radius: 29.4px;
+      border: solid 1.8px $medium-gray;
+      margin-bottom: 30px;
+      background-color: white;
+      box-shadow: 0 8px 0 $medium-gray, 0 15px 20px rgba(0, 0, 0, .35);
+      -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+      -moz-transition: -moz-box-shadow .1s ease-in-out;
+      -o-transition: -o-box-shadow .1s ease-in-out;
+      transition: box-shadow .1s ease-in-out;
+      padding-top: 20px;
+    }
+
+
+    .btn-shape{
+      text-align: center;
+      width: 100%;
+      height: 78px;
+      margin-right: 13px;
+      font-weight: bold;
+      border-top-left-radius: 29.4px;
+      border-bottom-right-radius: 20.4px;
+      padding-top: 20px;
+      border: solid 1.8px $medium-gray;
+    }
+
+    .btn-shape-left{
+      text-align: center;
+      width: 100%;
+      height: 78px;
+      margin-right: 13px;
+      font-weight: bold;
+      border-top-right-radius: 29.4px;
+      border-bottom-left-radius: 20.4px;
+      padding-top: 20px;
+      border: solid 1.8px $medium-gray;
+    }
+
+    .text-p{
+      font-size: 17px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.66;
+      letter-spacing: normal;
+      color: $medium-gray;
+      padding: 20px 0px 0px 50px;
+    }
+
+    .padding-section-main{
+      padding: 20px;
+    }
+
+    .text-subsection-know-p{
+      width: 381px;
+      height: 54px;
+      font-size: 17px;
+      margin-top: 25px;
+      font-size: 17px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.66;
+      letter-spacing: normal;
+      margin-left: 10px;
+      color: $medium-gray;
+    }
+
+    .section_main{
+      hr{
+        width: 64px;
+        height: 3px;
+        position: absolute;
+        background-color: $blue-text;
+      }
+      .icono{
+        margin-top: 30px;
+        width: 100%;
+        height: 185px;
+        object-fit: contain;
+      }
+      .text-title{
+        font-size: 28px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.6px;
+        color: $blue-text;
+      }
+
+      .text-p{
+        font-size: 17px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.66;
+        letter-spacing: normal;
+        color: $medium-gray;
+        padding: 30px 0px 0px 0px;
+      }
+
+      .subtext-title{
+        font-size: 13.6px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.22px;
+        color: $medium-gray;
+      }
+      .space{
+        margin-left: 30px;
+        display: inline;
+      }
+      .space-left{
+        padding-left: 50px;
+      }
+      .space-right{
+        padding-right: 50px;
+      }
+    }
+  }
+}
