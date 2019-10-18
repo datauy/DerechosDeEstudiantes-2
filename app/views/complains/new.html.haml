@@ -6,7 +6,7 @@
 .container
   .complain
     =image_tag("polygon-big-center.svg",  :class => "polygon-big-center")
-    .row.justify-content-md-center.padding-top
+    .row.justify-content-md-center
       .col-md-12
         %a.threedbutton.btn-max{:href => "#{root_path}"}
           %i.fas.fa-arrow-left=t('.button_back')
@@ -61,4 +61,3 @@
       $('#sendModal').modal('show');
     }
   });
-

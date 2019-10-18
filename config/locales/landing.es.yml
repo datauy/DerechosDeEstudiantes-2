@@ -28,8 +28,7 @@ es:
         button_ok: 'Reportar aquí'
     about_us:
       title: 'Sobre Nosotros'
-      text_left_html: 'En esta sección vas a encontrar información sobre cómo fue hecha esta herramienta, quiénes la hicimos, y cómo vos podés hacer uso de la misma, o reutilizar los datos y el código desarrollado.'
-      text_right_html: ''
+      text_about_html: 'En esta sección vas a encontrar información sobre cómo fue hecha esta herramienta, quiénes la hicimos, y cómo vos podés hacer uso de la misma, o reutilizar los datos y el código desarrollado.'
       button_back: 'volver'
       subtitle-origen: 'Origen'
       box_text_left_origen_html: 'Esta herramienta fue co-creada en por el <a href="http://www.ces.edu.uy/ces/">Consejo de Educación Secundaria</a> (CES), <a href="https://www.utu.edu.uy/">Consejo de Educación Técnico Profesional</a> (CETP/UTU), <a href="https://www.anep.edu.uy/">Administración Nacional de Educación Pública</a> (ANEP),  <a href="http://www.unicef.org/uruguay/spanish/">UNICEF Uruguay</a> y <a href="http://www.datauy.org/">DATA Uruguay</a> y permite a estudiantes, padres y actores educativos consultar preguntas con información actualizada y completa sobre derechos de estudiantes.'

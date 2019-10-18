@@ -1,4 +1,8 @@
 @media (max-width: 758px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
   .container .landing {
     margin-top: 60px;
   }
@@ -32,9 +36,40 @@
   .container .landing hr-title {
     -webkit-margin-before: 28px;
     margin-block-start: 28px;
+  }
+  /* About Us*/
+  .container .about_us{
+    margin-top: 43px;
+  }
+  .fa-arrow-left {
+    text-indent: -999px;
+    min-width: 16px;
+  }
+  .fa-arrow-left::before {
+    margin-right: 0;
+    text-indent: 0px;
+    float: left;
+    font-size: 20px;
+  }
+  a.threedbutton {
+    width: 84px;
+    height: 45px;
+    margin: 0 22px 9px;
+  }
+  .about-img {
+    margin: 52px auto;
+  }
+
+  /* COMPLAINS */
+  .container .complain {
+    margin-top: 43px;
+  }
+  .polygon-big-center {
+    width: 300%;
+    margin-left: -100%;
+  }
 }
 
-}
 @media (max-width: 992px) {
   .polygon-top,
   .polygon-right,
