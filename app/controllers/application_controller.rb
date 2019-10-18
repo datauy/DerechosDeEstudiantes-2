@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  require "json"
+
 
   def get_json_response(url)
     require 'open-uri'
@@ -9,16 +11,15 @@ class ApplicationController < ActionController::Base
   helper_method :get_institutions_json
   def get_institutions_json
     json_institutions = get_json_response(
-      "https://elijoestudiar-backend.development.datauy.org/api/busca-establecimientos?subsis=#{session[:search_type]}"
+      "https://ee-backend.development.datauy.org/api/busca-establecimientos?subsis=#{session[:search_type]}"
     )
     @array_institutions = json_institutions['establecimientos'].map { |e| e['nombre'] }.join(',')
   end
 
   helper_method :get_locations_json
   def get_locations_json
-    json_locations = get_json_response(
-      "https://elijoestudiar-backend.development.datauy.org/api/ubicaciones"
-    )
-    @array_locations= json_locations.map { |e| e['nombre'] }.join(',')
+    file = File.open "#{Rails.root}/public/ubicaciones.json"
+    json_locations = JSON.load file
+    @array_locations = json_locations.map { |e| e['nombre'].sub ',', ' -' }.join(',')
   end
 end
