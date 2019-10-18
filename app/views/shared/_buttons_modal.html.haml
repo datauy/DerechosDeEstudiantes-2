@@ -25,7 +25,6 @@
 :javascript
   $("#option1_modal").click(function() {
     root_path="#{root_path}"
-    toastr.success('Por favor espera un momento, estamos guardando la selección', '')
     $('#questionModal').modal('hide');
     $.ajax({ type: "GET", url: root_path+"?search_type=secundaria", success: function(result){
       $('#questionModal').modal('show');
@@ -34,7 +33,6 @@
 
   $("#option2_modal").click(function() {
     root_path="#{root_path}"
-    toastr.success('Por favor espera un momento, estamos guardando la selección', '')
     $('#questionModal').modal('hide');
     $.ajax({ type: "GET", url: root_path+"?search_type=utu", success: function(result){
       $('#questionModal').modal('show');

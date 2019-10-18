@@ -25,7 +25,6 @@
 :javascript
   $("#option1").click(function() {
     root_path="#{root_path}"
-    toastr.success('Por favor espera un momento, estamos guardando la selección', '')
     $.ajax({ type: "GET", url: root_path+"?search_type=secundaria", success: function(result){
       $('#search').val("");
     }});
@@ -33,7 +32,6 @@
 
   $("#option2").click(function() {
     root_path="#{root_path}"
-    toastr.success('Por favor espera un momento, estamos guardando la selección', '')
     $.ajax({ type: "GET", url: root_path+"?search_type=utu", success: function(result){
       $('#search').val("");
     }});
