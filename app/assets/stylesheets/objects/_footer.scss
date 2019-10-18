@@ -17,25 +17,34 @@ footer-landing .col-md-12 {
   display: inline-flex;
 }
 footer-landing .logo {
-  width: 35%;
+  width: 28%;
   margin: 0 auto;
-}
-.logo.data {
-  margin-top: -28px;
-}
-footer-landing .row.between .logo {
-  margin-top: -10px;
-  width: 50%;
 }
 footer-landing .row.first {
   width: 50%;
 }
 footer-landing .row.between {
   margin-bottom: 0;
-  width: 25%;
+  width: 50%;
+  margin: 0 2%;
 }
 footer-landing .row.last {
-  width: 30%;
+  width: 10%;
+}
+.logo.data {
+  margin-top: -28px;
+}
+.logo.anep {
+  margin-top: -28px;
+}
+.logo.codicen {
+  width: 18%;
+}
+.logo.ces{
+  width: 32%;
+}
+.logo.cetp{
+  width: 36%;
 }
 footer-landing span {
   margin: 0 7px;
