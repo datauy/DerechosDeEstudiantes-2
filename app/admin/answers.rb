@@ -26,7 +26,7 @@ ActiveAdmin.register Answer do
       f.input :name
       f.input :email
       f.input :message
-      f.input :question_id, :label => 'Pregunta', :as => :select, :collection => Question.all.map{|q| ["#{q.id}: #{q.message}", q.id]}
+      f.input :question_id, :label => 'Pregunta', :as => :select, :collection => Question.all.map{|q| ["#{q.id}: #{q.message}", q.id]}, selected: params['post']['question_id']
     end
     f.actions
   end
