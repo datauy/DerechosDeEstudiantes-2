@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'hola@derechos_de_estudiantes.uy'
+  default from: 'contacto@derechosdeestudiantes.edu.uy'
   layout 'mailer'
 end
