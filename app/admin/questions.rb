@@ -13,6 +13,9 @@ ActiveAdmin.register Question do
     column :is_public
     column :collage
     column :created_at
+    column "", :id do |q|
+      link_to "Responder", new_admin_answer_path(:post => { :question_id => q })
+    end
     actions
   end
 
