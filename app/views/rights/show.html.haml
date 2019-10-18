@@ -29,19 +29,16 @@
           =@right.description.html_safe
     .row.justify-content-md-center.text-main
       .col-md-8
-        -if @right.tag_one
+        -unless @right.tag_one.blank?
           .tag-search1
             =@right.tag_one
-
-        -if @right.tag_two
+        -unless @right.tag_two.blank?
           .tag-search2
             =@right.tag_two
-
-        -if @right.tag_three
+        -unless @right.tag_three.blank?
           .tag-search3
             =@right.tag_three
-
-        -if @right.tag_four
+        -unless @right.tag_four.blank?
           .tag-search4
             =@right.tag_four
     %div.margin-top
