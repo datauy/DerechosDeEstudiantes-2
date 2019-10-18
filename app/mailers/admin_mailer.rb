@@ -1,5 +1,5 @@
 class AdminMailer < ApplicationMailer
-  default from: 'hola@derechos_de_estudiantes.uy'
+  default from: 'contacto@derechosdeestudiantes.edu.uy'
 
   def send_answer
     @answer = params[:answer]
