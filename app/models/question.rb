@@ -18,7 +18,6 @@ class Question < ApplicationRecord
     }
   }
   after_create do
-    Rails.logger.info "\n LOGGGGIIINNNNNNNIIIIINNNNN\n"
     User.by_collage(self.collage).each do |user|
       AdminMailer.with(admin: user, question: self).new_question.deliver
     end
