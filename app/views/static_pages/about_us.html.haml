@@ -4,12 +4,12 @@
 
 .container
   .about_us
-    .row.justify-content-md-center.padding-top
+    .row.justify-content-md-center
       .col-md-6
         %a.threedbutton.btn-max{:href => "#{root_path}"}
           %i.fas.fa-arrow-left=t('.button_back')
-      .col-md-6
-        =image_tag("page.svg")
+      .col-md-6.justify-content-md-center
+        =image_tag("page.svg", :class => "about-img")
     .row.justify-content-md-center.text-main
       .col-md-9
         .text-title
@@ -18,12 +18,9 @@
     .row.justify-content-md-center
       .col-md-9
         .row
-          .col-md-6
+          .col-md-8
             .text-p
-              %p=t('.text_left_html')
-          .col-md-6
-            .text-p
-              %p=t('.text_right_html')
+              %p=t('.text_about_html')
     .row.justify-content-md-center.margin-top
       .col-md-10
         .label-solid
