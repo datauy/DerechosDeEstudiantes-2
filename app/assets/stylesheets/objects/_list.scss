@@ -2,13 +2,11 @@
   ul {
     position: relative;
   }
-
   ul li {
     line-height: 1.5;
     padding: 0.5em 0;
     list-style-type: none!important;
   }
-
   ul li:before {
     content: "";
     position: absolute;
@@ -19,5 +17,8 @@
     margin-top: 10px;
     margin-right: 10px;
   }
-
+}
+.arrow {
+  font-size: 42px;
+  margin-top: calc(50% - 21px);
 }

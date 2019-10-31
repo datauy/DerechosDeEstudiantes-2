@@ -10,7 +10,8 @@
       @extend hr;
       width: 51.2px;
       height: 2.4px;
-      top: 10px;
+      bottom: 0;
+      margin: 0;
       @media only screen and (max-width: 800px) {
         margin-block-start: 5px;
       }
