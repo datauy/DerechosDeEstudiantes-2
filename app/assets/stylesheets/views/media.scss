@@ -1,3 +1,11 @@
+@media (max-width: 360px) {
+  .input-group-search .input-group-btn {
+    padding-top: 1em;
+  }
+  .search-top-row .col-md-2 {
+    padding: 0;
+  }
+}
 @media (max-width: 758px) {
   body {
     width: 100%;

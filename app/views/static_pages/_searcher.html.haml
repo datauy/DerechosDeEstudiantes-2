@@ -25,8 +25,8 @@
                   -unless right.tag_four.blank?
                     .tag-search.tag-search6
                       =right.tag_four.truncate(12)
-            .col-md-2.right.c_blue-text
-              %span.arrow="🡒"
+            .col-md-2.right.arrow-container
+              %span.arrow
 
       -@questions.each_with_index do |question, index|
         .row.max-parent.search-top-row
@@ -41,8 +41,8 @@
                 .col-md-12
                   .tag-search.tag-search1
                     =t('.question')
-            .col-md-2.right.c_blue-text
-              %span.arrow="🡒"
+            .col-md-2.right.arrow-container
+              %span.arrow
     .col-md-12.input-group-btn
       .col-md-6.search-buttons
         =link_to t('.show_all_questions'), questions_path
