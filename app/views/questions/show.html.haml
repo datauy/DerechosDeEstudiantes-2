@@ -55,7 +55,7 @@
             %a.threedbutton2{:onclick=>"show_form()"}
               =t('.btn_no')
           .col-md-6
-            %a.threedbutton2{"data-toggle": "modal", "data-target": "#sendModal"}
+            %a.threedbutton2{id: "send_ok"}
               =t('.btn_yes')
 
     = form_for :answer, :url => {:controller => :answers, action: :create} do |f|
@@ -136,5 +136,12 @@
       var shareurl = $(this).data('shareurl');
       window.open('https://twitter.com/share?url=' + escape(shareurl), 'twitter-popup', 'height=350,width=600');
       return false;
+  });
+
+  $('#send_ok').click( function(){
+    root_path="#{question_path(@question.id)}"
+    $.ajax({type: "PATCH", url: root_path, success: function(result){
+      $('#sendModal').modal('show');
+    }});
   });
 

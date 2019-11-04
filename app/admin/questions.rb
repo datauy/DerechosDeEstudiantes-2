@@ -12,6 +12,7 @@ ActiveAdmin.register Question do
     column :location
     column :is_public
     column :collage
+    column :count_help
     column :created_at
     column "", :id do |q|
       link_to "Responder", new_admin_answer_path(:post => { :question_id => q })

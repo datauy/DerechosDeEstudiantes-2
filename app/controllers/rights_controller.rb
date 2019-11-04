@@ -8,4 +8,15 @@ class RightsController < ApplicationController
       @message=true
     end
   end
+
+  def update
+    @right = Right.find(params[:id])
+    @right.count_help = @right.count_help + 1
+    respond_to do |format|
+      if @right.save
+        return true
+      end
+      return false
+    end
+  end
 end

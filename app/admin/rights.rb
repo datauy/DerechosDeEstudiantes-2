@@ -11,6 +11,7 @@ ActiveAdmin.register Right do
     column :tag_three
     column :tag_four
     column :school_type
+    column :count_help
     column :created_at
     actions
   end

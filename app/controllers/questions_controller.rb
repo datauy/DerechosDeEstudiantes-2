@@ -25,6 +25,17 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def update
+    @question = Question.find(params[:id])
+    @question.count_help = @question.count_help + 1
+    respond_to do |format|
+      if @question.save
+        return true
+      end
+      return false
+    end
+  end
+
   private
   def question_params
     params.require(:question).permit(:name, :email, :location, :institution, :grade, :message)
