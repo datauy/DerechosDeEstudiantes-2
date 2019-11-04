@@ -25,8 +25,11 @@ ActiveAdmin.register Answer do
     f.inputs do
       f.input :name
       f.input :email
-      f.input :message
-      f.input :question_id, :label => 'Pregunta', :as => :select, :collection => Question.all.map{|q| ["#{q.id}: #{q.message}", q.id]}, selected: params['post']['question_id']
+      f.input :message, as: :ckeditor
+      f.input :question_id, :label => 'Pregunta', :as => :select, :collection => Question.all.map{|q| ["#{q.id}: #{q.message}", q.id]}, selected: params['post'].present? ? params['post']['question_id'] : Question.first.id
+      f.inputs "Datos de la pregunta", for: [:question, f.object.question || Question.find(params['post']['question_id'])] do |meta_form|
+        meta_form.input :is_public
+      end
     end
     f.actions
   end
@@ -42,7 +45,14 @@ ActiveAdmin.register Answer do
   end
 
   after_create do |answer|
+    answer.question.is_public = params['answer']['question_attributes']['is_public'] == '0' ? false : true
+    answer.question.save
     AdminMailer.with(answer: answer, url: question_url(answer.question.id)).send_answer.deliver
+  end
+
+  after_update do |answer|
+    answer.question.is_public = params['answer']['question_attributes']['is_public'] == '0' ? false : true
+    answer.question.save
   end
 
 end

@@ -2,6 +2,8 @@ class Right < ApplicationRecord
   has_many :doubts
   enum school_type: [ :secundaria, :utu , :ambas]
 
+  validates :school_type, presence: true
+
   include PgSearch
   pg_search_scope :search_by_full_title,
     against: [:title, :tag_one, :tag_two, :tag_three, :tag_four],
