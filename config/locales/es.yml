@@ -54,6 +54,10 @@ es:
             email:
               invalid:
                 "Correo sin formato correcto"
+        right:
+          attributes:
+            school_type:
+              blank: "Introduce un subsistema"
 
   date:
     abbr_day_names:

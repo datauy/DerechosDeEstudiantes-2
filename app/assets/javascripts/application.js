@@ -17,6 +17,7 @@
 //= require popper
 //= require bootstrap
 //= require toastr
+//= require ckeditor/init
 //= require_tree .
 
 

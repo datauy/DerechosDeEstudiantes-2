@@ -97,6 +97,12 @@ GEM
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    ckeditor (4.2.4)
+      cocaine
+      orm_adapter (~> 0.5.0)
+    climate_control (0.2.0)
+    cocaine (0.6.0)
+      terrapin (= 0.6.0)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -287,6 +293,8 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     temple (0.8.1)
+    terrapin (0.6.0)
+      climate_control (>= 0.0.3, < 1.0)
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -325,6 +333,7 @@ DEPENDENCIES
   cancancan
   capybara (>= 2.15)
   chromedriver-helper
+  ckeditor (= 4.2.4)
   coffee-rails (~> 4.2)
   devise
   ffaker

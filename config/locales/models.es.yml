@@ -56,6 +56,7 @@ es:
         created_at: "Creado en"
         is_public: "¿Público?"
         collage: "Subsistema"
+        count_help: "Ayudas totales"
         updated_at: "Actualizado en"
       right:
         title: 'Titulo'
@@ -66,4 +67,5 @@ es:
         tag_four: "Etiqueta 4"
         created_at: "Creado en"
         school_type: "Subsistema"
+        count_help: "Ayudas totales"
         updated_at: "Actualizado en"
