@@ -292,6 +292,7 @@ ActiveAdmin.setup do |config|
   #
   # config.include_default_association_filters = true
   config.register_javascript 'ckeditor/init.js'
+
   # == Head
   #
   # You can add your own content to the site head like analytics. Make sure
