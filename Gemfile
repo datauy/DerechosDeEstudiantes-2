@@ -31,7 +31,7 @@ gem 'jquery-rails'
 gem "haml-rails", "~> 1.0"
 gem 'font-awesome-sass', '~> 5.9.0'
 gem 'devise'
-gem 'i18n','>= 0.7', '< 2'
+gem 'i18n','>= 0.7', '< 1.6'
 gem 'activeadmin'
 gem 'kaminari'
 
