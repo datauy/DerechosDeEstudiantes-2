@@ -37,7 +37,6 @@ gem 'kaminari'
 
 gem 'pg_search'
 gem 'toastr-rails'
-gem 'ffaker'
 gem 'route_translator'
 gem 'cancancan'
 gem 'ckeditor', '4.2.4'
