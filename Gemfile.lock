@@ -341,7 +341,7 @@ DEPENDENCIES
   ffaker
   font-awesome-sass (~> 5.9.0)
   haml-rails (~> 1.0)
-  i18n
+  i18n (>= 0.7, < 2)
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
