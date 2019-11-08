@@ -40,7 +40,7 @@ gem 'toastr-rails'
 gem 'ffaker'
 gem 'route_translator'
 gem 'cancancan'
-gem 'ckeditor', '4.2.4'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'sitemap_generator'
 
 
