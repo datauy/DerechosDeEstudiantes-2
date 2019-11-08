@@ -2,12 +2,18 @@
 %html
   %head
     %title Derechos de Estudiantes
+    %meta{ name: "description", content:"Esta herramienta fue co-creada por la Administración Nacional de Educación Pública (ANEP), el Consejo de Educación Secundaria (CES), el Consejo de Educación Técnico Profesional (UTU), UNICEF Uruguay y DATA Uruguay y permite a estudiantes, padres y actores educativos consultar fichas con información actualizada y completa sobre derechos de los estudiantes. Además brinda una herramienta de consulta directa a los estudiantes, para que puedan conocer más sobre sus derechos, más allá de los temas cubiertos por las fichas." }
+    %meta{ name:"keywords", content:"derechos, estudiantes, educación, uruguay, consejo de educación secundaria, unicef, data uruguay, anep, cetp, utu, ces, administración nacional de educación pública, participación, salud, inclusión, reglamento, deporte, recreación, embarazo, discapacidad, religión, identidad de género, fútbol, acceso a la información" }
+    %meta{ property:"og:title", content: "Derechos de Estudiantes" }
+    %meta{ property:"og:image", content:"logo.svg" }
+    %meta{ property:"og:description", content:"Esta herramienta fue co-creada por la Administración Nacional de Educación Pública (ANEP), el Consejo de Educación Secundaria (CES), el Consejo de Educación Técnico Profesional (UTU), UNICEF Uruguay y DATA Uruguay y permite a estudiantes, padres y actores educativos consultar fichas con información actualizada y completa sobre derechos de los estudiantes. Además brinda una herramienta de consulta directa a los estudiantes, para que puedan conocer más sobre sus derechos, más allá de los temas cubiertos por las fichas." }
+    %meta{:name => "viewport", :content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;"}
+
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', 'href':'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400i,600,700&display=swap'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    %meta{:name => "viewport", :content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;"}
   %body
     .polygon-mobile-top
     .polygon-mobile-middle
