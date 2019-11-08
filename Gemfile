@@ -41,6 +41,7 @@ gem 'ffaker'
 gem 'route_translator'
 gem 'cancancan'
 gem 'ckeditor', '4.2.4'
+gem 'sitemap_generator'
 
 
 group :development, :test do
