@@ -7,6 +7,8 @@
         %li.nav-item
           =link_to "Hacer una consulta", about_us_path, class: "btn btn-outline-primary", "data-toggle": "modal", "data-target": "#questionModal"
         %li.nav-item
+          =link_to "Denuncia anónoma", new_complain_path, class: "btn btn-outline-primary"
+        %li.nav-item
           =link_to "Sobre nosotros", about_us_path, class: "btn btn-outline-primary"
     %input#menu-btn.menu-btn{:type => "checkbox"}
     %label.menu-icon.navbar-toggler{:for => "menu-btn"}
@@ -15,8 +17,8 @@
       =link_to root_path, class: "menu-logo" do
         =image_tag("logo-w.svg", class: "logo")
       =link_to "Hacer una consulta", about_us_path, class: "menu-link active", "data-toggle": "modal", "data-target": "#questionModal"
+      =link_to "Denuncia anónoma", new_complain_path, class: "menu-link"
       =link_to "Sobre nosotros", about_us_path, class: "menu-link"
-      =link_to "Denuncias", about_us_path, class: "menu-link", "data-toggle": "modal", "data-target": "#questionModal"
 
 .modal_form
   =render "shared/modal_form"
