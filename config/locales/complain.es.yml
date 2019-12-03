@@ -1,11 +1,11 @@
 es:
   complains:
     new:
-      title: 'Denuncias anónimas'
-      description: 'Tu denuncia será recibida directamente en el Consejo de Educación Secundaria (CES) o la Unidad Coordinadora de Atención al Estudiante (UCAE, UTU), no por tu centro de estudio. Se tratará con confidencialidad en todo el proceso. Este formulario es exclusivamente para temas que requieran confidencialidad por ser delicados y/o exponer a personas involucradas. Para consultas regulares, utilizar el formulario de consultas.'
+      title: 'Denuncias confidenciales'
+      description: 'Tu denuncia será recibida confidencialmente en ANEP, Secundaria o UTU, no en tu centro de estudio. Exclusivamente para temas delicados y/o evitar exponer a personas involucradas. Para consultas regulares, utilizar el formulario de consultas. Las respuestas pueden tardar hasta 7 días, por urgencias llamar al 2908 5743.'
       button_back: 'Volver'
-      instructions_title: 'Las denuncias en este formulario no quedarán visibles en el sitio web.'
-      instructions_p: 'Pedimos un correo electrónico para comunicar respuestas o ampliar la información.'
+      instructions_title: 'Las denuncias en este formulario no quedarán visibles en el sitio web. Por favor incluir en el mensaje detalles del hecho como; motivo de la denuncia, personas involucradas y fecha de los hechos descritos.'
+      instructions_p: 'Correo y teléfono permiten comunicar respuestas o ampliar información, especialmente cuando el tiempo de respuesta es importante.'
       name_placeholder: 'Nombre apellido'
       email_placeholder: 'correo@mail.com'
       message_placeholder: 'Describe ...'
