@@ -2,8 +2,13 @@ class QuestionsController < ApplicationController
   before_action :get_institutions_json, :get_locations_json
 
   def index
-    @questions = Question.are_publics().order(:message).page params[:page]
-    @rights = Right.by_school_type(session[:search_type]).order(:title).page params[:page]
+    if params[:search]
+      @questions = Question.are_publics().search_by_full_name(params[:search]).with_pg_search_highlight.page params[:page]
+      @rights = Right.by_school_type(session[:search_type]).search_by_full_title(params[:search]).with_pg_search_highlight.page params[:page]
+    else
+      @questions = Question.are_publics().order(:message).page params[:page]
+      @rights = Right.by_school_type(session[:search_type]).order(:title).page params[:page]
+    end
   end
 
   def show
