@@ -45,6 +45,8 @@
               %span.arrow
     .col-md-12.input-group-btn
       .col-md-6.search-buttons
-        =link_to t('.show_all_questions'), questions_path
+        =link_to t('.show_all_questions'), questions_path(search: params['search'])
       .col-md-6.search-buttons
         =link_to t('.not_answers'), rights_path, "data-toggle": "modal", "data-target": "#questionModal", id: "link-open-modal"
+-elsif !params['search'].blank?
+  %p.c_red No se han encontrado resultados
