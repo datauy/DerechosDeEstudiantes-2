@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :set_cache
   require "json"
 
 
@@ -24,5 +25,9 @@ class ApplicationController < ActionController::Base
       file = File.open "#{Rails.root}/public/ubicaciones.json"
       json_locations = JSON.load file
       @array_locations = json_locations.map { |e| e['nombre'].sub ',', ' -' }.join(',')
+  end
+
+  def set_cache
+    expires_in 3.minutes, :public => true
   end
 end

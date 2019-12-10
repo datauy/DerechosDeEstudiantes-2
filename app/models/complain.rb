@@ -13,10 +13,9 @@ class Complain < ApplicationRecord
       User.for_complains_secundaria().each do |user|
         AdminMailer.with(admin: user, complain: self).new_complain.deliver
       end
-    else
-      User.for_complains().each do |user|
-        AdminMailer.with(admin: user, complain: self).new_complain.deliver
-      end
+    end
+    User.for_complains().each do |user|
+      AdminMailer.with(admin: user, complain: self).new_complain.deliver
     end
   end
 end

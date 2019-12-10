@@ -13,7 +13,7 @@ class User < ApplicationRecord
   }
 
   scope :for_complains, ->() {
-    where(for_complain: true)
+    where(for_complain: true, school_type: nil)
   }
 
   scope :for_complains_utu, ->() {

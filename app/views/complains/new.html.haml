@@ -43,6 +43,11 @@
             =f.phone_field "phone", id: "phone", :class => "form-control"
           .input-group
             %span
+              .text-input=t('.to_who')
+            .autocomplete
+              =f.select :to_who, ApplicationHelper.get_to_who.collect { |p| [ p, p ] }, include_blank: false
+          .input-group
+            %span
               .text-input=t('.location')
             .autocomplete
               =f.text_field "location", id: "location_complain", :class => "form-control not-border", :value => "", :type => "text"
@@ -51,11 +56,6 @@
               .text-input=t('.institution')
             .autocomplete
               =f.text_field "institution", id: "institution_complain", :class => "form-control not-border", :value => "", :type => "text"
-          .input-group
-            %span
-              .text-input=t('.to_who')
-            .autocomplete
-              =f.select :to_who, ApplicationHelper.get_to_who.collect { |p| [ p, p ] }, include_blank: false
           .input-group
             %span
               .text-input=t('.message')
