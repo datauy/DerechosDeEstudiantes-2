@@ -1,15 +1,15 @@
-=image_tag("polygon-top.svg",  :class => "polygon-top")
+=image_tag("polygon-top.svg",  :class => "polygon-top", :alt => "polígono")
 =render "shared/navbar"
 
 .container.question-container
   .questions
     .row.justify-content-md-center.padding-top
-      =image_tag("polygon-answer-right.svg",  :class => "polygon-answer-right")
+      =image_tag("polygon-answer-right.svg",  :class => "polygon-answer-right", :alt => "polígono")
       .col-md-8
         %a.threedbutton.btn-max{:href => "#{root_path}"}
           %i.fas.fa-arrow-left=t('.button_back')
       .col-md-4
-        =image_tag("paloma.svg")
+        =image_tag("paloma.svg", :alt => "paloma")
     .row.justify-content-md-center.text-main
       .col-md-8
         .text-p-tags
@@ -26,7 +26,7 @@
           =@question.message
     %div.margin-top
     .row.justify-content-md-center
-      =image_tag("polygon-answer-left.svg",  :class => "polygon-answer-left")
+      =image_tag("polygon-answer-left.svg",  :class => "polygon-answer-left", :alt => "polígono")
       .col-md-8
         -@answers.each do |answer|
           -if answer.is_user
@@ -38,7 +38,7 @@
           -else
             .row
               .col-md-2.center
-                =image_tag("answer.svg")
+                =image_tag("answer.svg", :alt => "respuesta")
               .col-md-10
                 .label-solid-answer
                   .p-answers
@@ -92,9 +92,9 @@
                     %hr
                 .col-md-6.right
                   %a.fbsharelink{"data-shareurl" => "#{question_url(@question.id)}"}
-                    =image_tag("facebook.svg")
+                    =image_tag("facebook.svg", :alt => "facebook")
                   %a.twsharelink{"data-shareurl" =>  "#{question_url(@question.id)}"}
-                    =image_tag("twitter.svg")
+                    =image_tag("twitter.svg", :alt => "twitter")
             .row
               .col-md-12
                 .text-p

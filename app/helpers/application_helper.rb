@@ -26,4 +26,9 @@ module_function :alert_class_for
       "active"
     end
   end
+
+  def get_to_who
+    ['Derechos humanos', 'UTU', 'Secundaria', 'No sé']
+  end
+  module_function :get_to_who
 end

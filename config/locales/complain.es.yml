@@ -13,3 +13,7 @@ es:
       email: 'Correo'
       message: 'Mensaje'
       send: 'Enviar'
+      phone: 'Teléfono (opcional)'
+      location: 'Localidad (opcional)'
+      institution: 'Institución (opcional)'
+      to_who: '¿A quién va dirigida la pregunta?'

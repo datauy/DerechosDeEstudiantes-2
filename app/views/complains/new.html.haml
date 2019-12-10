@@ -1,11 +1,11 @@
-=image_tag("polygon-top-yellow.svg",  :class => "polygon-top")
+=image_tag("polygon-top-yellow.svg",  :class => "polygon-top", :alt => "polígono")
 
 =render "shared/navbar"
 
 
 .container
   .complain
-    =image_tag("polygon-big-center.svg",  :class => "polygon-big-center")
+    =image_tag("polygon-big-center.svg",  :class => "polygon-big-center", :alt => "polígono")
     .row.justify-content-md-center
       .col-md-12
         %a.threedbutton.btn-max{:href => "#{root_path}"}
@@ -15,7 +15,7 @@
       .col-md-auto
         .row
           .col-md-5
-            =image_tag("complain.svg",  :class => "icono")
+            =image_tag("complain.svg",  :class => "icono", :alt => "denuncia")
           .col-md-7
             .text-title
               =t('.title')
@@ -39,8 +39,27 @@
             =f.email_field "email", id: "email", :class => "form-control"
           .input-group
             %span
+              .text-input=t('.phone')
+            =f.phone_field "phone", id: "phone", :class => "form-control"
+          .input-group
+            %span
+              .text-input=t('.to_who')
+            .autocomplete
+              =f.select :to_who, ApplicationHelper.get_to_who.collect { |p| [ p, p ] }, include_blank: false
+          .input-group
+            %span
+              .text-input=t('.location')
+            .autocomplete
+              =f.text_field "location", id: "location_complain", :class => "form-control not-border", :value => "", :type => "text"
+          .input-group
+            %span
+              .text-input=t('.institution')
+            .autocomplete
+              =f.text_field "institution", id: "institution_complain", :class => "form-control not-border", :value => "", :type => "text"
+          .input-group
+            %span
               .text-input=t('.message')
-            =f.text_area "message", id: "message_complain", :class => "form-control"
+            =f.text_area "message", id: "message", :class => "form-control"
           .complain-btn
             %a.threedbutton.btn-max{id: "send_complain", :submit => "form"}
               =t('.send')
@@ -60,4 +79,19 @@
     if("#{@message}"=="true"){
       $('#sendModal').modal('show');
     }
+    var locations = "#{@array_locations}".split(',')
+    autocomplete(document.getElementById("location_complain"), locations);
   });
+  $('#complain_to_who').change(function() {
+    if(this.value=="UTU"){
+      $('#institution_complain').val('');
+      var institutions = "#{@array_institutions_utu}".split(',')
+      autocomplete(document.getElementById("institution_complain"), institutions);
+    }
+    if(this.value=="Secundaria"){
+      $('#institution_complain').val('');
+      var institutions = "#{@array_institutions_secundaria}".split(',')
+      autocomplete(document.getElementById("institution_complain"), institutions);
+    }
+  });
+
