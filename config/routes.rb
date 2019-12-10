@@ -21,5 +21,7 @@ Rails.application.routes.draw do
     resources :doubts
     root to: 'static_pages#index'
   end
+  match '/404' => 'errors#not_found', :via => :all
+  match '/500' => 'errors#internal_server_error', :via => :all
 
 end

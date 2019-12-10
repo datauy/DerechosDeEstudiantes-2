@@ -1,15 +1,15 @@
-=image_tag("polygon-top-yellow.svg",  :class => "polygon-top")
+=image_tag("polygon-top-yellow.svg",  :class => "polygon-top", :alt => "polígono")
 =render "shared/navbar"
 
 .container
   .questions
-    =image_tag("polygon-right-question.svg",  :class => "polygon-right-question")
+    =image_tag("polygon-right-question.svg",  :class => "polygon-right-question", :alt => "polígono")
     .row.justify-content-md-center.padding-top
       .col-md-8
         %a.threedbutton.btn-max{:href => "#{root_path}"}
           %i.fas.fa-arrow-left=t('.button_back')
       .col-md-4
-        =image_tag("foco.svg")
+        =image_tag("foco.svg", :alt => "foco")
     .row.justify-content-md-center.text-main
       .col-md-8
         .text-p-tags
@@ -20,7 +20,7 @@
           -if session[:search_type]
             =session[:search_type].capitalize
     .row.justify-content-md-center.text-main
-      =image_tag("polygon-left-question.svg",  :class => "polygon-left-question")
+      =image_tag("polygon-left-question.svg",  :class => "polygon-left-question", :alt => "polígono")
       .col-md-8
         = render partial: "shared/messages", flash: flash
         .text-title
@@ -112,9 +112,9 @@
                   %hr
               .col-md-6.right
                 %a.fbsharelink{"data-shareurl" => "#{right_url(@right.id)}"}
-                  =image_tag("facebook.svg")
+                  =image_tag("facebook.svg", :alt => "facebook")
                 %a.twsharelink{"data-shareurl" => "#{right_url(@right.id)}"}
-                  =image_tag("twitter.svg")
+                  =image_tag("twitter.svg", :alt => "twitter")
           .row
             .col-md-12
               .text-p

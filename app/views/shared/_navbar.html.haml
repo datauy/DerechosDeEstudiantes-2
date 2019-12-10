@@ -15,7 +15,7 @@
       %span.navicon
     #menu-wrapper
       =link_to root_path, class: "menu-logo" do
-        =image_tag("logo-w.svg", class: "logo")
+        =image_tag("logo-w.svg", class: "logo", :alt => "logo")
       =link_to "Hacer una consulta", about_us_path, class: "menu-link active", "data-toggle": "modal", "data-target": "#questionModal"
       =link_to "Denuncia anónoma", new_complain_path, class: "menu-link"
       =link_to "Sobre nosotros", about_us_path, class: "menu-link"
@@ -30,7 +30,7 @@
       .modal-body
         .row
           .col-md-4
-            =image_tag("mail.svg", class: "logo")
+            =image_tag("mail.svg", class: "logo", :alt => "correo")
           .col-md-8.center
             %p.send-title
               =t('.title_send')

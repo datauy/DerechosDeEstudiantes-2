@@ -16,4 +16,12 @@ class User < ApplicationRecord
     where(for_complain: true)
   }
 
+  scope :for_complains_utu, ->() {
+    where(for_complain: true, school_type: "utu")
+  }
+
+  scope :for_complains_secundaria, ->() {
+    where(for_complain: true, school_type: "secundaria")
+  }
+
 end

@@ -21,12 +21,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :get_locations_json
   def get_locations_json
-    if session[:search_type]
       file = File.open "#{Rails.root}/public/ubicaciones.json"
       json_locations = JSON.load file
       @array_locations = json_locations.map { |e| e['nombre'].sub ',', ' -' }.join(',')
-    else
-      @array_locations = {}
-    end
   end
 end

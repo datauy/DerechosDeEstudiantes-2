@@ -5,9 +5,18 @@ class Complain < ApplicationRecord
 
 
   after_create do
-    User.for_complains().each do |user|
-      AdminMailer.with(admin: user, complain: self).new_complain.deliver
+    if self.to_who == "UTU"
+      User.for_complains_utu().each do |user|
+        AdminMailer.with(admin: user, complain: self).new_complain.deliver
+      end
+    elsif self.to_who == "Secundaria"
+      User.for_complains_secundaria().each do |user|
+        AdminMailer.with(admin: user, complain: self).new_complain.deliver
+      end
+    else
+      User.for_complains().each do |user|
+        AdminMailer.with(admin: user, complain: self).new_complain.deliver
+      end
     end
   end
-
 end

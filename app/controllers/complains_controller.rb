@@ -23,6 +23,6 @@ class ComplainsController < ApplicationController
 
   private
   def complain_params
-    params.require(:complain).permit(:name, :email, :message)
+    params.require(:complain).permit(:name, :email, :phone, :location, :institution, :to_who, :message)
   end
 end
