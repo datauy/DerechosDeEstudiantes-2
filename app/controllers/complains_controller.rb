@@ -1,5 +1,6 @@
 class ComplainsController < ApplicationController
   before_action :get_institutions_json, :get_locations_json
+  before_action :get_both_institutions
   def index
   end
 
@@ -22,6 +23,15 @@ class ComplainsController < ApplicationController
   end
 
   private
+  def get_both_institutions
+      file = File.open "#{Rails.root}/public/utu.json"
+      json_institutions = JSON.load file
+      @array_institutions_utu = json_institutions['establecimientos'].map { |e| e['nombre'] }.join(',')
+      file = File.open "#{Rails.root}/public/secundaria.json"
+      json_institutions = JSON.load file
+      @array_institutions_secundaria = json_institutions['establecimientos'].map { |e| e['nombre'] }.join(',')
+  end
+
   def complain_params
     params.require(:complain).permit(:name, :email, :phone, :location, :institution, :to_who, :message)
   end

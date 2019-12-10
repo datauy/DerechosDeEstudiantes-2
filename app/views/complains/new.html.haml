@@ -80,8 +80,18 @@
       $('#sendModal').modal('show');
     }
     var locations = "#{@array_locations}".split(',')
-    var institutions = "#{@array_institutions}".split(',')
     autocomplete(document.getElementById("location_complain"), locations);
-    autocomplete(document.getElementById("institution_complain"), institutions);
+  });
+  $('#complain_to_who').change(function() {
+    if(this.value=="UTU"){
+      $('#institution_complain').val('');
+      var institutions = "#{@array_institutions_utu}".split(',')
+      autocomplete(document.getElementById("institution_complain"), institutions);
+    }
+    if(this.value=="Secundaria"){
+      $('#institution_complain').val('');
+      var institutions = "#{@array_institutions_secundaria}".split(',')
+      autocomplete(document.getElementById("institution_complain"), institutions);
+    }
   });
 
