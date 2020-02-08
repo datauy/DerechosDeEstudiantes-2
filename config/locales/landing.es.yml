@@ -3,6 +3,7 @@ es:
     searcher:
       not_answers: 'No encuentro la respuesta'
       show_all_questions: 'Ver todas las respuestas'
+      show_questions: 'Preguntas'
       right: 'Derecho'
       question: 'Pregunta'
     buttons:
@@ -22,6 +23,10 @@ es:
         title: '¿Qué querés saber?'
         description: 'Buscá sobre cualquier tema que tengas dudas. Si no encontrás la respuesta, no te preocupes, vas a poder hacer una nueva consulta y recibir una respuesta.'
         subtitle: 'SELECCIONÁ DONDE ESTÁS ESTUDIANDO:'
+      question:
+        title: 'Consultas'
+        description: 'Si no encontraste la respuesta que buscabas, podés hacer una nueva consulta acá. Va a llegar directamente a Secundaria o UTU y la respuesta -además de llegarte por correo- va a quedar visible en el sitio para quienes tengan la misma duda.'
+        button_ok: 'Consultar aquí'
       complain:
         title: 'Denuncias confidenciales'
         description: 'Si necesitás denunciar una situación en la que sentís que se vulneraron gravemente tus derechos y no querés o podés hacerlo públicamente, usá este formulario. No queda visible en la web, ni le llega a las autoridades de tu centro educativo.'

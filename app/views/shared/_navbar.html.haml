@@ -5,9 +5,11 @@
     #navbarResponsive.collapse.navbar-collapse
       %ul.navbar-nav.ml-auto
         %li.nav-item
-          =link_to "Hacer una consulta", about_us_path, class: "btn btn-outline-primary", "data-toggle": "modal", "data-target": "#questionModal"
+          =link_to "Hacer una consulta", '#', class: "btn btn-outline-primary", "data-toggle": "modal", "data-target": "#questionModal"
         %li.nav-item
           =link_to "Denuncia anónoma", new_complain_path, class: "btn btn-outline-primary"
+        %li.nav-item
+          =link_to "Ver preguntas", questions_path, class: "btn btn-outline-primary"
         %li.nav-item
           =link_to "Sobre nosotros", about_us_path, class: "btn btn-outline-primary"
     %input#menu-btn.menu-btn{:type => "checkbox"}

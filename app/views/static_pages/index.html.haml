@@ -44,6 +44,23 @@
             .col-md-12
               %hr-title
               .text-complain-title
+                =t('.question.title')
+            .col-md-12
+              .text-complain-p
+                =t('.question.description')
+            .col-md-12
+              =link_to t('.question.button_ok'), '#', class: "btn btn-outline-primary-yellow btn-max", "data-toggle": "modal", "data-target": "#questionModal"
+        .col-md-3.right
+          .row.justify-content-md-center
+            =image_tag("paloma.svg", class: "icono sm-y", :alt => "paloma")
+
+    .col-md-12.section
+      .row.justify-content-md-center.complains
+        .col-md-4
+          .row.justify-content-md-center.mm-x
+            .col-md-12
+              %hr-title
+              .text-complain-title
                 =t('.complain.title')
             .col-md-12
               .text-complain-p
@@ -83,9 +100,9 @@
                   .subtext-title
                     =t('.shared')
                     .space
-                    %a.fbsharelink{"data-shareurl" => "http://elujoestudiar.edu.uy/"}
+                    %a.fbsharelink{"data-shareurl" => "https://elijoestudiar.edu.uy/"}
                       =image_tag("facebook.svg", :alt => "facebook")
-                    %a.twsharelink{"data-shareurl" => "http://elujoestudiar.edu.uy/"}
+                    %a.twsharelink{"data-shareurl" => "https://elijoestudiar.edu.uy/"}
                       =image_tag("twitter.svg", :alt => "twitter")
 
 
