@@ -108,7 +108,7 @@ a.threedbutton {
 }
 a.threedbutton, a.threedbutton:after {
   display: inline-block;
-  padding: 8px 15px; /* vertical and horizontal padding of button */
+  padding: 8px 24px; /* vertical and horizontal padding of button */
   -moz-border-radius: 19.8px;
   -webkit-border-radius: 19.8px;
   border-radius: 19.8px;
@@ -211,4 +211,40 @@ a.threedbutton2:not([href]):not([tabindex]) {
 }
 .twsharelink{
   cursor: pointer;
+}
+
+.arrow-back {
+  text-indent: -9999px;
+  width: 26px;
+  height: 1px;
+  padding-top: 8px;
+  border-bottom: 0.19rem solid $medium-gray;
+  float: left;
+}
+.arrow-back::before {
+  display: block;
+  content: '';
+  border-top: 0.19rem solid $medium-gray;
+  width: 16px;
+  border-radius: 1px;
+  background-color: black;
+  transform: rotate(130deg);
+  margin-top: -0.3rem;
+  margin-left: -0.22rem;
+  border-radius: 1px;
+}
+.arrow-back::after {
+  display: block;
+  content: '';
+  border-bottom: 0.19rem solid $medium-gray;
+  width: 16px;
+  transform: rotate(48deg);
+  margin-top: 0.45rem;
+  margin-left: -0.22rem;
+  border-radius: 1px;
+}
+span.arrow-text {
+  float: left;
+  margin-left: 30px;
+  margin-top: -4px;
 }

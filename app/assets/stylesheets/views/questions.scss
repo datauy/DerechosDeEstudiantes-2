@@ -13,19 +13,12 @@
     }
     .text-title{
       font-size: 38px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
       letter-spacing: 0.81px;
       color: $blue-text;
+      margin: 22px;
     }
     .subtext-title{
       font-size: 23px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
       letter-spacing: 0.49px;
       color: $blue-text;
       text-align: left;
@@ -38,13 +31,8 @@
     }
     .text-p-tags{
       font-size: 16px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
       letter-spacing: 1.16px;
-      margin-bottom: 30px;
-      display: inline-block;
+      margin-bottom: 12px;
     }
 
     .div-title{
@@ -53,30 +41,18 @@
 
     .text-date{
       font-size: 16px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
       color: #9fa0a4;
     }
 
     .text-p{
       font-size: 17px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
       line-height: 1.66;
-      letter-spacing: normal;
       color: $medium-gray;
       padding: 20px 0px 0px 50px;
     }
     .text-we-can{
       font-size: 16px;
       font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
       letter-spacing: 1.16px;
       text-align: center;
       margin-top: 20px;
@@ -86,11 +62,7 @@
 
     .text-p-answer{
       font-size: 17px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
       line-height: 1.66;
-      letter-spacing: normal;
       color: $medium-gray;
       margin-top: 20px;
       margin-top: 20px;
@@ -137,10 +109,6 @@
     .text-input{
       font-size: 16px;
       font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
       color: $blue-input;
       margin-top: 10px;
     }
@@ -151,16 +119,10 @@
       padding-top: 2px;
       text-align: center;
       font-size: 12px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
       letter-spacing: 1.9px;
       border-radius: 9.5px;
       background-color: $yellow;
     }
-
-
   }
 }
 

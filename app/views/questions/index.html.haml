@@ -6,11 +6,12 @@
     .row.justify-content-md-center.padding-top
       .col-md-8
         %a.threedbutton.btn-max{:href => "#{root_path}"}
-          %i.fas.fa-arrow-left=t('.button_back')
-      .col-md-4
+          .arrow-back
+          %span.arrow-text='volver'
+      .col-md-4.section-img
         =image_tag("list.svg", :alt => "lista")
     .row.justify-content-md-center.text-main
-      .col-md-8
+      .col-md-8.section-head
         .text-p-tags
           =t('.search_in')
         .tag-search1
@@ -24,7 +25,6 @@
       .col-md-8
         .text-title
           =t('.title')
-    %div.margin-top
     =image_tag("polygon-big-right.svg",  :class => "polygon-big-right", :alt => "polígono")
     =image_tag("polygon-big-left.svg",  :class => "polygon-big-left", :alt => "polígono")
     -@rights.each do |right|

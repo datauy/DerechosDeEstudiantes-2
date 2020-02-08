@@ -7,7 +7,8 @@
     .row.justify-content-md-center
       .col-md-6
         %a.threedbutton.btn-max{:href => "#{root_path}"}
-          %i.fas.fa-arrow-left=t('.button_back')
+          .arrow-back
+          %span.arrow-text='volver'
       .col-md-6.justify-content-md-center
         =image_tag("page.svg", :class => "about-img", :alt => "página")
     .row.justify-content-md-center.text-main

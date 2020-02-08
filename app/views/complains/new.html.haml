@@ -9,7 +9,8 @@
     .row.justify-content-md-center
       .col-md-12
         %a.threedbutton.btn-max{:href => "#{root_path}"}
-          %i.fas.fa-arrow-left=t('.button_back')
+          .arrow-back
+          %span.arrow-text='volver'
       = render partial: "shared/messages", flash: flash
     .row.justify-content-md-center.text-main
       .col-md-auto
@@ -94,4 +95,3 @@
       autocomplete(document.getElementById("institution_complain"), institutions);
     }
   });
-

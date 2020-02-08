@@ -2,14 +2,14 @@ es:
   questions:
     index:
       title: 'Resultados'
-      button_back: 'Volver'
+      button_back: 'volver'
       search_in: 'BUSCASTE EN'
       right: 'Derecho'
       question: 'Pregunta'
       details: 'Ver detalle'
     show:
       title: 'Tenés espacios de participación en'
-      button_back: 'Volver'
+      button_back: 'volver'
       search_in: 'BUSCASTE EN'
       btn_no: 'NO'
       btn_yes: 'SÍ'

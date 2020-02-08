@@ -7,7 +7,8 @@
       =image_tag("polygon-answer-right.svg",  :class => "polygon-answer-right", :alt => "polígono")
       .col-md-8
         %a.threedbutton.btn-max{:href => "#{root_path}"}
-          %i.fas.fa-arrow-left=t('.button_back')
+          .arrow-back
+          %span.arrow-text='volver'
       .col-md-4
         =image_tag("paloma.svg", :alt => "paloma")
     .row.justify-content-md-center.text-main
@@ -144,4 +145,3 @@
       $('#sendModal').modal('show');
     }});
   });
-

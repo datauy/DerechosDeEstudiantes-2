@@ -62,7 +62,7 @@
   a.threedbutton {
     width: 84px;
     height: 45px;
-    margin: 0 22px 9px;
+    margin: 22px;
   }
   .about-img {
     margin: 52px auto;
@@ -82,6 +82,23 @@
   }
   .search-top-row .col-md-2 {
     width: 16%;
+  }
+  /* QUESTIONS*/
+  .container .questions {
+    margin-top: 0;
+  }
+  .section-img {
+    margin: 48px 22px;
+  }
+  .section-head {
+    margin: 0 22px;
+  }
+  /* GENERAL */
+  .arrow-back {
+    padding-top: 12px;
+  }
+  .arrow-text {
+    display: none;
   }
 }
 
