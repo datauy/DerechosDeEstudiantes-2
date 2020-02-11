@@ -1,8 +1,8 @@
 %nav.navbar.navbar-expand-lg.static-top
   .container
     =link_to root_path, class: "navbar-brand" do
-      =image_tag("logo.svg", class: "logo")
-    #navbarResponsive.collapse.navbar-collapse
+      =image_tag("logo.svg", class: "logo", alt: "Derechos de Estudiantes")
+    #navbarResponsive.collapse.navbar-collapse.col-md-9
       %ul.navbar-nav.ml-auto
         %li.nav-item
           =link_to "Hacer una consulta", '#', class: "btn btn-outline-primary", "data-toggle": "modal", "data-target": "#questionModal"

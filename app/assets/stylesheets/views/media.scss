@@ -11,12 +11,22 @@
     width: 100%;
     overflow-x: hidden;
   }
+  .container {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
   .container .landing {
     margin-top: 60px;
   }
   .section {
     margin-top: 42px;
     margin-bottom: 0;
+  }
+  .navbar-brand .logo {
+    width: 168px;
+  }
+  .btn-max {
+    max-width: 138px;
   }
   .container .landing .text-know-title {
     text-align: center;
@@ -62,19 +72,20 @@
   a.threedbutton {
     width: 84px;
     height: 45px;
-    margin: 22px;
+    margin: 1rem;
   }
   .about-img {
     margin: 52px auto;
   }
 
   /* COMPLAINS */
-  .container .complain {
-    margin-top: 43px;
-  }
   .polygon-big-center {
     width: 300%;
     margin-left: -100%;
+  }
+  .complain #send_complain {
+    width: 100%;
+    margin: 1rem 0;
   }
   /*SEARCH BOX*/
   .search-top-row .col-md-10 {
@@ -88,15 +99,20 @@
     margin-top: 0;
   }
   .section-img {
-    margin: 48px 22px;
+    margin-top: 60px;
+    padding: 0 2rem;
   }
   .section-head {
     margin: 0 22px;
   }
-  /* GENERAL */
-  .arrow-back {
-    padding-top: 12px;
+  .margin-top {
+    text-align: left;
   }
+  .questions .text-p-tags {
+    width: 100%;
+    display: block;
+  }
+  /* GENERAL */
   .arrow-text {
     display: none;
   }
@@ -137,5 +153,11 @@
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+@media (max-width: 1190px) {
+  .nav-item .btn-outline-primary {
+    padding-top: 4px;
   }
 }

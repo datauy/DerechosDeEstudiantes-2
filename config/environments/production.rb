@@ -84,6 +84,10 @@ Rails.application.configure do
   :user_name            => Rails.application.credentials[:mail_username],
   :password             => Rails.application.credentials[:mail_password]
   }
+  config.public_file_server.headers = {
+    'Cache-Control' => 'public, s-maxage=31536000, maxage=15552000',
+    'Expires' => "#{1.year.from_now.to_formatted_s(:rfc822)}"
+  }
 
   # Use a different logger for distributed setups.
   # require 'syslog/logger'

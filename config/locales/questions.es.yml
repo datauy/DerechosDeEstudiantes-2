@@ -1,7 +1,7 @@
 es:
   questions:
     index:
-      title: 'Resultados'
+      title: 'Preguntas'
       button_back: 'volver'
       search_in: 'BUSCASTE EN'
       right: 'Derecho'

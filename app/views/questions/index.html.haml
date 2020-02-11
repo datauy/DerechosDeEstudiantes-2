@@ -2,16 +2,15 @@
 =render "shared/navbar"
 
 .container
-  .questions
-    .row.justify-content-md-center.padding-top
-      .col-md-8
+  .questions.page-content
+    .mixed-header
+      .col-md-8.left-side
         %a.threedbutton.btn-max{:href => "#{root_path}"}
           .arrow-back
           %span.arrow-text='volver'
-      .col-md-4.section-img
+      .col-md-4.right-side.section-img
         =image_tag("list.svg", :alt => "lista")
-    .row.justify-content-md-center.text-main
-      .col-md-8.section-head
+      .col-md-8.left-side.right.margin-top
         .text-p-tags
           =t('.search_in')
         .tag-search1
@@ -23,51 +22,52 @@
             =session[:search_type].capitalize
     .row.justify-content-md-center.text-main
       .col-md-8
-        .text-title
+        %h1.text-title
           =t('.title')
     =image_tag("polygon-big-right.svg",  :class => "polygon-big-right", :alt => "polígono")
     =image_tag("polygon-big-left.svg",  :class => "polygon-big-left", :alt => "polígono")
-    -@rights.each do |right|
-      .row.justify-content-md-center
-        .col-md-10
-          .label-solid
-            .div-title
+    .search-results
+      -@rights.each do |right|
+        .row.justify-content-md-center
+          .col-md-10
+            .label-solid
+              .div-title
+                .row
+                  .col-md-6
+                    .tag-answer
+                      =t('.right')
+                  .col-md-6.right.c_gray
+                    Enviado #{right.created_at.to_time.strftime("%e de #{t(right.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
+              %hr
               .row
-                .col-md-6
-                  .tag-answer
-                    =t('.right')
-                .col-md-6.right.c_gray
-                  Enviado #{right.created_at.to_time.strftime("%e de #{t(right.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
-            %hr
-            .row
-              .col-md-12
-                .text-p
-                  %p=right.title
-            .row.justify-content-end
-              =link_to right_path(right) do
-                .btn-shape
-                  =t('.details')
+                .col-md-12
+                  .text-p
+                    %p=right.title
+              .row.justify-content-end
+                =link_to right_path(right) do
+                  .btn-shape
+                    =t('.details')
 
-    -@questions.each do |question|
-      .row.justify-content-md-center
-        .col-md-10
-          .label-solid
-            .div-title
+      -@questions.each do |question|
+        .row.justify-content-md-center
+          .col-md-10
+            .label-solid
+              .div-title
+                .row
+                  .col-md-6
+                    .tag-answer
+                      =t('.question')
+                  .col-md-6.right.c_gray
+                    Enviado #{question.created_at.to_time.strftime("%e de #{t(question.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
+              %hr
               .row
-                .col-md-6
-                  .tag-answer
-                    =t('.question')
-                .col-md-6.right.c_gray
-                  Enviado #{question.created_at.to_time.strftime("%e de #{t(question.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
-            %hr
-            .row
-              .col-md-12
-                .text-p
-                  %p=question.message
-            .row.justify-content-end
-              =link_to question_path(question) do
-                .btn-shape
-                  =t('.details')
+                .col-md-12
+                  .text-p
+                    %p=question.message
+              .row.justify-content-end
+                =link_to question_path(question) do
+                  .btn-shape
+                    =t('.details')
 
     .row.pagination.justify-content-center
       = paginate @rights, outer_window: 4

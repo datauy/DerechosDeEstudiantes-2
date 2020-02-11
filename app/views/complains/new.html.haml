@@ -18,7 +18,7 @@
           .col-md-5
             =image_tag("complain.svg",  :class => "icono", :alt => "denuncia")
           .col-md-7
-            .text-title
+            %h1.text-title
               =t('.title')
             .text-p
               =t('.description')
@@ -61,9 +61,8 @@
             %span
               .text-input=t('.message')
             =f.text_area "message", id: "message", :class => "form-control"
-          .complain-btn
-            %a.threedbutton.btn-max{id: "send_complain", :submit => "form"}
-              =t('.send')
+          %a.threedbutton{id: "send_complain", :submit => "form"}
+            =t('.send')
 %footer-complain.sticky-footer.max-parent
   =render "shared/footer"
 

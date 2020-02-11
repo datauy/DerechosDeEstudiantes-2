@@ -21,7 +21,7 @@ es:
         placeholder: 'Por ejemplo: Alerta meteorológica...'
       know:
         title: '¿Qué querés saber?'
-        description: 'Buscá sobre cualquier tema que tengas dudas. Si no encontrás la respuesta, no te preocupes, vas a poder hacer una nueva consulta y recibir una respuesta.'
+        description: 'Buscá información sobre tus derechos como estudiante en Uruguay. Si no encontrás la respuesta, no te preocupes, podés hacer una nueva consulta a UTU o Secundaria y recibir una respuesta.'
         subtitle: 'SELECCIONÁ DONDE ESTÁS ESTUDIANDO:'
       question:
         title: 'Consultas'

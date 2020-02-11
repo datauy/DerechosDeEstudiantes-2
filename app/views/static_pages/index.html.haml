@@ -15,7 +15,7 @@
             .col-md-7
               .text-know-title
                 =t('.know.title')
-              .text-know-p
+              %h1.text-know-p
                 =t('.know.description')
       .row.justify-content-md-center
         .col-md-auto
@@ -87,7 +87,7 @@
             .row.padding-section-main
               .col-md-6
                 =image_tag("section_1.svg",  :class => "icono", :alt => "sección")
-              .col-md-6.space-right
+              .col-md-6.space-left
                 .text-title
                   =t('.card_one_title')
                 %hr

@@ -1,7 +1,14 @@
 .input-group{
   margin-bottom: 15px;
+  border-radius: 27.6px;
+  border: 1.2px $medium-gray solid;
+  padding: 15px 30px;
+  text-align: right;
+  background-color: white;
+  a{
+    color: #fff;
+  }
 }
-
 .input-group > .form-control, .input-group > .custom-select {
   border: none;
   margin-left: 5px;
@@ -19,6 +26,39 @@
     opacity: 1;
     font-style: normal;
   }
+}
+
+.input-group-search{
+  z-index: 10;
+  margin-top: 15px;
+  width: 100%;
+  height: 370px;
+  border-radius: 27.6px;
+  border: 1.2px $medium-gray solid;
+  text-align: left;
+  background-color: white;
+  font-size: 12.8px;
+  line-height: 1.56;
+  color: #000000;
+  overflow: hidden;
+  .input-group-btn {
+    border-top: 1.2px $medium-gray solid;
+    padding-top: 2.6em;
+    display: inline-flex;
+  }
+  .div-scroll{
+    height: 265px;
+    overflow:scroll;
+    overflow-x:hidden;
+  }
+  a{
+    color: #000;
+  }
+
+  .fas{
+    font-size: 30px;
+  }
+
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -57,50 +97,6 @@ select{
   border-radius: 50%;
   margin-top: 10px;
   display: inline-block;
-}
-
-.input-group{
-  border-radius: 27.6px;
-  border: 1.2px $medium-gray solid;
-  padding: 10px;
-  text-align: right;
-  background-color: white;
-  a{
-    color: #fff;
-  }
-}
-
-.input-group-search{
-  z-index: 10;
-  margin-top: 15px;
-  width: 100%;
-  height: 370px;
-  border-radius: 27.6px;
-  border: 1.2px $medium-gray solid;
-  text-align: left;
-  background-color: white;
-  font-size: 12.8px;
-  line-height: 1.56;
-  color: #000000;
-  overflow: hidden;
-  .input-group-btn {
-    border-top: 1.2px $medium-gray solid;
-    padding-top: 2.6em;
-    display: inline-flex;
-  }
-  .div-scroll{
-    height: 265px;
-    overflow:scroll;
-    overflow-x:hidden;
-  }
-  a{
-    color: #000;
-  }
-
-  .fas{
-    font-size: 30px;
-  }
-
 }
 
 .dot{
