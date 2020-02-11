@@ -22,18 +22,7 @@
   }
 
   .text-p{
-    font-size: 17px;
-    margin-top: 50px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.66;
-    letter-spacing: normal;
-    color: $medium-gray;
-  }
-  .text-p-no-top{
-    @extend .text-p;
-    margin-top: 0px;
+    padding: 50px 0;
   }
   .label-solid{
     border-radius: 29.4px;

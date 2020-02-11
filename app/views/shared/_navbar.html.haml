@@ -7,7 +7,7 @@
         %li.nav-item
           =link_to "Hacer una consulta", '#', class: "btn btn-outline-primary", "data-toggle": "modal", "data-target": "#questionModal"
         %li.nav-item
-          =link_to "Denuncia anónoma", new_complain_path, class: "btn btn-outline-primary"
+          =link_to "Denuncia confidencial", new_complain_path, class: "btn btn-outline-primary"
         %li.nav-item
           =link_to "Ver preguntas", questions_path, class: "btn btn-outline-primary"
         %li.nav-item
@@ -19,7 +19,7 @@
       =link_to root_path, class: "menu-logo" do
         =image_tag("logo-w.svg", class: "logo", :alt => "logo")
       =link_to "Hacer una consulta", about_us_path, class: "menu-link active", "data-toggle": "modal", "data-target": "#questionModal"
-      =link_to "Denuncia anónoma", new_complain_path, class: "menu-link"
+      =link_to "Denuncia confidencial", new_complain_path, class: "menu-link"
       =link_to "Ver preguntas", questions_path, class: "menu-link"
       =link_to "Sobre nosotros", about_us_path, class: "menu-link"
 

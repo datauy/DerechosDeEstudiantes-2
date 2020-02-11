@@ -34,7 +34,6 @@ $(document).ready(function(){
   loadComponents;
   $(".menu-link").click(function(e) {
     $('#menu-btn').click();
-    alert('clicked');
   });
 
 });

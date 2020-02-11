@@ -1,18 +1,16 @@
 =image_tag("polygon-top-yellow.svg",  :class => "polygon-top", :alt => "polígono")
 =render "shared/navbar"
-
 .container
-  .questions
-    =image_tag("polygon-right-question.svg",  :class => "polygon-right-question", :alt => "polígono")
-    .row.justify-content-md-center.padding-top
-      .col-md-8
+  .questions.page-content
+    .mixed-header
+      =image_tag("polygon-right-question.svg",  :class => "polygon-right-question", :alt => "polígono")
+      .col-md-8.left-side
         %a.threedbutton.btn-max{:href => "#{root_path}"}
           .arrow-back
           %span.arrow-text='volver'
-      .col-md-4
+      .col-md-4.right-side.section-img
         =image_tag("foco.svg", :alt => "foco")
-    .row.justify-content-md-center.text-main
-      .col-md-8
+      .col-md-8.left-side.center.margin-top
         .text-p-tags
           =t('.search_in')
         .tag-search1
@@ -101,26 +99,7 @@
                 .btn-shape
                   Ver detalle
 
-    %div.margin-top
-    .row.justify-content-md-center
-      .col-md-10
-        .label-solid
-          .div-title
-            .row
-              .col-md-6
-                .subtext-title
-                  Compartir este derecho
-                  %hr
-              .col-md-6.right
-                %a.fbsharelink{"data-shareurl" => "#{right_url(@right.id)}"}
-                  =image_tag("facebook.svg", :alt => "facebook")
-                %a.twsharelink{"data-shareurl" => "#{right_url(@right.id)}"}
-                  =image_tag("twitter.svg", :alt => "twitter")
-          .row
-            .col-md-12
-              .text-p
-                %p=t('.right_share')
-
+=render "shared/share"
 
 %footer-right.sticky-footer.max-parent
   =render "shared/footer"

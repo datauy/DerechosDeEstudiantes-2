@@ -10,7 +10,7 @@
           %span.arrow-text='volver'
       .col-md-4.right-side.section-img
         =image_tag("list.svg", :alt => "lista")
-      .col-md-8.left-side.right.margin-top
+      .col-md-8.left-side.center.margin-top
         .text-p-tags
           =t('.search_in')
         .tag-search1
@@ -71,5 +71,6 @@
 
     .row.pagination.justify-content-center
       = paginate @rights, outer_window: 4
+    =render "shared/share"
 %footer-answer.sticky-footer.max-parent
   =render "shared/footer"

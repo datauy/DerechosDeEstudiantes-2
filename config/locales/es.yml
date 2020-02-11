@@ -45,6 +45,8 @@ es:
       title_send: 'Tu mensaje fue enviado'
       message_send: 'Gracias por reportar y ayudar'
       close: 'Cerrar'
+    share:
+      right_share: '¿Aprendiste algo nuevo? ¡Compartilo! Ayudanos a que más estudiantes conozcan y puedan defender sus derechos.'
 
   activerecord:
     errors:

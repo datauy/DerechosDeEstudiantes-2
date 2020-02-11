@@ -1,0 +1,31 @@
+.label-solid{
+  border-radius: 29.4px;
+  border: solid 1.8px $medium-gray;
+  margin-bottom: 30px;
+  background-color: white;
+  box-shadow: 0 8px 0 $medium-gray, 0 15px 20px rgba(0, 0, 0, .35);
+  -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+  -moz-transition: -moz-box-shadow .1s ease-in-out;
+  -o-transition: -o-box-shadow .1s ease-in-out;
+  transition: box-shadow .1s ease-in-out;
+  a{
+    color: $medium-gray;
+    text-decoration: none !important;
+  }
+}
+.div-title{
+  padding: 20px 50px 0px 50px;
+}
+.subtext-title,
+.questions .subtext-title {
+  font-size: 23px;
+  letter-spacing: 0.49px;
+  color: $blue-text;
+  text-align: left;
+  hr{
+    width: 53px;
+    height: 3px;
+    position: absolute;
+    background-color: $blue-text;
+  }
+}

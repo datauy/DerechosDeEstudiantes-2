@@ -3,16 +3,15 @@
 
 .container.question-container
   .questions.page-content
-    .row.justify-content-md-center.padding-top
+    .mixed-header
       =image_tag("polygon-answer-right.svg",  :class => "polygon-answer-right", :alt => "polígono")
-      .col-md-8
+      .col-md-8.left-side
         %a.threedbutton.btn-max{:href => "#{root_path}"}
           .arrow-back
           %span.arrow-text='volver'
-      .col-md-4
+      .col-md-4.right-side.section-img
         =image_tag("paloma.svg", :alt => "paloma")
-    .row.justify-content-md-center.text-main
-      .col-md-8
+      .col-md-8.left-side.center.margin-top
         .text-p-tags
           =t('.search_in')
         .tag-search1
@@ -23,7 +22,7 @@
     .row.justify-content-md-center.text-main
       .col-md-8
         = render partial: "shared/messages", flash: flash
-        .text-title
+        %h1.text-title
           =@question.message
     %div.margin-top
     .row.justify-content-md-center
@@ -81,26 +80,7 @@
               =t('.send')
 
     -if @question.is_public
-      %div.margin-top
-      .row.justify-content-md-center
-        .col-md-10
-          .label-solid
-            .div-title
-              .row
-                .col-md-6
-                  .subtext-title
-                    Compartir esta pregunta
-                    %hr
-                .col-md-6.right
-                  %a.fbsharelink{"data-shareurl" => "#{question_url(@question.id)}"}
-                    =image_tag("facebook.svg", :alt => "facebook")
-                  %a.twsharelink{"data-shareurl" =>  "#{question_url(@question.id)}"}
-                    =image_tag("twitter.svg", :alt => "twitter")
-            .row
-              .col-md-12
-                .text-p
-                  %p=t('.right_share')
-
+      =render "shared/share"
 
 %footer-answer.sticky-footer.max-parent
   =render "shared/footer"

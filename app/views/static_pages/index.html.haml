@@ -84,19 +84,20 @@
       .row.justify-content-md-center.section_main
         .col-md-8
           .label-solid
-            .row.padding-section-main
-              .col-md-6
-                =image_tag("section_1.svg",  :class => "icono", :alt => "sección")
-              .col-md-6.space-left
-                .text-title
-                  =t('.card_one_title')
-                %hr
-                .text-p
-                  %p
-                    =t('.card_one_description_html')
+            %a{:href => "https://elijoestudiar.edu.uy", :target => "_blank"}
+              .row.padding-section-main
+                .col-md-6
+                  =image_tag("section_1.svg",  :class => "icono", :alt => "sección")
+                .col-md-6.space-left
+                  .text-title
+                    =t('.card_one_title')
+                  %hr
+                  .text-p
+                    %p
+                      =t('.card_one_description_html')
             .row.justify-content-end
               .col-md-6
-                .btn-shape
+                .btn-shape.space-left
                   .subtext-title
                     =t('.shared')
                     .space
@@ -109,20 +110,21 @@
       .row.justify-content-md-center.section_main
         .col-md-8
           .label-solid
-            .row.padding-section-main
-              .col-md-6.space-left
-                .text-title
-                  =t('.card_two_title')
-                %hr
-                .text-p
-                  %p
-                    =t('.card_two_description_html')
-              .col-md-6
-                =image_tag("section_2.svg",  :class => "icono", :alt => "sección")
+            %a{:href => "https://www.anep.edu.uy/", :target => "_blank"}
+              .row.padding-section-main
+                .col-md-6.space-left
+                  .text-title
+                    =t('.card_two_title')
+                  %hr
+                  .text-p
+                    %p
+                      =t('.card_two_description_html')
+                .col-md-6
+                  =image_tag("section_2.svg",  :class => "icono", :alt => "sección")
 
             .row.justify-content-end
               .col-md-6.left
-                .btn-shape-left
+                .btn-shape-left.space-left
                   .subtext-title
                     =t('.shared')
                     .space
