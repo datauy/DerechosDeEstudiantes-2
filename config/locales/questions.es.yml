@@ -7,6 +7,8 @@ es:
       right: 'Derecho'
       question: 'Pregunta'
       details: 'Ver detalle'
+      search:
+        placeholder: 'Por ejemplo: Alerta meteorológica...'
     show:
       title: 'Tenés espacios de participación en'
       button_back: 'volver'

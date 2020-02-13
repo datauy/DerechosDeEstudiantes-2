@@ -32,7 +32,7 @@ es:
         description: 'Si necesitás denunciar una situación en la que sentís que se vulneraron gravemente tus derechos y no querés o podés hacerlo públicamente, usá este formulario. No queda visible en la web, ni le llega a las autoridades de tu centro educativo.'
         button_ok: 'Reportar aquí'
     about_us:
-      title: 'Sobre Nosotros'
+      title: 'Sobre el proyecto'
       text_about_html: 'En esta sección vas a encontrar información sobre cómo fue hecha esta herramienta, quiénes la hicimos, y cómo vos podés hacer uso de la misma, o reutilizar los datos y el código desarrollado.'
       button_back: 'volver'
       subtitle-origen: 'Origen'

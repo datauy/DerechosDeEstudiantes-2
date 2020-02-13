@@ -30,7 +30,7 @@
 
       -@questions.each_with_index do |question, index|
         .row.max-parent.search-top-row
-          =link_to right_path(question), class: 'row max-parent' do
+          =link_to question_path(question), class: 'row max-parent' do
             .col-md-10
               .row
                 .col-md-12.search-title

@@ -9,6 +9,12 @@ class QuestionsController < ApplicationController
       @questions = Question.are_publics().order(:message).page params[:page]
       @rights = Right.by_school_type(session[:search_type]).order(:title).page params[:page]
     end
+    respond_to do |format|
+      format.js{
+        render :template => "questions/index.js.haml", :layout => false
+      }
+      format.html{}
+    end
   end
 
   def show

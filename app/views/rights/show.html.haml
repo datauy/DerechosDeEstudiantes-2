@@ -11,13 +11,16 @@
       .col-md-4.right-side.section-img
         =image_tag("foco.svg", :alt => "foco")
       .col-md-8.left-side.center.margin-top
-        .text-p-tags
-          =t('.search_in')
         .tag-search1
           Derecho
-        .tag-search2
-          -if session[:search_type]
-            =session[:search_type].capitalize
+        -if [@right.school_type==2]
+          .tag-search2="Secundaria"
+          .tag-search3="UTU"
+        -else
+          -if [@right.school_type==1]
+            .tag-search2="UTU"
+          -else
+            .tag-search2="Secundaria"
     .row.justify-content-md-center.text-main
       =image_tag("polygon-left-question.svg",  :class => "polygon-left-question", :alt => "polígono")
       .col-md-8
@@ -99,7 +102,7 @@
                 .btn-shape
                   Ver detalle
 
-=render "shared/share"
+  =render "shared/share"
 
 %footer-right.sticky-footer.max-parent
   =render "shared/footer"

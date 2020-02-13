@@ -3,8 +3,8 @@
 
 .container.question-container
   .questions.page-content
+    =image_tag("polygon-answer-right.svg",  :class => "polygon-answer-right", :alt => "polígono")
     .mixed-header
-      =image_tag("polygon-answer-right.svg",  :class => "polygon-answer-right", :alt => "polígono")
       .col-md-8.left-side
         %a.threedbutton.btn-max{:href => "#{root_path}"}
           .arrow-back
@@ -12,13 +12,16 @@
       .col-md-4.right-side.section-img
         =image_tag("paloma.svg", :alt => "paloma")
       .col-md-8.left-side.center.margin-top
-        .text-p-tags
-          =t('.search_in')
         .tag-search1
           Pregunta
-        .tag-search2
-          -if session[:search_type]
-            =session[:search_type].capitalize
+        -if [@question.school_type==2]
+          .tag-search2="Secundaria"
+          .tag-search3="UTU"
+        -else
+          -if [@question.school_type==1]
+            .tag-search2="UTU"
+          -else
+            .tag-search2="Secundaria"
     .row.justify-content-md-center.text-main
       .col-md-8
         = render partial: "shared/messages", flash: flash

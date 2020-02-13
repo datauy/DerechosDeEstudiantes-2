@@ -1,15 +1,14 @@
 =image_tag("polygon-top.svg",  :class => "polygon-top", :alt => "polígono")
-=image_tag("polygon-right-down2.svg",  :class => "polygon-right-down", :alt => "polígono")
 =render "shared/navbar"
 
 .container
   .about_us
     .row.justify-content-md-center
-      .col-md-6
+      .col-md-5
         %a.threedbutton.btn-max{:href => "#{root_path}"}
           .arrow-back
           %span.arrow-text='volver'
-      .col-md-6.justify-content-md-center
+      .col-md-5.right
         =image_tag("page.svg", :class => "about-img", :alt => "página")
     .row.justify-content-md-center.text-main
       .col-md-9
@@ -19,10 +18,10 @@
     .row.justify-content-md-center
       .col-md-9
         .row
-          .col-md-8
-            .text-p
-              %p=t('.text_about_html')
+          .text-p
+            %p=t('.text_about_html')
     .row.justify-content-md-center
+      =image_tag("polygon-right-down2.svg",  :class => "polygon-right-down", :alt => "polígono")
       .col-md-10
         .label-solid
           .row
@@ -122,6 +121,6 @@
               .text-p
                 %p=t('.box_text_left_lenguaje_html')
 
-
+  =render "shared/share"
 %footer-about-us.sticky-footer.max-parent
   =render "shared/footer"

@@ -1,0 +1,43 @@
+-@rights.each do |right|
+  .row.justify-content-md-center
+    .col-md-10
+      .label-solid
+        .div-title
+          .row
+            .col-md-6
+              .tag-answer
+                =t('.right')
+            .col-md-6.right.c_gray
+              Enviado #{right.created_at.to_time.strftime("%e de #{t(right.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
+        %hr
+        .row
+          .col-md-12
+            .text-p
+              %p=right.title
+        .row.justify-content-end
+          =link_to right_path(right) do
+            .btn-shape
+              =t('.details')
+
+-@questions.each do |question|
+  .row.justify-content-md-center
+    .col-md-10
+      .label-solid
+        .div-title
+          .row
+            .col-md-6
+              .tag-answer
+                =t('.question')
+            .col-md-6.right.c_gray
+              Enviado #{question.created_at.to_time.strftime("%e de #{t(question.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
+        %hr
+        .row
+          .col-md-12
+            .text-p
+              %p=question.message
+        .row.justify-content-end
+          =link_to question_path(question) do
+            .btn-shape
+              =t('.details')
+.row.pagination.justify-content-center
+  = paginate @rights, outer_window: 4
