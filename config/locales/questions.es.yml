@@ -22,3 +22,7 @@ es:
       email: 'Correo'
       message: 'Mensaje'
       send: 'Enviar'
+    results:
+      right: 'Derecho'
+      question: 'Pregunta'
+      details: 'Ver detalle'
