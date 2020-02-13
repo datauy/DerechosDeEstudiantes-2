@@ -21,17 +21,17 @@
         .col-md-auto
           .text-know-subtitle
             =t('.know.subtitle')
-      .buttons-selected
-        =render "buttons"
-
       .row.justify-content-md-center
-        .col-md-6
-          .input-group
-            %input.form-control{:placeholder => t('.search.placeholder'), :type => "text", :id=> "search"}/
-            %span.dot
-              %i.fas.fa-search{"aria-hidden" => "true"}
-          .table-responsive
-            =render 'searcher'
+        .col-md-8
+          .buttons-selected
+            =render "buttons"
+          .col-md-12
+            .input-group
+              %input.form-control{:placeholder => t('.search.placeholder'), :type => "text", :id=> "search"}/
+              %span.dot
+                %i.fas.fa-search{"aria-hidden" => "true"}
+            .table-responsive
+              =render 'searcher'
 
       .row.justify-content-md-center
         .col-md-8
