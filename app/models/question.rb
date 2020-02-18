@@ -1,6 +1,6 @@
 class Question < ApplicationRecord
   has_many :answers
-  enum collage: [ :secundaria, :utu ]
+  enum collage: [ :secundaria, :utu, :ambas ]
 
   validates :message, :email, :name, :location, :institution, :grade, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }

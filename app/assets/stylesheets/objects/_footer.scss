@@ -20,8 +20,13 @@ footer-landing .logo {
   width: 28%;
   margin: 0 auto;
 }
+.logo img {
+  width: 100%;
+}
 footer-landing .row.first {
   width: 50%;
+  display: flex;
+  align-items: center;
 }
 footer-landing .row.between {
   margin-bottom: 0;
@@ -31,11 +36,9 @@ footer-landing .row.between {
 footer-landing .row.last {
   width: 10%;
 }
-.logo.data {
-  margin-top: -28px;
-}
-.logo.anep {
-  margin-top: -28px;
+.logo.data img,
+.logo.anep img {
+  margin-top: -24px;
 }
 .logo.codicen {
   width: 18%;
@@ -51,7 +54,7 @@ footer-landing span {
 }
 footer-complain{
   @extend footer-landing;
-  top: 550px;
+  top: 150px;
 }
 footer-about-us{
   @extend footer-landing;

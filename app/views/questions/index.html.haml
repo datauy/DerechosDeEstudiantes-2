@@ -1,75 +1,49 @@
-=image_tag("polygon-top.svg",  :class => "polygon-top")
+=image_tag("polygon-top.svg",  :class => "polygon-top", :alt => "polígono")
 =render "shared/navbar"
 
 .container
-  .questions
-    .row.justify-content-md-center.padding-top
-      .col-md-8
+  .questions.page-content
+    .row.justify-content-md-center
+      .col-md-5
         %a.threedbutton.btn-max{:href => "#{root_path}"}
-          %i.fas.fa-arrow-left=t('.button_back')
-      .col-md-4
-        =image_tag("list.svg")
+          .arrow-back
+          %span.arrow-text='volver'
+      .col-md-5.right.section-img
+        =image_tag("list.svg", :alt => "lista")
+    .row.justify-content-md-center.margin-top
+      .col-md-8
+        .input-group
+          %input.form-control{:placeholder => t('.search.placeholder'), :type => "text", :id=> "search"}/
+          %span.dot
+            %i.fas.fa-search{"aria-hidden" => "true"}
+        .buttons-selected
+          =render "static_pages/buttons"
+        .table-responsive
     .row.justify-content-md-center.text-main
       .col-md-8
-        .text-p-tags
-          =t('.search_in')
-        .tag-search1
-          Pregunta
-        .tag-search2
-          Derecho
-        -if session[:search_type]
-          .tag-search3
-            =session[:search_type].capitalize
-    .row.justify-content-md-center.text-main
-      .col-md-8
-        .text-title
+        %h1.text-title
           =t('.title')
-    %div.margin-top
-    =image_tag("polygon-big-right.svg",  :class => "polygon-big-right")
-    =image_tag("polygon-big-left.svg",  :class => "polygon-big-left")
-    -@rights.each do |right|
-      .row.justify-content-md-center
-        .col-md-10
-          .label-solid
-            .div-title
-              .row
-                .col-md-6
-                  .tag-answer
-                    =t('.right')
-                .col-md-6.right.c_gray
-                  Enviado #{right.created_at.to_time.strftime("%e de #{t(right.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
-            %hr
-            .row
-              .col-md-12
-                .text-p
-                  %p=right.title
-            .row.justify-content-end
-              =link_to right_path(right) do
-                .btn-shape
-                  =t('.details')
-
-    -@questions.each do |question|
-      .row.justify-content-md-center
-        .col-md-10
-          .label-solid
-            .div-title
-              .row
-                .col-md-6
-                  .tag-answer
-                    =t('.question')
-                .col-md-6.right.c_gray
-                  Enviado #{question.created_at.to_time.strftime("%e de #{t(question.created_at.to_time.strftime('%B'))} del %Y, %H:%M")}
-            %hr
-            .row
-              .col-md-12
-                .text-p
-                  %p=question.message
-            .row.justify-content-end
-              =link_to question_path(question) do
-                .btn-shape
-                  =t('.details')
-
-    .row.pagination.justify-content-center
-      = paginate @rights, outer_window: 4
+    =image_tag("polygon-big-right.svg",  :class => "polygon-big-right", :alt => "polígono")
+    =image_tag("polygon-big-left.svg",  :class => "polygon-big-left", :alt => "polígono")
+    .search-results
+      =render 'results'
+    =render "shared/share"
 %footer-answer.sticky-footer.max-parent
   =render "shared/footer"
+
+:javascript
+  $("#search").keyup(function (e) {
+    sval = $('#search').val();
+    if (sval.search(/^[a-zA-Z]+$/) != -1) {
+      ppath="/preguntas"+"?search="+sval
+      console.log(ppath);
+      $.ajax({
+        type: "GET",
+        url: ppath,
+        success: function(result){
+          console.log('Success, ajax');
+        }
+      });
+      console.log('Vuelve ajax');
+    }
+  });

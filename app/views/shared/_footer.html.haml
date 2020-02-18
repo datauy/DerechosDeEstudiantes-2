@@ -1,16 +1,16 @@
 .container.my-auto
   .copyright.text-center.my-auto
-    =image_tag("polygon-left-down.svg",  :class => "polygon-left-down")
+    =image_tag("polygon-left-down.svg",  :class => "polygon-left-down", :alt => "polígono")
     .footer-copyright.text-center.py-3
       .row.justify-content-end
         .col-md-12
           .row.first
-            =image_tag("unicef.svg", :class => "logo")
-            =image_tag("DATA.svg", :class => "logo data")
-            =image_tag("ANEP.svg", :class => "logo anep")
+            =link_to image_tag("unicef.svg", :alt => "unicef"), "https://www.unicef.org/uruguay/", :class => "logo"
+            =link_to image_tag("DATA.svg", :alt => "data"), "https://data.org.uy", :class => "logo data"
+            =link_to image_tag("ANEP.svg", :alt => "anep"), "https://www.anep.edu.uy/", :class => "logo anep"
           .row.between
-            =image_tag("CODICEN.svg", :class => "logo codicen")
-            =image_tag("CES.svg", :class => "logo ces")
-            =image_tag("CETP.svg", :class => "logo cetp")
+            =link_to image_tag("CODICEN.svg", :alt => "codicen"), "https://www.anep.edu.uy/codicen", :class => "logo codicen"
+            =link_to image_tag("CES.svg", :alt => "ces"), "https://www.ces.edu.uy/", :class => "logo ces"
+            =link_to image_tag("CETP.svg", :alt => "cetp"), "https://www.utu.edu.uy/", :class => "logo cetp"
           .row.last
             =raw t('.copyright')

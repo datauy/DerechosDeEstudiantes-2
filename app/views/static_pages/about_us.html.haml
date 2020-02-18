@@ -1,79 +1,79 @@
-=image_tag("polygon-top.svg",  :class => "polygon-top")
-=image_tag("polygon-right-down2.svg",  :class => "polygon-right-down")
+=image_tag("polygon-top.svg",  :class => "polygon-top", :alt => "polígono")
 =render "shared/navbar"
 
 .container
   .about_us
     .row.justify-content-md-center
-      .col-md-6
+      .col-md-5
         %a.threedbutton.btn-max{:href => "#{root_path}"}
-          %i.fas.fa-arrow-left=t('.button_back')
-      .col-md-6.justify-content-md-center
-        =image_tag("page.svg", :class => "about-img")
+          .arrow-back
+          %span.arrow-text='volver'
+      .col-md-5.right
+        =image_tag("page.svg", :class => "about-img", :alt => "página")
     .row.justify-content-md-center.text-main
       .col-md-9
-        .text-title
+        %h1.text-title
           =t('.title')
         %hr
     .row.justify-content-md-center
       .col-md-9
         .row
-          .col-md-8
-            .text-p
-              %p=t('.text_about_html')
-    .row.justify-content-md-center.margin-top
+          .text-p
+            %p=t('.text_about_html')
+    .row.justify-content-md-center
+      =image_tag("polygon-right-down2.svg",  :class => "polygon-right-down", :alt => "polígono")
       .col-md-10
         .label-solid
           .row
             .col-md-6
-              .text-title
+              %h2.text-title
                 =t('.subtitle-origen')
               %hr
               .text-p
                 %p=t('.box_text_left_origen_html')
             .col-md-6
-              .text-p-no-top
+              .text-p.no-top
                 %p=t('.box_text_right_origen_html')
     .row.justify-content-md-center.margin-top
       .col-md-9
         .row
           .col-md-12
-            .text-title
+            %h2.text-title
               =t('.subtitle-objetivos')
             %hr
             .text-p
               %p=t('.box_text_left_objetivos_html')
-    .row.justify-content-md-center.margin-top
+    .row.justify-content-md-center
       .col-md-10
         .label-solid
           .row
             .col-md-6
-              .text-title
+              %h2.text-title
                 =t('.subtitle-antecedentes')
               %hr
               .text-p
                 %p=t('.box_text_left_antecedentes_html')
             .col-md-6
-              .text-p-no-top
+              .text-p.no-top
                 %p=t('.box_text_right_antecedentes_html')
     .row.justify-content-md-center.margin-top
       .col-md-9
         .row
           .col-md-6
-            .text-title
+            %h2.text-title
               =t('.subtitle-da')
             %hr
             .text-p
               %p=t('.box_text_left_da_html')
           .col-md-6
-            .text-p-no-top
+            .text-p.no-top
               %p=t('.box_text_right_da_html')
-    .row.justify-content-md-center.margin-top
+    .row.justify-content-md-center
       .col-md-10
         .label-solid
           .row
             .col-md-12
-              .text-title
+              %h2.text-title
                 =t('.subtitle-procesamiento')
               %hr
               .text-p
@@ -83,44 +83,44 @@
       .col-md-9
         .row
           .col-md-12
-            .text-title
+            %h2.text-title
               =t('.subtitle-disponibilidad')
             %hr
             .text-p
               %p=t('.box_text_left_disponibilidad_html')
-    .row.justify-content-md-center.margin-top
+    .row.justify-content-md-center
       .col-md-10
         .label-solid
           .row
             .col-md-6
-              .text-title
+              %h2.text-title
                 =t('.subtitle-contacto')
               %hr
               .text-p
                 %p=t('.box_text_left_contacto_html')
             .col-md-6
-              .text-p-no-top
+              .text-p.no-top
                 %p=t('.box_text_right_contacto_html')
     .row.justify-content-md-center.margin-top
       .col-md-9
         .row
           .col-md-12
-            .text-title
+            %h2.text-title
               =t('.subtitle-tyc')
             %hr
             .text-p
               %p=t('.box_text_left_tyc_html')
-    .row.justify-content-md-center.margin-top
+    .row.justify-content-md-center
       .col-md-10
         .label-solid
           .row
             .col-md-12
-              .text-title
+              %h2.text-title
                 =t('.subtitle-lenguaje')
               %hr
               .text-p
                 %p=t('.box_text_left_lenguaje_html')
 
-
+  =render "shared/share"
 %footer-about-us.sticky-footer.max-parent
   =render "shared/footer"

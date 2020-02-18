@@ -45,6 +45,8 @@ es:
       title_send: 'Tu mensaje fue enviado'
       message_send: 'Gracias por reportar y ayudar'
       close: 'Cerrar'
+    share:
+      right_share: '¿Aprendiste algo nuevo? ¡Compartilo! Ayudanos a que más estudiantes conozcan y puedan defender sus derechos.'
 
   activerecord:
     errors:
@@ -58,6 +60,13 @@ es:
           attributes:
             school_type:
               blank: "Introduce un subsistema"
+  errors:
+    not_found:
+      page_not_found: "404, Página no encontrada"
+      return: "Regresar"
+    internal_server_error:
+      error: "500, Error de servidor"
+      return: "Regresar"
 
   date:
     abbr_day_names:

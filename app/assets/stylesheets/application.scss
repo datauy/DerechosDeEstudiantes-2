@@ -6,6 +6,7 @@
 @import 'base/variables';
 @import 'base/color';
 @import 'base/flashes';
+@import 'base/layout';
 //////////objects//////////
 @import 'objects/navbar';
 @import 'objects/footer';
@@ -19,6 +20,7 @@
 @import 'objects/alerts';
 @import 'objects/autocomplete';
 @import 'objects/graphics';
+@import 'objects/share';
 //////////views//////////
 @import 'views/login';
 @import 'views/landing';

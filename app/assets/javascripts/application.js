@@ -30,4 +30,10 @@ var loadComponents = function () {
   });
 };
 
-$(document).ready(loadComponents);
+$(document).ready(function(){
+  loadComponents;
+  $(".menu-link").click(function(e) {
+    $('#menu-btn').click();
+  });
+
+});

@@ -1,0 +1,28 @@
+.container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.page-content {
+  margin-top: 7rem;
+}
+.mixed-header {
+  width: 82.5%;
+  display: inline-block;
+  margin: 0 8.75%;
+}
+.left-side {
+  float: left;
+}
+.right-side {
+  float: right;
+}
+.text-p{
+  font-size: 17px;
+  line-height: 1.66;
+  color: $medium-gray;
+  padding: 20px 25px 0px 50px;
+}
+
+.no-top{
+  margin-top: 0px;
+}

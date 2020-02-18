@@ -3,6 +3,7 @@ es:
     searcher:
       not_answers: 'No encuentro la respuesta'
       show_all_questions: 'Ver todas las respuestas'
+      show_questions: 'Preguntas'
       right: 'Derecho'
       question: 'Pregunta'
     buttons:
@@ -12,22 +13,26 @@ es:
       title_section_two: 'Sugerencias'
       description_section_two: 'Para hacer valer tus derechos.'
       card_one_title: 'Elijo Estudiar'
-      card_one_description_html: 'Conocé todas las opciones, cursos y centros para estudiar en Educación Pública Inicial, Primaria, Secundaria, UTU y Formación en Educación. Muy pronto.'
+      card_one_description_html: 'Conocé todas las opciones, cursos y centros para estudiar en Educación Pública Inicial, Primaria, Secundaria, UTU y Formación en Educación en <a href="https://elijoestudiar.edu.uy">ElijoEstudiar.edu.uy</a>.'
       shared: 'Compartir'
       card_two_title: 'VOS'
-      card_two_description_html: 'Próximamente podrás acceder a la App VOS. En ella encontrarás tus calificaciones, horarios de clase, asistencias, entre otras cosas. <a href="https://www.anep.edu.uy">Descargala aquí</a>.'
+      card_two_description_html: 'Descargá la App VOS. En ella encontrarás tus calificaciones, horarios de clase, asistencias, entre otras cosas. <a href="https://www.anep.edu.uy">Descargala aquí</a>.'
       search:
         placeholder: 'Por ejemplo: Alerta meteorológica...'
       know:
         title: '¿Qué querés saber?'
-        description: 'Buscá sobre cualquier tema que tengas dudas. Si no encontrás la respuesta, no te preocupes, vas a poder hacer una nueva consulta y recibir una respuesta.'
+        description: 'Buscá información sobre tus derechos como estudiante en Uruguay. Si no encontrás la respuesta, no te preocupes, podés hacer una nueva consulta a UTU o Secundaria y recibir una respuesta.'
         subtitle: 'SELECCIONÁ DONDE ESTÁS ESTUDIANDO:'
+      question:
+        title: 'Consultas'
+        description: 'Si no encontraste la respuesta que buscabas, podés hacer una nueva consulta acá. Va a llegar directamente a Secundaria o UTU y la respuesta -además de llegarte por correo- va a quedar visible en el sitio para quienes tengan la misma duda.'
+        button_ok: 'Consultar aquí'
       complain:
-        title: 'Denuncias anónimas'
+        title: 'Denuncias confidenciales'
         description: 'Si necesitás denunciar una situación en la que sentís que se vulneraron gravemente tus derechos y no querés o podés hacerlo públicamente, usá este formulario. No queda visible en la web, ni le llega a las autoridades de tu centro educativo.'
         button_ok: 'Reportar aquí'
     about_us:
-      title: 'Sobre Nosotros'
+      title: 'Sobre el proyecto'
       text_about_html: 'En esta sección vas a encontrar información sobre cómo fue hecha esta herramienta, quiénes la hicimos, y cómo vos podés hacer uso de la misma, o reutilizar los datos y el código desarrollado.'
       button_back: 'volver'
       subtitle-origen: 'Origen'
@@ -38,7 +43,7 @@ es:
 
       subtitle-objetivos: 'Objetivos'
       box_text_left_objetivos_html: 'El proyecto busca difundir los derechos de los y las estudiantes en los consejos participantes, así como fomentar una cultura de defensa, acceso y demanda de estos derechos.<br>
-      En primer lugar, haciendo fácilmente accesible información sobre los mismos, pero también a través de los mecanismos de consulta y denuncia anónima, que permiten abordar situaciones particulares.'
+      En primer lugar, haciendo fácilmente accesible información sobre los mismos, pero también a través de los mecanismos de consulta y denuncia confidencial, que permiten abordar situaciones particulares.'
       box_text_right_objetivos_html: ''
 
       subtitle-antecedentes: 'Antecedentes'

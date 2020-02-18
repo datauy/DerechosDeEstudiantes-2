@@ -1,22 +1,27 @@
 %nav.navbar.navbar-expand-lg.static-top
   .container
     =link_to root_path, class: "navbar-brand" do
-      =image_tag("logo.svg", class: "logo")
-    #navbarResponsive.collapse.navbar-collapse
+      =image_tag("logo.svg", class: "logo", alt: "Derechos de Estudiantes")
+    #navbarResponsive.collapse.navbar-collapse.col-md-9
       %ul.navbar-nav.ml-auto
         %li.nav-item
-          =link_to "Hacer una consulta", about_us_path, class: "btn btn-outline-primary", "data-toggle": "modal", "data-target": "#questionModal"
+          =link_to "Hacer una consulta", '#', class: "btn btn-outline-primary", "data-toggle": "modal", "data-target": "#questionModal"
         %li.nav-item
-          =link_to "Sobre nosotros", about_us_path, class: "btn btn-outline-primary"
+          =link_to "Denuncia confidencial", new_complain_path, class: "btn btn-outline-primary"
+        %li.nav-item
+          =link_to "Ver preguntas", questions_path, class: "btn btn-outline-primary"
+        %li.nav-item
+          =link_to "Sobre el proyecto", about_us_path, class: "btn btn-outline-primary"
     %input#menu-btn.menu-btn{:type => "checkbox"}
     %label.menu-icon.navbar-toggler{:for => "menu-btn"}
       %span.navicon
     #menu-wrapper
       =link_to root_path, class: "menu-logo" do
-        =image_tag("logo-w.svg", class: "logo")
+        =image_tag("logo-w.svg", class: "logo", :alt => "logo")
       =link_to "Hacer una consulta", about_us_path, class: "menu-link active", "data-toggle": "modal", "data-target": "#questionModal"
-      =link_to "Sobre nosotros", about_us_path, class: "menu-link"
-      =link_to "Denuncias", about_us_path, class: "menu-link", "data-toggle": "modal", "data-target": "#questionModal"
+      =link_to "Denuncia confidencial", new_complain_path, class: "menu-link"
+      =link_to "Ver preguntas", questions_path, class: "menu-link"
+      =link_to "Sobre el proyecto", about_us_path, class: "menu-link"
 
 .modal_form
   =render "shared/modal_form"
@@ -28,7 +33,7 @@
       .modal-body
         .row
           .col-md-4
-            =image_tag("mail.svg", class: "logo")
+            =image_tag("mail.svg", class: "logo", :alt => "correo")
           .col-md-8.center
             %p.send-title
               =t('.title_send')

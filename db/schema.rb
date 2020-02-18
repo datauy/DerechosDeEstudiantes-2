@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_04_022629) do
+ActiveRecord::Schema.define(version: 2019_12_04_141437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,10 @@ ActiveRecord::Schema.define(version: 2019_11_04_022629) do
     t.text "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "location"
+    t.string "institution"
+    t.string "phone"
+    t.string "to_who"
     t.index ["email"], name: "index_complains_on_email"
     t.index ["name"], name: "index_complains_on_name"
   end

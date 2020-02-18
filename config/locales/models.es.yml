@@ -37,6 +37,10 @@ es:
         name: 'Nombre'
         email: 'Correo'
         message: "Mensaje"
+        phone: "Teléfono"
+        institution: "Institución"
+        location: "Localidad"
+        to_who: "Dirigido a"
         created_at: "Creado en"
         updated_at: "Actualizado en"
       doubt:

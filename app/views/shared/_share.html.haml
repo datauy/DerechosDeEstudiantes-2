@@ -1,0 +1,18 @@
+%div.margin-top
+.row.justify-content-md-center
+  .col-md-10
+    .div-title
+      .row
+        .col-md-6
+          .subtext-title
+            Compartir
+            %hr
+        .col-md-6.right
+          %a.fbsharelink{"data-shareurl" => request.base_url + request.original_fullpath}
+            =image_tag("facebook.svg", :alt => "facebook")
+          %a.twsharelink{"data-shareurl" =>  request.base_url + request.original_fullpath}
+            =image_tag("twitter.svg", :alt => "twitter")
+    .row
+      .col-md-12
+        .text-p
+          %p=t('.right_share')

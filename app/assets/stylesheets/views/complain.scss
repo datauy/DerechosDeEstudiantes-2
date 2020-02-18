@@ -1,104 +1,82 @@
-.container{
-  .complain{
-    margin-top: 132px;
-    hr{
-      width: 64px;
-      height: 3px;
-      position: absolute;
-      background-color: $orange;
-    }
-    .icono{
-      width: 218px;
-      height: 153px;
-      margin-top: 30px;
-      object-fit: contain;
-    }
-    .text-title{
-      font-size: 38px;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: 0.81px;
-      color: $medium-gray;
-    }
+.complain{
+  hr{
+    width: 64px;
+    height: 3px;
+    position: absolute;
+    background-color: $orange;
+  }
+  .icono{
+    width: 218px;
+    height: 153px;
+    margin-top: 30px;
+    object-fit: contain;
+  }
+  .text-title{
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 0.81px;
+    color: $medium-gray;
+  }
 
-    .text-p{
-      width: 400px;
-      height: 122px;
-      font-size: 17px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.66;
-      letter-spacing: normal;
-      color: $medium-gray;
-    }
+  .text-p{
+    font-size: 17px;
+    line-height: 1.66;
+    color: $medium-gray;
+  }
 
-    .text-subtitle{
-      font-size: 14.4px;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.44;
-      letter-spacing: 1.12px;
-      text-align: center;
-      color: $medium-gray;
-      margin-top: 25px;
-    }
+  .text-subtitle{
+    font-size: 14.4px;
+    font-weight: bold;
+    line-height: 1.44;
+    letter-spacing: 1.12px;
+    text-align: center;
+    color: $medium-gray;
+    margin-top: 25px;
+  }
 
-    .blue-title{
-      font-size: 18px;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: center;
-      color: $blue-title;
-    }
+  .blue-title{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: $blue-title;
+  }
 
-    .blue-subtitle{
-      font-family: 'Source Sans Pro', sans-serif;
-      font-size: 18px;
-      font-style: italic;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: center;
-      color: $blue;
-    }
+  .blue-subtitle{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    color: $blue;
+  }
 
-    .text-input{
-      font-size: 16px;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      color: $dark-blue;
-      margin-top: 5px;
-    }
+  .text-input{
+    font-size: 16px;
+    font-weight: bold;
+    color: $dark-blue;
+    margin-top: 5px;
+  }
 
-    .btn-group{
-      margin-top: 30px;
-      text-align: center;
-    }
-    .text-main{
-      padding-top: 110px;
-    }
+  .btn-group{
+    margin-top: 30px;
+    text-align: center;
+  }
+  .text-main{
+    padding: 2.6rem 1rem;
+  }
 
-    .label-doted{
-      text-align: center;
-      border: dotted 2px #84a1d5;
-      border-radius: 49.6px;
-      padding: 24px;
-      margin-top: 110px;
-      margin-bottom: 20px;
-    }
-    .complain-btn{
-      margin-top: 15px;
-      text-align: right;
-    }
+  .label-doted{
+    text-align: center;
+    border: dotted 2px #84a1d5;
+    border-radius: 49.6px;
+    padding: 24px;
+    margin-bottom: 2.6rem;
+  }
+  .complain-btn{
+    margin-top: 15px;
+    text-align: right;
+  }
+  #send_complain {
+    width: 208px;
+    margin: 1rem 0;
   }
 }
