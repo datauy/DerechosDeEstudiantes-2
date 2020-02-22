@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  default_url_options :host => "derechosdeestudiantes.edu.uy"
   localized do
     get 'about_us', to: 'static_pages#about_us'
     ActiveAdmin.routes(self)
