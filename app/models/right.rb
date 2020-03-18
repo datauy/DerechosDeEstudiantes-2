@@ -4,7 +4,7 @@ class Right < ApplicationRecord
 
   validates :school_type, presence: true
 
-  include PgSearch
+  include PgSearch::Model
   pg_search_scope :search_by_full_title,
     against: [:title, :tag_one, :tag_two, :tag_three, :tag_four],
     using: {
@@ -27,5 +27,3 @@ class Right < ApplicationRecord
 
 
 end
-
-

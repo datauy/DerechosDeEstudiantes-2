@@ -9,7 +9,7 @@ class Question < ApplicationRecord
     where(is_public: true)
   }
 
-  include PgSearch
+  include PgSearch::Model
   pg_search_scope :search_by_full_name, against: [:message],
   using: {
     tsearch: {
