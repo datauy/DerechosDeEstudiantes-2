@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
-<<<<<<< Updated upstream
-=======
   default_url_options :host => "derechosdeestudiantes.edu.uy"
 =begin  unless Rails.application.config.consider_all_requests_local
     match '*not_found', to: 'errors#not_found', :via => :all
     match '/500' => 'errors#internal_server_error', :via => :all
 =end
->>>>>>> Stashed changes
   localized do
     get 'about_us', to: 'static_pages#about_us'
     ActiveAdmin.routes(self)
