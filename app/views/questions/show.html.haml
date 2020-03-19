@@ -14,14 +14,13 @@
       .col-md-8.left-side.center.margin-top
         .tag-search1
           Pregunta
-        -if [@question.school_type==2]
+        -if @question.collage=="ambas"
           .tag-search2="Secundaria"
           .tag-search3="UTU"
+        -elsif @question.collage=="utu"
+          .tag-search2="UTU"
         -else
-          -if [@question.school_type==1]
-            .tag-search2="UTU"
-          -else
-            .tag-search2="Secundaria"
+          .tag-search2="Secundaria"
     .row.justify-content-md-center.text-main
       .col-md-8
         = render partial: "shared/messages", flash: flash
@@ -37,7 +36,7 @@
               .col-md-10
                 .label-solid-answer
                   .p-answers
-                    =answer.message
+                    =answer.message.html_safe
           -else
             .row
               .col-md-2.center
@@ -45,7 +44,7 @@
               .col-md-10
                 .label-solid-answer
                   .p-answers
-                  =answer.message
+                  =answer.message.html_safe
 
     %div.margin-top
     .row.justify-content-md-center.center

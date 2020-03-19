@@ -13,14 +13,13 @@
       .col-md-8.left-side.center.margin-top
         .tag-search1
           Derecho
-        -if [@right.school_type==2]
+        -if @right.school_type=="ambas"
           .tag-search2="Secundaria"
           .tag-search3="UTU"
+        -elsif @right.school_type=="utu"
+          .tag-search2="UTU"
         -else
-          -if [@right.school_type==1]
-            .tag-search2="UTU"
-          -else
-            .tag-search2="Secundaria"
+          .tag-search2="Secundaria"
     .row.justify-content-md-center.text-main
       =image_tag("polygon-left-question.svg",  :class => "polygon-left-question", :alt => "polígono")
       .col-md-8
