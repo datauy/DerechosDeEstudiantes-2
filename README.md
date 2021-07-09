@@ -1,7 +1,20 @@
 # Derechos de Estudiantes  
 Versión 2.0.3  
 
-Bienvenidos, el presente es un proyecto de...  
+<p align="center">
+<img  src="https://img.shields.io/github/license/datauy/DerechosDeEstudiantes-2">
+<img  src="https://img.shields.io/github/last-commit/datauy/DerechosDeEstudiantes-2">
+<img  src="https://img.shields.io/website?up_color=green&up_message=online&url=https%3A%2F%2Fderechosdeestudiantes.edu.uy">
+<a href="https://sonarcloud.io/dashboard?id=datauy_DerechosDeEstudiantes-2" target="_blank"><img src="https://sonarcloud.io/api/project_badges/measure?project=datauy_DerechosDeEstudiantes-2&metric=alert_status"></a>
+</p>
+
+Bienvenides,  
+Esta herramienta fue co-creada en por el Consejo de Educación Secundaria (CES), Consejo de Educación Técnico Profesional (CETP/UTU), Administración Nacional de Educación Pública (ANEP), UNICEF Uruguay y DATA Uruguay, en base a demandas surgidas de las Mesas Representativas de estudiantes de Secundaria y permite a estudiantes, padres y actores educativos consultar preguntas con información actualizada y completa sobre derechos de estudiantes.  
+
+Además brinda una herramienta de consulta directa a estudiantes, para que puedan conocer más sobre sus derechos y recibir respuestas personalizadas a sus problemas e inquietudes.
+En los casos donde la información buscada no se encuentra dentro del contenido existente, ni las consultas anteriores de estudiantes, un sencillo formulario permite enviar una consulta, que es recibida por el consejo correspondiente, que canaliza o realiza las consultas necesarias.  
+
+La herramienta evoluciona con la participación de los estudiantes, actualizando su contenido para reflejar las inquietudes planteadas, así como los nuevos derechos adquiridos.
 
 ## Instalación
 ssh ull  
