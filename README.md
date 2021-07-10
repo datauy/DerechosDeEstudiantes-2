@@ -1,5 +1,5 @@
 # Derechos de Estudiantes  
-Versión 2.0.3  
+Versión 2.1.0  
 
 <p align="center">
 <img  src="https://img.shields.io/github/license/datauy/DerechosDeEstudiantes-2">
@@ -57,8 +57,7 @@ nginx config
 sudo bash nodesource_setup.sh
 sudo apt install nodejs`  
 
-### DATAUY / Derechos de Estudiantes
-`sudo su datauy  
+### DATAUY / Derechos de Estudiantes  
 git clone https://github.com/datauy/DerechosDeEstudiantes-2.git  
 cd /DerechosDeEstudiantes-2  
 git fetch  
