@@ -27,5 +27,11 @@ class AdminMailer < ApplicationMailer
     mail(to: @admin.email, subject: 'Nueva denuncia')
   end
 
+  def new_comment
+    @admin =  params[:admin]
+    @answer = params[:answer]
+    @url  =  admin_answer_url(@answer.id)
+    mail(to: @admin.email, subject: 'Nuevo comentario')
+  end
 
 end

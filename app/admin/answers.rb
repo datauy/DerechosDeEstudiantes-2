@@ -1,6 +1,7 @@
 ActiveAdmin.register Answer do
-  permit_params :name, :email, :message, :question_id
+  permit_params :name, :email, :message, :question_id, :is_public
   belongs_to :question, optional: true
+  config.clear_action_items!
 
   index do
     selectable_column
@@ -26,6 +27,7 @@ ActiveAdmin.register Answer do
       f.input :name
       f.input :email
       f.input :message, as: :ckeditor
+      f.input :is_public
       if params['post'].present?
         f.input :question_id, :label => 'Pregunta', :as => :select, :collection => Question.all.map{|q| ["#{q.id}: #{q.message}", q.id]}, selected: params['post']['question_id']
       else

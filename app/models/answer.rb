@@ -6,7 +6,7 @@ class Answer < ApplicationRecord
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
   scope :by_question, ->(question) {
-    where(question_id: question)
+    where(question_id: question, is_public: true)
   }
 
 end
