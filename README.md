@@ -1,5 +1,5 @@
 # Derechos de Estudiantes  
-Versión 2.1.0  
+Versión 2.2.0  
 
 <p align="center">
 <img  src="https://img.shields.io/github/license/datauy/DerechosDeEstudiantes-2">
@@ -16,6 +16,8 @@ En los casos donde la información buscada no se encuentra dentro del contenido 
 
 La herramienta evoluciona con la participación de los estudiantes, actualizando su contenido para reflejar las inquietudes planteadas, así como los nuevos derechos adquiridos.
 
+## Datos Abiertos
+Desde la versión 2.2.0 hemos incorporado la publicación de datos anonimizados de las consultas, las respuestas, dudas, y los derechos de los estudiantes del Uruguay.
 ## Instalación
 ssh ull  
 Description:    Debian GNU/Linux 9.11 (stretch)  
