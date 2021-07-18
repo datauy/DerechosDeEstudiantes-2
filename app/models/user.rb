@@ -5,11 +5,15 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   enum admin_type: [ :admin, :moderador ]
-  enum school_type: [ :secundaria, :utu ]
+  enum school_type: [ :secundaria, :utu, :ambas ]
 
 
   scope :by_collage, ->(id) {
-    where(admin_type: "moderador", school_type: id)
+    if id != 2
+      where(admin_type: "moderador", school_type: [id, 2])
+    else
+      where(admin_type: "moderador")
+    end
   }
 
   scope :for_complains, ->() {

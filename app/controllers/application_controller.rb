@@ -30,4 +30,8 @@ class ApplicationController < ActionController::Base
   def set_cache
     expires_in 3.minutes, :public => true
   end
+
+  def access_denied(exception)
+    redirect_to admin_root_path, alert: exception.message
+  end
 end
