@@ -46,7 +46,7 @@ def doubts_data
 	order(:id)
 end
 def rights_headers
-	'id, title, school_type, description, created_at, count_help, tag_one, tag_two, tag_three, tag_four'
+	'id, title, created_at, school_type, description, tag_one, tag_two, tag_three, tag_four, count_help'
 end
 def rights_data
 	Right.
