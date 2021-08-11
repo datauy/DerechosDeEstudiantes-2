@@ -109,7 +109,8 @@
 
 :javascript
   function show_form(){
-    $('#form-more-help').removeClass("gone").addClass("visible");
+    $('#questionModal').modal('show');
+    //$('#form-more-help').removeClass("gone").addClass("visible");
   }
 
   $('#send_doubt').click(function() {
