@@ -21,6 +21,9 @@ div.cke {
 form select {
   max-width: 87.8vh;
 }
+form.right {
+  float: none !important;
+}
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:
 //
