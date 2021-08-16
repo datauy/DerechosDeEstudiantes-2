@@ -30,7 +30,7 @@ ActiveAdmin.register Question do
     f.inputs do
       f.input :name
       f.input :email
-      f.input :message
+      f.input :message, as: :ckeditor
       f.input :grade
       f.input :institution
       f.input :location
