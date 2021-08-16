@@ -27,7 +27,7 @@ ActiveAdmin.register Right do
   form do |f|
     f.inputs do
       f.input :title
-      f.input :description
+      f.input :description, as: :ckeditor
       f.input :tag_one
       f.input :tag_two
       f.input :tag_three

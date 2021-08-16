@@ -60,27 +60,6 @@
             %a.threedbutton2{id: "send_ok"}
               =t('.btn_yes')
 
-    = form_for :answer, :url => {:controller => :answers, action: :create} do |f|
-      #form-more-help.row.justify-content-md-center.margin-top-small.gone
-        .col-md-8
-          .input-group
-            %span
-              .text-input=t('.name')
-            =f.text_field "name", id: "name", :class => "form-control", value: ""
-          .input-group
-            %span
-              .text-input=t('.email')
-            =f.email_field "email", id: "email_answer", :class => "form-control", value: ""
-          .input-group
-            %span
-              .text-input=t('.message')
-            =f.text_area "message", id: "message_answer", :class => "form-control", value: ""
-
-          = hidden_field_tag 'question_id', @question.id
-          .complain-btn
-            %a.threedbutton.btn-max{id: "send_answer", :submit => "form"}
-              =t('.send')
-
     -if @question.is_public
       =render "shared/share"
 
