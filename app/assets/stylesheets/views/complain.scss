@@ -54,8 +54,15 @@
     font-weight: bold;
     color: $dark-blue;
     margin-top: 5px;
+    text-align: left;
   }
-
+  .to-who {
+    width: 100%;
+    select {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
   .btn-group{
     margin-top: 30px;
     text-align: center;
@@ -78,5 +85,25 @@
   #send_complain {
     width: 208px;
     margin: 1rem 0;
+  }
+  .button-container {
+    margin: 20px 0 0;
+    text-align: center;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+  }
+  &.steps .input-group,
+  &.steps #send_complain,
+  .step {
+    display: none;
+  }
+  &.steps .step-1 {
+    display: block;
+  }
+  .note {
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 10px;
   }
 }

@@ -28,7 +28,7 @@ module_function :alert_class_for
   end
 
   def get_to_who
-    ['Derechos humanos', 'UTU', 'Secundaria', 'No sé']
+    ['Derechos humanos CODICEN', 'Atención del estudiante UTU', 'Departamento Integral del Estudiante de Secundaria', 'No sé']
   end
   module_function :get_to_who
 end
