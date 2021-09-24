@@ -17,7 +17,7 @@ class ComplainsController < ApplicationController
       if @complain.save
         format.html {redirect_to new_complain_path(intern: true)}
       else
-        format.html {redirect_to new_complain_path(), notice: 'Error al crear la denuncia' }
+        format.html {redirect_to new_complain_path(), notice: 'Error al crear el reporte' }
       end
     end
   end
