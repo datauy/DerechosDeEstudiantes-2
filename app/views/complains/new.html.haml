@@ -48,10 +48,12 @@
             %span
               .text-input=t('.name')
             =f.text_field "name", id: "name_complain", :class => "form-control", :required => true
-          .input-group
+          .input-group#group-email
             %span
               .text-input=t('.email')
             =f.email_field "email", id: "email", :class => "form-control", :required => true
+          .alert.alert-danger.hidden.error-email{:role => "alert"}
+            =t('.error-email')
           .input-group
             %span
               .text-input=t('.phone')
@@ -71,12 +73,15 @@
               .text-input=t('.institution')
             .autocomplete
               =f.text_field "institution", id: "institution_complain", :class => "form-control not-border", :value => "", :type => "text"
-          .input-group
+          .input-group#group-message
             %span
               .text-input=t('.message')
             =f.text_area "message", id: "message", :class => "form-control", :required => true
+          .alert.alert-danger.hidden.error-message{:role => "alert"}
+            =t('.error-message')
           %a.threedbutton{id: "send_complain", :submit => "form"}
             =t('.send')
+          %span#error
 %footer-complain.sticky-footer.max-parent
   =render "shared/footer"
 
@@ -86,21 +91,39 @@
     console.log(e);
     $('.step').hide();
     var step = parseInt(e.target.id.split('-')[1]) + 1;
-    console.log('STEP: ', step);
     $('.step-'+step).show();
   });
   $('#complain_to_who').change(() => {
     $('.steps').removeClass('steps');
-    console.log("QUITA CLASE");
   });
+
+  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
   $('#send_complain').click(function() {
-    if($('#email_complain').val() === "" || $('#message_complain').val() === ""){
-      toastr.error('Por favor llena al menos correo y mensaje', 'Error!')
+    if( !emailReg.test( $('#email_complain').val() ) || $('#message_complain').val() === "" ){
+      if( !emailReg.test( $('#email_complain').val() ) ){
+        $('#group-email').addClass('is-error');
+        $('.error-email').show();
+      }
+      if ( $('#message').val() === "" ) {
+        $('#group-message').addClass('is-error');
+        $('.error-message').show();
+      }
+      $('.is-error input, .is-error textarea').focus((e) => {
+        var group = $(e.target).parent();
+        group.removeClass('is-error');
+        group.find('~ .alert').first().hide();
+
+      })
     }
     else{
       $( "form" ).last().submit();
     }
   });
+  function hideError(e) {
+
+  }$('.is-error input, .is-error textarea').focus((e) => {
+    console.log("FOCUS", e);
+  })
   $( document ).ready(function() {
     if("#{@message}"=="true"){
       $('#sendModal').modal('show');

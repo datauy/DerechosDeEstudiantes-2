@@ -2,7 +2,7 @@ es:
   complains:
     new:
       title: 'Denuncias confidenciales'
-      description: 'Tu denuncia será recibida en ANEP, Secundaria o UTU, no en tu centro de estudio. Este es un espacio para reportar situaciones de vulneraciones graves de derechos, ocurridas en el ámbito educativo (discriminación, acoso sexual, violencia de cualquier tipo) y que no fueron o no pueden ser abordadas en tu centro de estudio.'
+      description: 'Tu denuncia será recibida en ANEP, Secundaria o UTU, no en tu centro de estudio. Este es un espacio para reportar situaciones de vulneraciones graves de derechos, ocurridas en el ámbito educativo (discriminación, acoso sexual, violencia de cualquier tipo) y que no fueron o no pueden ser abordadas en tu centro de estudio. Las respuestas a denuncias pueden tardar hasta 7 días, por urgencias llamar al 2908 5743. Para consultas regulares, utilizar el formulario de consultas.'
       button_back: 'Volver'
       instructions_title: 'Lo que escribas en este formulario no quedará visible en el sitio web. En lo posible, por favor incluí en el mensaje la mayor cantidad de detalles del hecho, como motivo de la denuncia, personas involucradas y fecha de los hechos descritos, eso facilitará su abordaje.'
       instructions_p: 'Correo y número de teléfono permiten comunicar respuestas o ampliar información, especialmente cuando el tiempo de respuesta es importante.'
@@ -21,3 +21,5 @@ es:
       step-1-note: '*Situaciones de vulneración de derechos, como discriminación, acoso sexual o violencia de cualquier tipo, ocurridas en el ámbito educativo'
       step-2-title: '¿Pediste ayuda en tu centro de estudio para resolver este hecho?'
       step-2-note: 'En muchas situaciones, abordar las problemáticas desde el mismo centro de estudio puede generar soluciones más rápidas y efectivas. '
+      error-email: 'Debe agregar un correo de contacto válido'
+      error-message: 'El mensaje no puede estar vacío'

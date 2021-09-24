@@ -10,10 +10,10 @@ module ApplicationHelper
       "flash-notice"
     when :notice
       "flash-alert"
-  else
-      flash_type.to_s
+    else
+        flash_type.to_s
+    end
   end
-end
 module_function :alert_class_for
 
   def form_errors_class(object)
