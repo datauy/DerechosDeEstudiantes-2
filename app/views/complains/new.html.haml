@@ -4,7 +4,7 @@
 
 
 .container
-  .complain.page-content
+  .complain.page-content.steps
     =image_tag("polygon-big-center.svg",  :class => "polygon-big-center", :alt => "polígono")
     .row.justify-content-md-center
       .col-md-10
@@ -27,26 +27,42 @@
         .label-doted
           .blue-title=t('.instructions_title')
           .blue-subtitle=t('.instructions_p')
+    .row.justify-content-md-center
+      .col-md-8.step.step-1
+        %h3=t('.step-1-title')
+        %div.note=t('.step-1-note')
+        %div.button-container
+          =link_to "Hacer consulta", '#', class: "threedbutton btn-max wide", "data-toggle": "modal", "data-target": "#questionModal"
+          %a#step-1.threedbutton.wide.btn-max.btn-complain{:href => ""} Reportar hecho grave
+      .col-md-8.step.step-2
+        %h3=t('.step-2-title')
+        %div.note=t('.step-2-note')
+        %div.button-container
+          %a.threedbutton.wide.btn-max.question{:href => "/"} No, pero voy a intentarlo
+          %a#step-2.threedbutton.wide.btn-max.btn-complain{:href => "#"} Prefiero no hacerlo*
+        %div.note.right * o ya lo hice y el problema no pudo solucionarse
     = form_for :complain, :url => {:controller => :complains, action: :create} do |f|
       .row.justify-content-md-center
         .col-md-8
           .input-group
             %span
               .text-input=t('.name')
-            =f.text_field "name", id: "name_complain", :class => "form-control"
-          .input-group
+            =f.text_field "name", id: "name_complain", :class => "form-control", :required => true
+          .input-group#group-email
             %span
               .text-input=t('.email')
-            =f.email_field "email", id: "email", :class => "form-control"
+            =f.email_field "email", id: "email", :class => "form-control", :required => true
+          .alert.alert-danger.hidden.error-email{:role => "alert"}
+            =t('.error-email')
           .input-group
             %span
               .text-input=t('.phone')
             =f.phone_field "phone", id: "phone", :class => "form-control"
-          .input-group
+          .input-group.step-3
             %span
               .text-input=t('.to_who')
-            .autocomplete
-              =f.select :to_who, ApplicationHelper.get_to_who.collect { |p| [ p, p ] }, include_blank: false
+            .to-who=f.select :to_who, ApplicationHelper.get_to_who.collect { |p| [ p, p ] }, include_blank: true, :required => true
+            %div.note=t('.step-1-note')
           .input-group
             %span
               .text-input=t('.location')
@@ -57,24 +73,57 @@
               .text-input=t('.institution')
             .autocomplete
               =f.text_field "institution", id: "institution_complain", :class => "form-control not-border", :value => "", :type => "text"
-          .input-group
+          .input-group#group-message
             %span
               .text-input=t('.message')
-            =f.text_area "message", id: "message", :class => "form-control"
+            =f.text_area "message", id: "message", :class => "form-control", :required => true
+          .alert.alert-danger.hidden.error-message{:role => "alert"}
+            =t('.error-message')
           %a.threedbutton{id: "send_complain", :submit => "form"}
             =t('.send')
+          %span#error
 %footer-complain.sticky-footer.max-parent
   =render "shared/footer"
 
 :javascript
+  $('.btn-complain').click((e) => {
+    e.preventDefault();
+    console.log(e);
+    $('.step').hide();
+    var step = parseInt(e.target.id.split('-')[1]) + 1;
+    $('.step-'+step).show();
+  });
+  $('#complain_to_who').change(() => {
+    $('.steps').removeClass('steps');
+  });
+
+  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
   $('#send_complain').click(function() {
-    if($('#email_complain').val() === "" || $('#message_complain').val() === ""){
-      toastr.error('Por favor llena al menos correo y mensaje', 'Error!')
+    if( !emailReg.test( $('#email_complain').val() ) || $('#message_complain').val() === "" ){
+      if( !emailReg.test( $('#email_complain').val() ) ){
+        $('#group-email').addClass('is-error');
+        $('.error-email').show();
+      }
+      if ( $('#message').val() === "" ) {
+        $('#group-message').addClass('is-error');
+        $('.error-message').show();
+      }
+      $('.is-error input, .is-error textarea').focus((e) => {
+        var group = $(e.target).parent();
+        group.removeClass('is-error');
+        group.find('~ .alert').first().hide();
+
+      })
     }
     else{
       $( "form" ).last().submit();
     }
   });
+  function hideError(e) {
+
+  }$('.is-error input, .is-error textarea').focus((e) => {
+    console.log("FOCUS", e);
+  })
   $( document ).ready(function() {
     if("#{@message}"=="true"){
       $('#sendModal').modal('show');

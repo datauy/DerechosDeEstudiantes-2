@@ -1,5 +1,5 @@
 # Derechos de Estudiantes  
-Versión 2.2.0  
+Versión 2.2.2 
 
 <p align="center">
 <img  src="https://img.shields.io/github/license/datauy/DerechosDeEstudiantes-2">

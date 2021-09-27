@@ -1,6 +1,6 @@
 <h1>Hola, <%= @admin.email%>!</h1>
 <p>
-  Se generó una nueva denuncia el día <%= @complain.created_at%> por el usuario: <%= "#{@complain.name}, #{@complain.email}, #{@complain.phone}"%> de
+  Se generó un nuevo reporte de un hecho grave el día <%= @complain.created_at%> por el usuario: <%= "#{@complain.name}, #{@complain.email}, #{@complain.phone}"%> de
   <%= "#{@complain.institution}, #{@complain.location}"%> dirigida a <%= "#{@complain.to_who}"%><br></p>
 <p>
   Con el siguiente mensaje:
