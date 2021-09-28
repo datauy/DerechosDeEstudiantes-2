@@ -2,10 +2,10 @@ es:
   complains:
     new:
       title: 'Reportar hecho grave'
-      description: 'Tu reporte será recibido en ANEP, Secundaria o UTU, no en tu centro de estudio. Este es un espacio para reportar situaciones de vulneraciones graves de derechos, ocurridas en el ámbito educativo (discriminación, acoso sexual, violencia de cualquier tipo) y que no fueron o no pueden ser abordadas en tu centro de estudio. Las respuestas a los reportes pueden tardar hasta 7 días, por urgencias llamar al 2908 5743. Para consultas regulares, utilizar el formulario de consultas.'
+      description: 'Este es un espacio para reportar situaciones de vulneraciones graves de derechos, ocurridas en el ámbito educativo (discriminación, acoso sexual, violencia de cualquier tipo) y que no fueron o no pueden ser abordadas en tu centro de estudio. La información será recibida por ANEP, Secundaria o UTU, y no en tu centro de estudio. Las respuestas a los reportes pueden tardar hasta 7 días, por urgencias llamar al 2908 5743. Para consultas regulares, utilizá el formulario de consultas.'
       button_back: 'Volver'
-      instructions_title: 'Lo que escribas en este formulario no quedará visible en el sitio web. En lo posible, por favor incluí en el mensaje la mayor cantidad de detalles del hecho, como motivo de la denuncia, personas involucradas y fecha de los hechos descritos, eso facilitará su abordaje.'
-      instructions_p: 'Correo y número de teléfono permiten comunicar respuestas o ampliar información, especialmente cuando el tiempo de respuesta es importante.'
+      instructions_title: 'Lo que escribas en este formulario no quedará visible en el sitio web. En lo posible, incluí la mayor cantidad de detalles, como motivo de la denuncia, personas involucradas y fecha de los hechos descritos. Eso facilitará su abordaje.'
+      instructions_p: 'El correo y número de teléfono permiten establecer contacto rápidamente para ampliar información o comunicar respuestas.'
       name_placeholder: 'Nombre apellido'
       email_placeholder: 'correo@mail.com'
       message_placeholder: 'Describe ...'
