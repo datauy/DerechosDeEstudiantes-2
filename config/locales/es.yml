@@ -33,6 +33,7 @@ es:
         error: 'Antes de buscar, tenés que seleccionar si sos estudiante de Secundaria o UTU.'
     modal_form:
       title_html: 'Envianos tu pregunta y te vamos<br>a responder lo antes posible'
+      warning: 'ATENCIÓN: Durante el mes de enero, los tiempos de respuesta pueden verse afectados por licencias de personal.'
       name: 'Nombre'
       email: 'Correo'
       institution: 'Institución'
