@@ -15,8 +15,10 @@ es:
       card_one_title: 'Elijo Estudiar'
       card_one_description_html: 'Conocé todas las opciones, cursos y centros para estudiar en Educación Pública Inicial, Primaria, Secundaria, UTU y Formación en Educación en <a href="https://elijoestudiar.edu.uy">ElijoEstudiar.edu.uy</a>.'
       shared: 'Compartir'
-      card_two_title: 'VOS'
-      card_two_description_html: 'Descargá la App VOS. En ella encontrarás tus calificaciones, horarios de clase, asistencias, entre otras cosas. <a href="https://www.anep.edu.uy">Descargala aquí</a>.'
+      card_two_title: 'La convivencia al Centro'
+      card_two_description_html: 'Pongamos La convivencia al Centro y cuidemos la trayectoria educativa de todas las personas. Digámosle NO a la discriminación y al racismo. Avancemos en derechos. Volvamos Mejores. <a href="https://youtu.be/PsbepwlLGdg">Mirá el video</a>.'
+      #card_two_title: 'VOS'
+      #card_two_description_html: 'Descargá la App VOS. En ella encontrarás tus calificaciones, horarios de clase, asistencias, entre otras cosas. <a href="https://www.anep.edu.uy">Descargala aquí</a>.'
       search:
         placeholder: 'Por ejemplo: Alerta meteorológica...'
       know:
