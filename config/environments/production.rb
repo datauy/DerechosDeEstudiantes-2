@@ -80,9 +80,12 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   # SMTP settings
   config.action_mailer.smtp_settings = {
-  :address              => "freyja.datauy.org",
-  :user_name            => Rails.application.credentials[:mail_username],
-  :password             => Rails.application.credentials[:mail_password]
+    :address              => "mail.data.org.uy",
+    :port                 =>  587,
+    :user_name            => Rails.application.credentials[:mail_username],
+    :password             => Rails.application.credentials[:mail_password]
+    :authentication       => "plain",
+    :enable_starttls_auto => true
   }
   config.public_file_server.headers = {
     'Cache-Control' => 'public, s-maxage=31536000, maxage=15552000',
