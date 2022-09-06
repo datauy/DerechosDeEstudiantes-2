@@ -8,6 +8,11 @@
   a{
     color: #fff;
   }
+  &.recaptcha {
+    background-color: transparent;
+    border: none;
+    padding-left: 0;
+  }
 }
 .input-group > .form-control, .input-group > .custom-select {
   border: none;

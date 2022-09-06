@@ -77,6 +77,8 @@
             %span
               .text-input=t('.message')
             =f.text_area "message", id: "message", :class => "form-control", :required => true
+          .input-group.recaptcha
+            =recaptcha_tags
           .alert.alert-danger.hidden.error-message{:role => "alert"}
             =t('.error-message')
           %a.threedbutton{id: "send_complain", :submit => "form"}
