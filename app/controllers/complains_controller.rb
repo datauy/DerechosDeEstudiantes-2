@@ -13,9 +13,13 @@ class ComplainsController < ApplicationController
 
   def create
     @complain = Complain.new(complain_params)
+    success = verify_recaptcha(action: 'complain', minimum_score: 0.5, secret_key: Rails.application.credentials.recaptcha_secret_key)
+    checkbox_success = verify_recaptcha unless success
     respond_to do |format|
-      if @complain.save
+      if (success || checkbox_success) && @complain.save
         format.html {redirect_to new_complain_path(intern: true)}
+      elsif !success
+        @show_checkbox_recaptcha = true
       else
         format.html {redirect_to new_complain_path(), notice: 'Error al crear el reporte' }
       end
