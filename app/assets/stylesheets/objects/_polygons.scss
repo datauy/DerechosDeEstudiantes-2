@@ -66,8 +66,8 @@
 
 .polygon-big-center{
   @extend .polygon;
-  width: 942px;
-  height: 1741px;
+  max-width: 942px;
+  max-height: 1741px;
   left: 0;
   right: 0;
   margin-left: auto;
