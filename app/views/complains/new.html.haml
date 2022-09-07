@@ -91,9 +91,12 @@
   =render "shared/footer"
 
 :javascript
+  const last_step = "#{@show_checkbox_recaptcha}";
+  if ( last_step ) {
+    $('.steps').removeClass('steps');
+  }
   $('.btn-complain').click((e) => {
     e.preventDefault();
-    console.log(e);
     $('.step').hide();
     var step = parseInt(e.target.id.split('-')[1]) + 1;
     $('.step-'+step).show();
