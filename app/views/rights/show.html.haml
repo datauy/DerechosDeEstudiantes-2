@@ -70,7 +70,11 @@
             %span
               .text-input=t('.message')
             =f.text_area "message", id: "message_doubt", :class => "form-control", value: ""
-
+          - if @show_checkbox_recaptcha
+            .input-group.recaptcha
+              =recaptcha_tags
+          - else
+            =recaptcha_v3(action: 'doubt', site_key: Rails.application.credentials.recaptcha_site_key)
           = hidden_field_tag 'right_id', @right.id
           .complain-btn
             %a.threedbutton.btn-max{id: "send_doubt", :submit => "form"}

@@ -3,7 +3,9 @@ class DoubtsController < ApplicationController
   def create
     @doubt = Doubt.new(doubt_params)
     @doubt.right_id = params['right_id']
-    if @doubt.save
+    success = verify_recaptcha(action: 'doubt', minimum_score: 0.5, secret_key: Rails.application.credentials.recaptcha_secret_key)
+    checkbox_success = verify_recaptcha unless success
+    if (success || checkbox_success) && @doubt.save
       redirect_to right_path(id: @doubt.right_id, finished: true)
     else
       redirect_to right_path(@doubt.right_id), notice: 'Error al crear el comentario'
