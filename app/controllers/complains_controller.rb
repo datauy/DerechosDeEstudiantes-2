@@ -29,11 +29,9 @@ class ComplainsController < ApplicationController
 
   private
   def get_both_institutions
-      file = File.open "#{Rails.root}/public/utu.json"
-      json_institutions = JSON.load file
+      json_institutions = JSON.parse(File.read("#{Rails.root}/public/utu.json"))
       @array_institutions_utu = json_institutions['establecimientos'].map { |e| e['nombre'] }.join(',')
-      file = File.open "#{Rails.root}/public/secundaria.json"
-      json_institutions = JSON.load file
+      json_institutions = JSON.parse(File.read("#{Rails.root}/public/secundaria.json"))
       @array_institutions_secundaria = json_institutions['establecimientos'].map { |e| e['nombre'] }.join(',')
   end
 
