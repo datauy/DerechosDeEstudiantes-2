@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "rdbg",
+            "name": "Start server (debug)",
+            "request": "launch",
+            "script": "bin/rails",
+            "args": [
+                "server",
+                "-b",
+                "0.0.0.0",
+                "-p",
+                "3000"
+            ],
+            "useBundler": true,
+            "cwd": "${workspaceFolder}",
+        }
+    ]
+}
