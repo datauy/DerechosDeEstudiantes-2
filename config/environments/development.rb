@@ -54,4 +54,17 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  # Dev-only fallback so the app runs without config/master.key.
+  # Uses Google's public reCAPTCHA test keys (always pass); never used in production.
+  # https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do
+  {
+    recaptcha_site_key: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+    recaptcha_secret_key: '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe',
+    recaptcha_site_key_v2: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+    recaptcha_secret_key_v2: '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'
+  }.each do |key, test_value|
+    next if Rails.application.credentials.public_send(key).present?
+
+    Rails.application.credentials.define_singleton_method(key) { test_value }
+  end
 end
