@@ -20,7 +20,8 @@ class CkanReportPublisher
     exported_files.each do |name, paths|
       next unless RESOURCE_NAMES.include?(name.to_s)
 
-      synchronize_resource(package, name.to_s, paths[:json])
+      synchronize_resource(package, name.to_s, paths[:json], 'JSON', "#{name}.json")
+      synchronize_resource(package, name.to_s, paths[:csv], 'CSV', "#{name}.csv")
     end
 
     package
@@ -41,14 +42,19 @@ class CkanReportPublisher
     }.compact
   end
 
-  def synchronize_resource(package, name, path)
-    resource = package.fetch('resources', []).find { |item| item['name'] == name }
+  def synchronize_resource(package, name, path, format, filename)
+    return unless path
+
+    mimetype = format == 'CSV' ? 'text/csv' : 'application/json'
+    resource = package.fetch('resources', []).find do |item|
+      item['name'] == name && item['format'].to_s.casecmp(format).zero?
+    end
     attributes = {
       name: name,
       package_id: package['id'],
-      url: "#{@public_base_url}/data/latest/#{name}.json",
-      format: 'JSON',
-      mimetype: 'application/json',
+      url: "#{@public_base_url}/data/latest/#{filename}",
+      format: format,
+      mimetype: mimetype,
       last_modified: File.mtime(path).utc.iso8601
     }
 

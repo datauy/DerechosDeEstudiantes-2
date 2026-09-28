@@ -66,4 +66,19 @@ class CkanClientTest < ActiveSupport::TestCase
   ensure
     file.unlink if file
   end
+  test 'uses the CSV MIME type for CSV uploads' do
+    response = Struct.new(:code, :body).new('200', JSON.generate('success' => true, 'result' => { 'id' => 'resource-id' }))
+    client = StubbedClient.new(response)
+    file = Tempfile.new(['preguntas', '.csv'])
+    file.write("id,message\n1,test\n")
+    file.close
+
+    client.resource_create({ package_id: 'package-id', name: 'preguntas-csv' }, upload: file.path)
+    _uri, request = client.requests.first
+
+    assert_match(/Content-Type: text\/csv/, request.body)
+    assert_includes request.body, "\r\nid,message\n1,test\n\r\n"
+  ensure
+    file.unlink if file
+  end
 end

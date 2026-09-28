@@ -69,7 +69,8 @@ class CkanClient
     end
     body << "--#{boundary}\r\n"
     body << "Content-Disposition: form-data; name=\"upload\"; filename=\"#{File.basename(upload)}\"\r\n"
-    body << "Content-Type: application/json\r\n\r\n"
+    content_type = File.extname(upload).downcase == '.csv' ? 'text/csv' : 'application/json'
+    body << "Content-Type: #{content_type}\r\n\r\n"
     body << File.binread(upload)
     body << "\r\n--#{boundary}--\r\n"
     ["multipart/form-data; boundary=#{boundary}", body]

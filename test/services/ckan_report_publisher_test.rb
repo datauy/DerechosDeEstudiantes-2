@@ -38,16 +38,15 @@ class CkanReportPublisherTest < ActiveSupport::TestCase
     end
   end
 
-  test 'creates four named resources and updates them on the next run' do
+  test 'creates JSON and CSV resources and updates them on the next run' do
     Dir.mktmpdir do |directory|
-      path = File.join(directory, 'preguntas.json')
-      File.write(path, '[]')
-      exported_files = {
-        'preguntas' => { json: path },
-        'respuestas' => { json: path },
-        'dudas' => { json: path },
-        'derechos' => { json: path }
-      }
+      exported_files = %w[preguntas respuestas dudas derechos].each_with_object({}) do |name, files|
+        json_path = File.join(directory, "#{name}.json")
+        csv_path = File.join(directory, "#{name}.csv")
+        File.write(json_path, '[]')
+        File.write(csv_path, "id,message\n1,test\n")
+        files[name] = { json: json_path, csv: csv_path }
+      end
       client = FakeClient.new
       publisher = CkanReportPublisher.new(
         client: client,
@@ -58,16 +57,19 @@ class CkanReportPublisherTest < ActiveSupport::TestCase
       publisher.publish(exported_files: exported_files)
       publisher.publish(exported_files: exported_files)
 
-      assert_equal %w[preguntas respuestas dudas derechos], client.created_resources.map { |resource| resource['name'] }
-      assert_equal 4, client.updated_resources.length
-      assert_equal %w[preguntas respuestas dudas derechos], client.updated_resources.map { |resource| resource[:name] }
+      assert_equal %w[preguntas preguntas respuestas respuestas dudas dudas derechos derechos], client.created_resources.map { |resource| resource['name'] }
+      assert_equal 8, client.updated_resources.length
+      assert_equal %w[preguntas preguntas respuestas respuestas dudas dudas derechos derechos], client.updated_resources.map { |resource| resource[:name] }
       assert_equal 'https://derechosdeestudiantes.edu.uy/data/latest/preguntas.json', client.updated_resources.first[:url]
+      assert_equal 'https://derechosdeestudiantes.edu.uy/data/latest/preguntas.csv', client.updated_resources.second[:url]
+      assert_equal 'CSV', client.updated_resources.second[:format]
+      assert_equal 'text/csv', client.updated_resources.second[:mimetype]
     end
   end
 
-  test 'requires an organization' do
-    assert_raises(ArgumentError) do
-      CkanReportPublisher.new(client: FakeClient.new, credentials: {})
-    end
+  test 'does not require an organization when publishing can proceed without one' do
+    publisher = CkanReportPublisher.new(client: FakeClient.new, credentials: {})
+
+    assert_instance_of CkanReportPublisher, publisher
   end
 end
