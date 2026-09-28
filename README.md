@@ -20,26 +20,38 @@ La herramienta evoluciona con la participación de los estudiantes, actualizando
 Desde la versión 2.2.0 hemos incorporado la publicación de datos anonimizados de las consultas, las respuestas, dudas, y los derechos de los estudiantes del Uruguay.
 
 ### Publicación automática en CKAN
-La tarea `dataexport:ckan_upload` genera los cuatro archivos JSON de datos abiertos y sincroniza un conjunto de datos con cuatro recursos en CKAN. Usa la API Action v3 (`/api/3/action`) y actualiza los recursos existentes sin duplicarlos.
+La tarea `dataexport:ckan_upload` genera los archivos JSON y CSV de los cuatro conjuntos de datos y sincroniza un conjunto de datos con ocho recursos en CKAN. Usa la API Action v3 (`/api/3/action`) y actualiza los recursos existentes sin duplicarlos.
 
-//TODO: Configurar las credenciales Rails cifradas con esta estructura:
+La URL y la API key se configuran por variables de entorno. En el dev container, la URL predeterminada es `https://host.docker.internal:8443` para alcanzar CKAN publicado en el host; se puede reemplazar con `CKAN_URL`. La API key se lee de `CATALOGO_KEY` y no debe guardarse en el repositorio. Para un CKAN local con certificado autofirmado, `CKAN_SSL_VERIFY=false` desactiva la verificación TLS solo en `development`; no use esta opción en producción. Para ejecutar desde una terminal de desarrollo:
 
-```yaml
-ckan:
-	server: https://catalogo.example.uy
-	api_key: <token de API de CKAN>
-	organization: <slug de la organización>
-	package_name: derechos-de-estudiantes
-	public_base_url: https://derechosdeestudiantes.edu.uy
+```sh
+export CKAN_URL='https://host.docker.internal:8443'
+export CATALOGO_KEY='<API key de test>'
+export CKAN_ORGANIZATION='<slug de organización, si corresponde>'
+export CKAN_SSL_VERIFY=false
+RAILS_ENV=development bundle exec rake dataexport:ckan_upload
 ```
 
-Para ejecutar manualmente:
+Nota: para obtener el token desde ckan-docker hay que correr:
+
+```sh
+# crea un usuario de prueba
+docker exec -it ckan-docker-ckan-1 ckan -c /srv/app/ckan.ini sysadmin add my_test_admin email=admin@example.com password=password
+
+# obtiene el token
+docker exec -it ckan-docker-ckan-1 ckan -c /srv/app/ckan.ini user token add my_test_admin test_token
+```
+
+
+El token debe pertenecer a un usuario con permisos para crear y actualizar conjuntos de datos y recursos. `CKAN_ORGANIZATION` es necesario si el conjunto de datos debe crearse dentro de una organización; al publicar sobre un conjunto existente se puede omitir. Para despliegues, se pueden configurar `server`, `api_key`, `organization`, `package_name` y `public_base_url` bajo `ckan` en las credenciales Rails cifradas. Las variables de entorno tienen prioridad.
+
+Para ejecutar manualmente en otros entornos:
 
 ```sh
 RAILS_ENV=production bundle exec rake dataexport:ckan_upload
 ```
 
-//TODO: configurar el scheduler del servidor para ejecutar el comando 
+Configure el scheduler del servidor para ejecutar el comando diariamente con las variables de entorno disponibles en ese proceso.
 
 ## Instalación
 ssh ull  

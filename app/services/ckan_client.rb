@@ -14,12 +14,13 @@ class CkanClient
     end
   end
 
-  def initialize(server:, api_key:, open_timeout: 10, read_timeout: 60)
+  def initialize(server:, api_key:, ssl_verify: true, open_timeout: 10, read_timeout: 60)
     raise ArgumentError, 'CKAN server is required' if server.to_s.empty?
     raise ArgumentError, 'CKAN API key is required' if api_key.to_s.empty?
 
     @server = server.to_s.sub(%r{/+$}, '')
     @api_key = api_key
+    @ssl_verify = Rails.env.development? ? ssl_verify : true
     @open_timeout = open_timeout
     @read_timeout = read_timeout
   end
@@ -81,6 +82,7 @@ class CkanClient
       uri.host,
       uri.port,
       use_ssl: uri.scheme == 'https',
+      verify_mode: @ssl_verify ? OpenSSL::SSL::VERIFY_PEER : OpenSSL::SSL::VERIFY_NONE,
       open_timeout: @open_timeout,
       read_timeout: @read_timeout
     ) { |http| http.request(request) }

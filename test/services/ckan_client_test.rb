@@ -50,6 +50,12 @@ class CkanClientTest < ActiveSupport::TestCase
     assert_equal '401', error.status
   end
 
+  test 'keeps SSL verification enabled outside development' do
+    client = CkanClient.new(server: 'https://catalog.example.test', api_key: 'token', ssl_verify: false)
+
+    assert client.instance_variable_get(:@ssl_verify)
+  end
+
   test 'uploads a resource as multipart form data' do
     response = Struct.new(:code, :body).new('200', JSON.generate('success' => true, 'result' => { 'id' => 'resource-id' }))
     client = StubbedClient.new(response)
@@ -66,6 +72,7 @@ class CkanClientTest < ActiveSupport::TestCase
   ensure
     file.unlink if file
   end
+
   test 'uses the CSV MIME type for CSV uploads' do
     response = Struct.new(:code, :body).new('200', JSON.generate('success' => true, 'result' => { 'id' => 'resource-id' }))
     client = StubbedClient.new(response)
